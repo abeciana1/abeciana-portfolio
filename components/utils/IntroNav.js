@@ -6,7 +6,7 @@ const IntroNav = () => {
     return (
         <React.Fragment>
             <section
-                className="self-center"
+                className="self-center hidden lg:block z-50"
             >
                     <h2 className="text-6xl leading-tight">home</h2>
                     <Link

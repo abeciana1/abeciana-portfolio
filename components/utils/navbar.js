@@ -23,22 +23,22 @@ const NavBar = () => {
                     <Link
                         href="/#portfolio"
                     >
-                        <h2 className="text-3xl pl-10">portfolio</h2>
+                        <h2 className="text-3xl pl-5 lg:pl-10">portfolio</h2>
                     </Link>
                     <Link
                         href="/#blog"
                     >
-                        <h2 className="text-3xl pl-10">blog</h2>
+                        <h2 className="text-3xl pl-5 lg:pl-10">blog</h2>
                     </Link>
                     <Link
                         href="/#reviews"
                     >
-                        <h2 className="text-3xl pl-10">reviews</h2>
+                        <h2 className="text-3xl pl-5 lg:pl-10">reviews</h2>
                     </Link>
                     <Link
                         href="/#contact"
                     >
-                        <h2 className="text-3xl pl-10">contact</h2>
+                        <h2 className="text-3xl pl-5 lg:pl-10">contact</h2>
                     </Link>
                 </section>
             </section>
