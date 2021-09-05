@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+  width: 100%;
+}
+
 h1, h2, h3, h4, h5, h6 {
   /* font-family: carlmarx, sans-serif; */
   font-family: reross-quadratic, sans-serif;
@@ -15,9 +19,11 @@ h1, h2, h3, h4, h5, h6 {
   font-style: normal;
 } */
 
-body, footer, main {
-  /* padding: 0;
-  margin: 0; */
+html, body, footer, main {
+  padding: 0px;
+  margin: 0px;
+  width: 100vw;
+  position: fixed;
   font-family: futura-pt,sans-serif;
   font-weight: 400;
   font-style: normal;
@@ -60,13 +66,13 @@ a {
   /* pointer-events: none; */
 }
 
-@media (min-width: 1024px) {
-  .code {
-    /* font-size: 15px; */
-    padding: 18px 20px;
-    margin-left: 48px
-  }
-}
+/* .code-card {
+  flex-shrink: 0;
+  margin-bottom: 120px;
+  position: relative;
+  max-width: 376px;
+  width: 100%;
+} */
 
 @media (min-width: 768px) {
   .code-wrapper {
@@ -76,7 +82,25 @@ a {
   .code {
     font-size: 10px;
   }
+
+  .code-counter {
+    margin-left: 10px;
+    margin-right: 20px;
+  }
 }
+
+@media (min-width: 1024px) {
+  .code {
+    /* font-size: 15px; */
+    padding: 18px 20px;
+    margin-left: 48px
+  }
+  .code-counter {
+    margin-left: -48px;
+    margin-right: 32px;
+  }
+}
+
 
 .code {
   background: #f7f7fc;
@@ -92,19 +116,6 @@ a {
   flex-direction: row;
 }
 
-@media (min-width: 768px) {
-  .code-counter {
-    margin-left: 10px;
-    margin-right: 20px;
-  }
-}
-
-@media (min-width: 1024px) {
-  .code-counter {
-    margin-left: -48px;
-    margin-right: 32px;
-  }
-}
 
 .code-counter {
   flex-shrink: 0;
@@ -115,4 +126,19 @@ a {
 
 .sub {
   text-indent: 1rem;
+}
+
+.anim-text {
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-image: -webkit-gradient(linear, left top, right top, from(#ec3737), color-stop(50%, #ec3737), color-stop(50%, #000000));
+    background-image: linear-gradient(to right, #ec3737, #ec3737 50%, #000000 50%);
+    background-size: 200% 100%;
+    background-position: 100%;
+}
+
+.anim-text:hover {
+    -webkit-transition: all 0.8s cubic-bezier(0, 0, 0.23, 1);
+    transition: all 0.8s cubic-bezier(0, 0, 0.23, 1);
+    background-position: 0%;
 }

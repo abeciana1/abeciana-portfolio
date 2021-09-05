@@ -6,33 +6,40 @@ const IntroNav = () => {
     return (
         <React.Fragment>
             <section
-                className="self-center hidden lg:block z-50"
+                className="self-center hidden lg:block"
             >
-                    <h2 className="text-6xl leading-tight">home</h2>
+                    <Link href="/">
+                        <a className="anim-text text-6xl leading-tight cursor-pointer font-reross">home</a>
+                    </Link>
+                    <br/>
                     <Link
                         href="/#about"
                     >
-                        <h2 className="text-6xl leading-tight">about</h2>
+                        <a className="anim-text text-6xl leading-tight font-reross">about</a>
                     </Link>
+                    <br/>
                     <Link
                         href="/#portfolio"
                     >
-                        <h2 className="text-6xl leading-tight">portfolio</h2>
-                    </Link>
+                        <a className="anim-text text-6xl leading-tight font-reross">portfolio</a>
+                </Link>
+                <br/>
                     <Link
                         href="/#blog"
                     >
-                        <h2 className="text-6xl leading-tight">blog</h2>
-                    </Link>
+                        <a className="anim-text text-6xl leading-tight font-reross">blog</a>
+                </Link>
+                <br/>
                     <Link
                         href="/#reviews"
                     >
-                        <h2 className="text-6xl leading-tight">reviews</h2>
-                    </Link>
+                        <a className="anim-text text-6xl leading-tight font-reross">reviews</a>
+                </Link>
+                <br/>
                     <Link
                         href="/#contact"
                     >
-                        <h2 className="text-6xl leading-tight">contact</h2>
+                        <a className="anim-text text-6xl leading-tight font-reross">contact</a>
                     </Link>
             </section>
         </React.Fragment>

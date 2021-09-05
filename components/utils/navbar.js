@@ -9,36 +9,38 @@ const NavBar = () => {
             <PageMargin>
 
             <section
-                className="flex item-stretch justify-between"
+                className="flex lg:items-stretch md:justify-between"
             >
-                <h2 className="text-3xl">Alex Beciana</h2>
+                <Link href="/#intro">
+                    <a className="text-3xl sm:text-4xl md:text-3xl font-reross">Alex Beciana</a>
+                </Link>
                 <section
                     className="self-center float-right flex justify-end"
                 >
                     <Link
                         href="/#about"
                     >
-                        <h2 className="text-3xl">about</h2>
+                        <a className="text-3xl hidden lg:block font-reross">about</a>
                     </Link>
                     <Link
                         href="/#portfolio"
                     >
-                        <h2 className="text-3xl pl-5 lg:pl-10">portfolio</h2>
+                        <a className="text-3xl pl-5 lg:pl-10 hidden lg:block font-reross">portfolio</a>
                     </Link>
                     <Link
                         href="/#blog"
                     >
-                        <h2 className="text-3xl pl-5 lg:pl-10">blog</h2>
+                        <a className="text-3xl pl-5 lg:pl-10 hidden lg:block font-reross">blog</a>
                     </Link>
                     <Link
                         href="/#reviews"
                     >
-                        <h2 className="text-3xl pl-5 lg:pl-10">reviews</h2>
+                        <a className="text-3xl pl-5 lg:pl-10 hidden lg:block font-reross">reviews</a>
                     </Link>
                     <Link
                         href="/#contact"
                     >
-                        <h2 className="text-3xl pl-5 lg:pl-10">contact</h2>
+                        <a className="text-3xl pl-5 lg:pl-10 hidden lg:block font-reross">contact</a>
                     </Link>
                 </section>
             </section>
