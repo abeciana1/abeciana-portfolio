@@ -142,3 +142,12 @@ a {
     transition: all 0.8s cubic-bezier(0, 0, 0.23, 1);
     background-position: 0%;
 }
+
+.menu-line {
+  position: absolute;
+  transition: transform 0.5s;
+  -webkit-transition-timing-function: cubic-bezier(1, 0.01, 0, 1);
+  -webkit-transition-timing-function: cubic-bezier(1, 0.01, 0, 1.22);
+  transition-timing-function: cubic-bezier(1, 0.01, 0, 1.22);
+  pointer-events: none;
+}

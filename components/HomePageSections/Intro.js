@@ -16,8 +16,9 @@ const Intro = () => {
                     </div>
                 </section>
                 <section
-                    className="mt-16 flex flex-col md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-x-10 justify-items-center item-stretch"
+                    className="mt-16 flex flex-col md:grid md:grid-cols-2 lg:grid-cols-3 justify-items-center item-stretch"
                 >
+                    {/* <div>/</div> */}
                     <IntroNav/>
                     <div className="justify-item-center self-center mx-auto z-50">
                         <img

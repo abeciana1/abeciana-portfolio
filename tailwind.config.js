@@ -8,6 +8,9 @@ module.exports = {
       ...defaultTheme.fontFamily,
       reross: ['reross-quadratic', 'sans-serif']
     },
+    colors: {
+      ...defaultTheme.colors,
+    },
     extend: {},
   },
   variants: {
