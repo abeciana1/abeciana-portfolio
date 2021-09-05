@@ -1,14 +1,12 @@
 import '../styles/globals.css'
 import 'tailwindcss/tailwind.css'
-import Head from 'next/head'
+import Header from '../components/utils/header'
 
 
 function MyApp({ Component, pageProps }) {
   return (
     <>
-      <Head>
-        <link rel="stylesheet" href="https://use.typekit.net/bsh6twa.css"/>
-      </Head>
+      <Header />
       <Component {...pageProps} />
     </>
   )
