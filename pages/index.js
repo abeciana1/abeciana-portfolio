@@ -3,6 +3,9 @@ import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 
+//! import home page sections here
+import Intro from '../components/HomePageSections/Intro'
+
 export default function Home() {
   return (
     <React.Fragment>
@@ -14,7 +17,7 @@ export default function Home() {
         </Head>
 
         <main className={styles.main}>
-          
+          <Intro/>
         </main>
 
         <footer className={styles.footer}>
