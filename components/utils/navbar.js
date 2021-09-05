@@ -1,10 +1,13 @@
 import React from 'react';
 import Link from 'next/link'
+import PageMargin from './PageMargin'
 
 const NavBar = () => {
 
     return (
         <React.Fragment>
+            <PageMargin>
+
             <section
                 className="flex item-stretch justify-between"
             >
@@ -39,6 +42,7 @@ const NavBar = () => {
                     </Link>
                 </section>
             </section>
+            </PageMargin>
         </React.Fragment>
     )
 }
