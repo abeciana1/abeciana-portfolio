@@ -35,10 +35,10 @@ const Portfolio = (props) => {
                             </h2>
                             Full-stack software engineer with an entrepreneurial spirit with 5 years of digital marketing, product management, and community management experience, working in tech (startup to FAANG), education, and music as well as leading a profitable startup. I'm a recent Flatiron School graduate and accustomed to the Agile methodology, working across technical and non-technical teams, and managing project roadmaps.
                         </div>
-                        <div className="self-center absolute left-2/4">
+                        <div className="self-center absolute left-1/4">
                             <img
                                 src="/amulets.png"
-                                className="w-10/12"
+                                className=""
                             />
                         </div>
                     </section>
