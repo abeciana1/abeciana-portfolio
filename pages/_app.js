@@ -1,4 +1,5 @@
 import '../styles/globals.css'
+import '../styles/about-section.css'
 import 'tailwindcss/tailwind.css'
 import Header from '../components/utils/header'
 import NavBar from '../components/utils/navbar'

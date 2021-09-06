@@ -16,7 +16,7 @@ const Intro = () => {
                     </div>
                 </section>
                 <section
-                    className="homepage-section mt-16 pb-32 flex flex-col md:grid md:grid-cols-2 lg:grid-cols-3 justify-items-center item-stretch"
+                    className="homepage-section mt-8 pb-32 flex flex-col md:grid md:grid-cols-2 lg:grid-cols-3 justify-items-center item-stretch"
                 >
                     <IntroNav/>
                     <div className="justify-item-center self-center mx-auto z-30">

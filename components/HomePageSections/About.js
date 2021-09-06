@@ -1,16 +1,16 @@
-import React from 'react';
+import React, { useState } from 'react';
 import PageMargin from '../utils/PageMargin'
 
-import { Transition } from '@headlessui/react'
+const About = (props) => {
 
-const About = () => {
+    // const [aboutAnimate, setAboutAnimate] = useState(false)
 
     return (
         <React.Fragment>
             <PageMargin>
                 <section
                     id="about"
-                    className="homepage-section mt-16 flex flex-col md:grid md:grid-cols-2 justify-items-center item-stretch"
+                    className="homepage-section mt-16 pb-32 flex flex-col md:grid md:grid-cols-2 justify-items-center item-stretch"
                 >
                         <section
                             className="self-center justify-self-start"
@@ -36,22 +36,15 @@ const About = () => {
                         <section
                             className="self-center justify-self-start"
                         >
-                            <Transition
-                                show={true}
-                                enter="transition-opacity duration-700"
-                                enterFrom="opacity-0"
-                                enterTo="opacity-100"
-                                leave="transition-opacity duration-150"
-                                leaveFrom="opacity-100"
-                                leaveTo="opacity-0"
-                            >
-                            <div>
+                        {props.aboutAnimate ? 
+                            <div className="profile-callout">
                                 <img 
                                     src="/profile-callout.png"
                                     className="transform translate-x-10"
                                 />
                             </div>
-                            </Transition>
+                        : null
+                        }
                         </section>
                 </section>
             </PageMargin>
