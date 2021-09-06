@@ -16,7 +16,7 @@ const Intro = () => {
                     </div>
                 </section>
                 <section
-                    className="mt-16 pb-32 flex flex-col md:grid md:grid-cols-2 lg:grid-cols-3 justify-items-center item-stretch"
+                    className="homepage-section mt-16 pb-32 flex flex-col md:grid md:grid-cols-2 lg:grid-cols-3 justify-items-center item-stretch"
                 >
                     <IntroNav/>
                     <div className="justify-item-center self-center mx-auto z-30">
@@ -27,7 +27,7 @@ const Intro = () => {
                     </div>
                     <div className="code-card justify-item-center self-center hidden sm:block">
                         <div className="code-wrapper">
-                            <div className="code text-lg font-mono">
+                            <div className="code text-lg">
                                 <div className="code-line">
                                     <span className="code-counter">
                                         1

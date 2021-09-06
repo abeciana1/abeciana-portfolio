@@ -6,7 +6,7 @@ module.exports = {
   theme: {
     fontFamily: {
       ...defaultTheme.fontFamily,
-      reross: ['reross-quadratic', 'sans-serif']
+      reross: ['reross-quadratic', 'sans-serif'],
     },
     colors: {
       ...defaultTheme.colors,
