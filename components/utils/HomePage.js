@@ -7,6 +7,7 @@ import Head from 'next/head'
 import Intro from '../HomePageSections/Intro'
 import About from '../HomePageSections/About'
 import Portfolio from '../HomePageSections/Portfolio'
+import Blog from '../HomePageSections/Blog'
 
 const HomePage = () => {
 
@@ -45,6 +46,7 @@ const HomePage = () => {
         <Intro />
         <About aboutAnimate={aboutAnimate} />
         <Portfolio portfolioAnimate={portfolioAnimate} />
+        <Blog />
     </React.Fragment>
   )
 }
