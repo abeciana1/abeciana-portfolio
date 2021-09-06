@@ -22,7 +22,7 @@ const IntroNav = () => {
         setYPosition(e.target.offsetTop)
     }
 
-    console.log("y", yPosition)
+    // console.log("y", yPosition)
 
     return (
         <React.Fragment>
@@ -34,10 +34,13 @@ const IntroNav = () => {
             >
                     {/* <section className="nav"> */}
                     <span
-                        className="menu-line self-center text-6xl font-reross float-left text-gray-300 pt-2"
+                        className="menu-line ml-10 self-center text-6xl font-reross float-left text-gray-300 pt-2"
                     style={{ "top": `${yPosition}px`}}
                     >/</span>
-                    <div className="ml-10">
+                    <div 
+                        className="ml-20"
+                        style={{"color": "#292F36"}}
+                    >
                         <Link
                             href="/"
                             onHover={(e) => handleMouseEnter(e)}

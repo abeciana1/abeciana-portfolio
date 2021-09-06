@@ -10,6 +10,11 @@ module.exports = {
     },
     colors: {
       ...defaultTheme.colors,
+      white: "#F8F8F8",
+      black: "#292F36",
+      red: "#DF2935",
+      yellow: "#F7B538",
+      blue: "#3C91E6"
     },
     extend: {},
   },

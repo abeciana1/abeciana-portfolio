@@ -9,28 +9,31 @@ html {
 h1, h2, h3, h4, h5, h6 {
   /* font-family: carlmarx, sans-serif; */
   font-family: reross-quadratic, sans-serif;
+  color: #292F36;
   font-weight: 400;
   font-style: normal;
 }
 
-/* p, div {
+p, div, a {
+  color: #292F36;
   font-family: futura-pt,sans-serif;
   font-weight: 400;
   font-style: normal;
-} */
+}
 
 html, body, footer, main {
   padding: 0px;
   margin: 0px;
   width: 100vw;
-  position: fixed;
+  background: #F8F8F8;
+  color: #292F36;
+  /* position: fixed; */
   font-family: futura-pt,sans-serif;
   font-weight: 400;
   font-style: normal;
 }
 
 a {
-  color: inherit;
   text-decoration: none;
 }
 
@@ -104,7 +107,7 @@ a {
 
 .code {
   background: #f7f7fc;
-  color: #2b4667;
+  color: #292F36;
   font-family: Roboto Mono;
   font-weight: 500;
   letter-spacing: -.18px;
@@ -131,8 +134,8 @@ a {
 .anim-text {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    background-image: -webkit-gradient(linear, left top, right top, from(#ec3737), color-stop(50%, #ec3737), color-stop(50%, #000000));
-    background-image: linear-gradient(to right, #ec3737, #ec3737 50%, #000000 50%);
+    background-image: -webkit-gradient(linear, left top, right top, from(#ec3737), color-stop(50%, #ec3737), color-stop(50%, #292F36));
+    background-image: linear-gradient(to right, #ec3737, #ec3737 50%, #292F36 50%);
     background-size: 200% 100%;
     background-position: 100%;
 }
@@ -150,4 +153,13 @@ a {
   -webkit-transition-timing-function: cubic-bezier(1, 0.01, 0, 1.22);
   transition-timing-function: cubic-bezier(1, 0.01, 0, 1.22);
   pointer-events: none;
+}
+
+#scrolled {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: '#F8F8F8';
+  width: 100%;
+  z-index: 50;
 }

@@ -16,11 +16,10 @@ const Intro = () => {
                     </div>
                 </section>
                 <section
-                    className="mt-16 flex flex-col md:grid md:grid-cols-2 lg:grid-cols-3 justify-items-center item-stretch"
+                    className="mt-16 pb-32 flex flex-col md:grid md:grid-cols-2 lg:grid-cols-3 justify-items-center item-stretch"
                 >
-                    {/* <div>/</div> */}
                     <IntroNav/>
-                    <div className="justify-item-center self-center mx-auto z-50">
+                    <div className="justify-item-center self-center mx-auto z-30">
                         <img
                             src="/profile-pic.png"
                             className="shadow-xl rounded-full w-2/3 md:w-3/5 mx-auto bg-white"
