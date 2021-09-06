@@ -6,10 +6,12 @@ import Head from 'next/head'
 //! import home page sections here
 import Intro from '../HomePageSections/Intro'
 import About from '../HomePageSections/About'
+import Portfolio from '../HomePageSections/Portfolio'
 
 const HomePage = () => {
 
   const [aboutAnimate, setAboutAnimate] = useState(false)
+  const [portfolioAnimate, setPortfolioAnimate] = useState(false)
 
       const handleAboutScroll = () => {
         const offset = window.scrollY;
@@ -18,10 +20,20 @@ const HomePage = () => {
         } else {
             setAboutAnimate(false)
         }
-    };
+      };
+  
+      const handlePortfolioScroll = () => {
+        const offset = window.scrollY;
+        if (offset > 900) {
+            setPortfolioAnimate(true)
+        } else {
+            setPortfolioAnimate(false)
+        }
+      }
 
     useEffect(() => {
         window.addEventListener('scroll', handleAboutScroll);
+        window.addEventListener('scroll', handlePortfolioScroll);
     });
 
   return (
@@ -32,6 +44,7 @@ const HomePage = () => {
         </Head>
         <Intro />
         <About aboutAnimate={aboutAnimate} />
+        <Portfolio portfolioAnimate={portfolioAnimate} />
     </React.Fragment>
   )
 }
