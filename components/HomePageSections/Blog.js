@@ -8,7 +8,7 @@ const Blog = (props) => {
             <section  className="homepage-section blog-background mt-16 pb-16 my-4">
                     <div
                     id="blog"
-                        className="text-5xl pt-1 font-reross flex flex-col text-yellow leading-relaxed ml-5 md:ml-10"
+                        className="text-5xl pt-4 font-reross flex flex-col text-yellow leading-relaxed ml-5 md:ml-10"
                     >
                         blog
                     </div>
