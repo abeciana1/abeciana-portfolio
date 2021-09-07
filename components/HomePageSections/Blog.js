@@ -4,7 +4,7 @@ const Blog = (props) => {
 
     return (
         <React.Fragment>
-            
+            {props.blogAnimate ? 
             <section
                 id="blog"
                 className="blog-background py-16 -ml-32"
@@ -25,6 +25,7 @@ const Blog = (props) => {
                     </section>
                 </section>
             </section>
+            : null}
         </React.Fragment>
     )
 }

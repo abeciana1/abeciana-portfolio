@@ -13,10 +13,11 @@ const HomePage = () => {
 
   const [aboutAnimate, setAboutAnimate] = useState(false)
   const [portfolioAnimate, setPortfolioAnimate] = useState(false)
+  const [blogAnimate, setBlogAnimate] = useState(false)
 
       const handleAboutScroll = () => {
         const offset = window.scrollY;
-        if (offset > 450) {
+        if (offset > 550) {
             setAboutAnimate(true)
         } else {
             setAboutAnimate(false)
@@ -25,16 +26,26 @@ const HomePage = () => {
   
       const handlePortfolioScroll = () => {
         const offset = window.scrollY;
-        if (offset > 900) {
+        if (offset > 1000) {
             setPortfolioAnimate(true)
         } else {
             setPortfolioAnimate(false)
+        }
+      }
+  
+      const handleBlogScroll = () => {
+        const offset = window.scrollY;
+        if (offset > 1550) {
+            setBlogAnimate(true)
+        } else {
+            setBlogAnimate(false)
         }
       }
 
     useEffect(() => {
         window.addEventListener('scroll', handleAboutScroll);
         window.addEventListener('scroll', handlePortfolioScroll);
+        window.addEventListener('scroll', handleBlogScroll);
     });
 
   return (
@@ -46,7 +57,7 @@ const HomePage = () => {
         <Intro />
         <About aboutAnimate={aboutAnimate} />
         <Portfolio portfolioAnimate={portfolioAnimate} />
-        <Blog />
+        <Blog blogAnimate={blogAnimate} />
     </React.Fragment>
   )
 }
