@@ -55,6 +55,13 @@ const Blog = (props) => {
                         </div>
                     </section>
                     </section>
+                    <section className="justify-self-start ml-5 md:ml-10">
+                        <button
+                            className="bg-black text-lg text-white font-medium py-2 px-14 rounded-full"
+                        >
+                            See all
+                        </button>
+                    </section>
                 </section>
                 : null}
         </React.Fragment>
