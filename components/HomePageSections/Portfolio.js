@@ -5,8 +5,11 @@ const Portfolio = (props) => {
 
     return (
         <React.Fragment>
+            <section
+                id="portfolio"
+            >
+                <br/>
                 <section
-                    id="portfolio"
                     className="homepage-section mt-16 pb-16 flex flex-col md:grid md:grid-cols-3 justify-items-center item-stretch my-4 ml-5 md:ml-10"
                 >
                     <section
@@ -21,7 +24,8 @@ const Portfolio = (props) => {
                                 chevrons to change between projects
                             </section>
                     </section>
-                    {props.portfolioAnimate ? 
+                    {props.portfolioAnimate ?
+                    <>
                     <section 
                         className="portfolio-background py-16 self-end col-span-2 flex justify-items-center item-stretch mt-16"
                     >
@@ -42,7 +46,6 @@ const Portfolio = (props) => {
                             />
                         </div>
                     </section>
-                    : null}
                     <section className="justify-self-start">
                         <button
                             className="bg-black text-lg text-white font-medium py-2 px-14 rounded-full"
@@ -50,7 +53,10 @@ const Portfolio = (props) => {
                             See all
                         </button>
                     </section>
+                    </>
+                    : null}
                 </section>
+            </section>
         </React.Fragment>
     )
 }

@@ -8,7 +8,7 @@ const Intro = () => {
         <React.Fragment>
             <PageMargin>
                 <section
-                    id="home"
+                    id="intro"
                     className="mt-16 text-center"
                 >
                     <div>
