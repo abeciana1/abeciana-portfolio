@@ -22,7 +22,7 @@ const Blog = (props) => {
                         blog
                     </div>
                 <section
-                    className="md:grid md:grid-cols-3 justify-items-center item-stretch z-50"
+                    className="md:grid md:grid-cols-3 justify-items-center item-stretch z-50 ml-2"
                 >
                         <section
                             className="self-center justify-self-start z-50"
