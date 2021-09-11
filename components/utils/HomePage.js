@@ -35,7 +35,7 @@ const HomePage = () => {
   
       const handleBlogScroll = () => {
         const offset = window.scrollY;
-        if (offset > 1550) {
+        if (offset > 1590) {
             setBlogAnimate(true)
         } else {
             setBlogAnimate(false)
@@ -48,6 +48,7 @@ const HomePage = () => {
         window.addEventListener('scroll', handleBlogScroll);
     });
 
+  console.log(blogAnimate)
   return (
     <React.Fragment>
         <Head>
