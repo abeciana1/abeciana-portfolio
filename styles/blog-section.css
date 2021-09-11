@@ -41,12 +41,12 @@
 } */
 
 .blog-background {
-    background-image: url('/blog-circle.svg');
-    background-repeat: no-repeat;
-    background-position: left;
+    /* background-image: url('/blog-circle.svg'); */
+    /* background-repeat: no-repeat; */
+    /* background-position: left; */
 	-webkit-animation: bounce-in-top 1.5s both;
 	        animation: bounce-in-top 1.5s both;
-    background-size: 500px
+    /* background-size: 500px */
 }
 
 @-webkit-keyframes bounce-in-top {

@@ -26,7 +26,7 @@ const HomePage = () => {
   
       const handlePortfolioScroll = () => {
         const offset = window.scrollY;
-        if (offset > 1000) {
+        if (offset > 900) {
             setPortfolioAnimate(true)
         } else {
             setPortfolioAnimate(false)

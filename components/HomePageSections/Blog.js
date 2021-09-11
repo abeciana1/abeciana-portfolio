@@ -14,15 +14,18 @@ const Blog = (props) => {
             <section
                 id="blog"
                 className="homepage-section blog-background mt-16 pb-16 my-4 z-40"
-            >
+                >
+                    <img
+                        src="/blog-circle.svg"
+                        className="blog-background w-4/12 mt-32"
+                    />
                     <div
-                    
-                        className="text-5xl pt-4 font-reross flex flex-col text-yellow leading-relaxed ml-5 md:ml-10"
+                        className="absolute text-5xl pt-4 font-reross flex flex-col text-yellow leading-relaxed ml-5 md:ml-10 top-5"
                     >
                         blog
                     </div>
                 <section
-                    className="md:grid md:grid-cols-3 justify-items-center item-stretch z-50 ml-2"
+                    className="absolute md:grid md:grid-cols-3 justify-items-center item-stretch z-50 top-16"
                 >
                         <section
                             className="self-center justify-self-start z-50"
@@ -61,8 +64,6 @@ const Blog = (props) => {
                             </div>
                         </section>
                     </section>
-            </section>
-            )}
             <section className="mt-10">
                 <section className="absolute justify-self-start ml-5 md:ml-10 -mt-32">
                     <button
@@ -72,6 +73,8 @@ const Blog = (props) => {
                     </button>
                 </section>
             </section>
+            </section>
+            )}
             {/* <section id="blog" className="homepage-section blog-background mt-16 pb-16 my-4">
                 {props.blogAnimate ?
                     <>
