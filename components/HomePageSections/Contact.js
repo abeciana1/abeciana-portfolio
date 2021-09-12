@@ -1,5 +1,7 @@
 import React from 'react'
 
+import ContactForm from '../utils/forms/ContactForm'
+
 const Contact = (props) => {
 
     return (
@@ -13,6 +15,11 @@ const Contact = (props) => {
                 >
                     contact
                 </div>
+                <section
+                    className=""
+                >
+                    <ContactForm />
+                </section>
             </section>
         </React.Fragment>
     )
