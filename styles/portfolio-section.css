@@ -30,3 +30,16 @@
     opacity: 1;
   }
 }
+
+
+.project-card {
+  max-width: 580px;
+  max-height: 287px;
+}
+
+@media (max-width: 426px) {
+  .project-card {
+    height: 580px;
+    width: 287px;
+  }
+}

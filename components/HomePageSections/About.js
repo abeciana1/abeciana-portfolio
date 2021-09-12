@@ -10,7 +10,7 @@ const About = (props) => {
             <PageMargin>
                 <section
                     id="about"
-                    className="homepage-section sticky top-0 mt-16 pb-32 flex flex-col md:grid md:grid-cols-2 justify-items-center item-stretch"
+                    className="homepage-section sticky top-0 mt-16 lg:pb-32 flex flex-col md:grid md:grid-cols-2 justify-items-center item-stretch"
                 >
                         <section
                             className="self-center justify-self-start"
@@ -27,7 +27,7 @@ const About = (props) => {
                                 Alex Beciana
                             </div>
                             <div
-                                className="leading-10 text-lg w-3/4"
+                                className="leading-10 text-lg lg:w-3/4"
                             >
                                 Full-stack software engineer with an entrepreneurial spirit with 5 years of digital marketing, product management, and community management experience, working in tech (startup to FAANG), education, and music as well as leading a profitable startup. I'm a recent Flatiron School graduate and accustomed to the Agile methodology, working across technical and non-technical teams, and managing project roadmaps.
                             </div>
