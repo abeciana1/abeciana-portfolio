@@ -8,6 +8,8 @@ import Intro from '../HomePageSections/Intro'
 import About from '../HomePageSections/About'
 import Portfolio from '../HomePageSections/Portfolio'
 import Blog from '../HomePageSections/Blog'
+import Reviews from '../HomePageSections/Reviews'
+import Contact from '../HomePageSections/Contact'
 
 const HomePage = () => {
 
@@ -59,6 +61,8 @@ const HomePage = () => {
         <About aboutAnimate={aboutAnimate} />
         <Portfolio portfolioAnimate={portfolioAnimate} />
         <Blog blogAnimate={blogAnimate} />
+        <Reviews />
+        <Contact />
     </React.Fragment>
   )
 }

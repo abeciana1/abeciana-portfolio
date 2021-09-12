@@ -10,7 +10,7 @@ const Portfolio = (props) => {
             >
                 <br/>
                 <section
-                    className="homepage-section mt-16 pb-16 flex flex-col md:grid md:grid-cols-3 justify-items-center item-stretch my-4 ml-5 md:ml-10"
+                    className="homepage-section mt-16 pb-16 flex flex-col md:grid md:grid-cols-3 justify-items-center item-stretch ml-5 md:ml-10"
                 >
                     <section
                         className="self-start justify-self-start col-span-1"
