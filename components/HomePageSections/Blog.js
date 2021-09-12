@@ -30,7 +30,7 @@ const Blog = (props) => {
                         >
                             <img
                                 src="/amulets.png"
-                                className="mx-auto w-5/6 self-center"
+                                className="mx-auto w-5/6 self-center object-center"
                             />
                         </section>
                         <section className="self-center justify-self-end z-50">
@@ -57,7 +57,7 @@ const Blog = (props) => {
                                 <div className="pt-16">
                                 <img
                                     src="/amulets.png"
-                                    className="mx-auto w-5/6"
+                                    className="mx-auto w-5/6 object-center"
                                 />
                             </div>
                         </section>

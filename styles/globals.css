@@ -168,3 +168,9 @@ a {
 .homepage-section {
   min-height: 682px;
 }
+
+@media (max-width: 426px) {
+  .homepage-section {
+    min-height: 300px;
+  }
+}

@@ -1,3 +1,7 @@
+.testimonial {
+    /* max-width: 287[] */
+}
+
 .testimonial-pic {
     max-width: 206px;
 }
@@ -12,4 +16,16 @@
     max-height: 287px;
     width: 580px;
     height: 287px;
+}
+
+@media (max-width: 425px) {
+    .testimonial-rec2 {
+        height: 580px;
+        width: 287px;
+    }
+
+    .testimonial-rec {
+        height: 580px;
+        width: 287px;
+    }
 }

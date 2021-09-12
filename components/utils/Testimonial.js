@@ -5,10 +5,10 @@ const Testimonial = (props) => {
     return (
         <React.Fragment>
             <section
-                className="relative"
+                className="relative testimonial flex"
             >
                 <div
-                    className="ml-44"
+                    className=" lg:ml-44"
                 >
                     <div
                         className="absolute z-40 testimonial-pic"
@@ -18,11 +18,14 @@ const Testimonial = (props) => {
                             className="rounded-full bg-yellow p-3"
                         />
                     </div>
+                    <div
+                        className="font-reross lg:ml-56 text-2xl pt-56 lg:pt-0 pb-10 lg:pb-0"
+                    >Tashawn Williams — Sr. Manager, Software Engineering Instruction</div>
                         <div
-                            className="absolute testimonial-rec2 bg-blue shadow-xl rounded-3xl ml-56 mt-16 z-0"
+                            className="absolute testimonial-rec2 bg-blue shadow-xl rounded-3xl ml-12 lg:ml-56 mt-16 z-0"
                         ></div>
                         <div
-                            className="absolute bg-white testimonial-rec shadow-xl leading-10 p-10 rounded-3xl z-30 ml-44 overflow-auto overscroll-contain"
+                            className="absolute bg-white testimonial-rec shadow-xl leading-10 p-10 rounded-3xl z-30 lg:ml-44 overflow-auto overscroll-contain"
                         >
                             I’ve been a Lead Instructor at Flatiron School for close to 3 years and have graduated over 1500 students. I don’t often write recommendations but I do when I notice something special. There are 3 things I look for in a student to gauge their likelihood to be highly successful engineers: resiliency, ability to receive feedback, and impact on others. Alex exhibits all three.
                             <br/>
@@ -30,7 +33,6 @@ const Testimonial = (props) => {
                             <br/> 
                             Alex has proven that he is self motivated and committed to learning and growing as a developer. I firmly believe he will be a valuable addition to any team.
                         </div>
-                        
                 </div>
             </section>
         </React.Fragment>
