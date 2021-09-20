@@ -31,7 +31,9 @@ const About = (props) => {
                             >
                                 Full-stack software engineer with an entrepreneurial spirit with 5 years of digital marketing, product management, and community management experience, working in tech (startup to FAANG), education, and music as well as leading a profitable startup. I'm a recent Flatiron School graduate and accustomed to the Agile methodology, working across technical and non-technical teams, and managing project roadmaps.
                             </div>
-                            <div>
+                            <div
+                                className="pt-5 hidden md:block"
+                            >
                                 <img src="https://readme-jokes.vercel.app/api" alt="Jokes Card" />
                             </div>
                             </section>

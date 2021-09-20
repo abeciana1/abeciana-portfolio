@@ -11,7 +11,7 @@ const Blog = (props) => {
                 {props.blogAnimate && (
             <section
                 id="blog"
-                className="homepage-section blog-background mt-16 pb-16 my-4 z-40"
+                className="homepage-section blog-background mt-16 pb-16 my-4 z-40 hidden lg:block"
                 >
                     <img
                         src="/blog-circle.svg"

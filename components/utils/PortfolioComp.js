@@ -7,9 +7,7 @@ const PortfolioComp = (props) => {
                     {/* <div
                         className="lg:ml-56 text-2xl pt-56 lg:pt-0 pb-10 lg:pb-0"
                     ></div> */}
-                        <div
-                            className="absolute testimonial-rec2 bg-red shadow-xl rounded-3xl ml-12 lg:ml-56 mt-16 z-0 left-5 lg:left-0"
-                        ></div>
+                    {/* <div> */}
                         <div
                             className="absolute left-5 lg:left-0 bg-white testimonial-rec shadow-xl leading-10 p-10 rounded-3xl z-30 lg:ml-44 overflow-auto overscroll-contain"
                         >
@@ -22,6 +20,10 @@ const PortfolioComp = (props) => {
                             <br/> 
                             Alex has proven that he is self motivated and committed to learning and growing as a developer. I firmly believe he will be a valuable addition to any team.
                         </div>
+                        <div
+                            className=" testimonial-rec2 bg-red shadow-xl rounded-3xl ml-12 lg:ml-56 mt-16 z-0 left-5 lg:left-0"
+                        ></div>
+                    {/* </div> */}
         </React.Fragment>
     )
 }
