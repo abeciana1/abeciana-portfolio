@@ -1,7 +1,7 @@
 
 .portfolio-background {
-    background-image: url('/portfolio-back.svg');
-    min-height: 580px;
+    /* background-image: url('/portfolio-back.svg'); */
+    /* min-height: 580px; */
     -webkit-animation: slide-in-right 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 	    animation: slide-in-right 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }

@@ -45,7 +45,7 @@ const HomePage = () => {
       }
 
     useEffect(() => {
-      console.log(window)
+      // console.log(window)
       if (window.innerWidth > 768) {
         window.addEventListener('scroll', handleAboutScroll);
         window.addEventListener('scroll', handlePortfolioScroll);
