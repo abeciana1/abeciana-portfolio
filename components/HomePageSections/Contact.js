@@ -1,4 +1,6 @@
 import React from 'react'
+import PageMargin from '../utils/PageMargin'
+
 
 import ContactForm from '../utils/forms/ContactForm'
 
@@ -6,21 +8,24 @@ const Contact = (props) => {
 
     return (
         <React.Fragment>
-            <section
-                id="contact"
-                className="homepage-section mt-16 pb-16 flex flex-col justify-items-center item-stretch ml-5 md:ml-10"
-            >
-                <div
-                    className="text-5xl font-reross text-yellow leading-relaxed"
-                >
-                    contact
-                </div>
+            <PageMargin>
+
                 <section
-                    className=""
+                    id="contact"
+                    className="homepage-section mt-16 pb-16 flex flex-col justify-items-center item-stretch"
                 >
-                    <ContactForm />
+                    <div
+                        className="text-5xl font-reross text-yellow leading-relaxed"
+                    >
+                        contact
+                    </div>
+                    <section
+                        className=""
+                    >
+                        <ContactForm />
+                    </section>
                 </section>
-            </section>
+            </PageMargin>
         </React.Fragment>
     )
 }
