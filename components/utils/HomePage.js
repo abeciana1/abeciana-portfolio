@@ -53,7 +53,7 @@ const HomePage = () => {
       }
     });
 
-  console.log(blogAnimate)
+  // console.log(blogAnimate)
   return (
     <React.Fragment>
         <Head>
