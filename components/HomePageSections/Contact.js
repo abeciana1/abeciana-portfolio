@@ -19,9 +19,7 @@ const Contact = (props) => {
                     >
                         contact
                     </div>
-                    <section
-                        className=""
-                    >
+                    <section>
                         <ContactForm />
                     </section>
                 </section>

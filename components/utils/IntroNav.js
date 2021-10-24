@@ -1,4 +1,5 @@
-import React, {useState} from 'react'
+import React, { useState } from 'react'
+// import { Link, animateScroll as scroll } from "react-scroll";
 import Link from 'next/link'
 
 const IntroNav = () => {
