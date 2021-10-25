@@ -176,3 +176,9 @@ a {
     min-height: 300px;
   }
 }
+
+@screen md {
+  .homepage-section {
+    min-height: 500px;
+  }
+}

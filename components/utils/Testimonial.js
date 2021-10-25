@@ -23,7 +23,7 @@ const Testimonial = (props) => {
                         className="font-reross lg:ml-5 text-2xl pt-10 pb-10 lg:pb-0"
                     >Tashawn Williams — Sr. Manager, Software Engineering Instruction
                         <div
-                            className="absolute bg-white testimonial-rec shadow-xl leading-10 p-10 rounded-3xl z-30 overflow-auto overscroll-contain"
+                            className="absolute bg-white testimonial-rec shadow-xl leading-10 text-base p-10 rounded-3xl z-30 overflow-auto overscroll-contain"
                         >
                             I’ve been a Lead Instructor at Flatiron School for close to 3 years and have graduated over 1500 students. I don’t often write recommendations but I do when I notice something special. There are 3 things I look for in a student to gauge their likelihood to be highly successful engineers: resiliency, ability to receive feedback, and impact on others. Alex exhibits all three.
                             <br/>

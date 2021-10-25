@@ -13,7 +13,7 @@ const NavBar = () => {
 
     const [scrolled, setScrolled] = React.useState(false);
 
-//   const [mobileNavLinks, setMobileNavLinks] = React.useState(false);
+    const [isOpen, setOpen] = useState(false)
 
     let navBarId = '';
 
@@ -44,7 +44,7 @@ const NavBar = () => {
                 <PageMargin>
 
                 <section
-                    className="flex lg:items-stretch md:justify-between"
+                    className="hidden lg:block flex lg:items-stretch md:justify-between"
                 >
                     <a 
                         className="text-3xl sm:text-4xl md:text-3xl font-reross cursor-pointer anim-text"
@@ -118,12 +118,17 @@ const NavBar = () => {
                             duration={1000}
                             exact="true"
                             offset={-80}
-                            // href="/#contact"
                         >
                             contact
                             {/* <a className="text-3xl pl-5 lg:pl-10 hidden lg:block font-reross">contact</a> */}
                         </Link>
                     </section>
+                </section>
+                <section>
+                    <a 
+                        className="text-3xl sm:text-4xl md:text-3xl font-reross cursor-pointer anim-text"
+                        onClick={() => scrollToTop()}
+                    >Alex Beciana</a>
                 </section>
                 </PageMargin>
             </section>

@@ -16,7 +16,7 @@ const Intro = () => {
                     </div>
                 </section>
                 <section
-                    className="homepage-section mt-8 lg:pb-32 flex flex-col md:grid md:grid-cols-2 lg:grid-cols-3 justify-items-center item-stretch"
+                    className="homepage-section mt-8 lg:pb-32 flex flex-col lg:grid lg:grid-cols-3 justify-items-center item-stretch"
                 >
                     <IntroNav/>
                     <div className="justify-item-center self-center mx-auto z-30">
@@ -25,7 +25,17 @@ const Intro = () => {
                             className="shadow-xl rounded-full w-2/3 md:w-3/5 mx-auto bg-white"
                         />
                     </div>
-                    <div className="code-card justify-item-center self-center hidden sm:block">
+                        <div
+                            className="py-10 block lg:hidden mx-auto"
+                        >
+                            <h2 className="text-center text-3xl pb-5">Dev dad jokes</h2>
+                            <img 
+                                src="https://readme-jokes.vercel.app/api"
+                                alt="Jokes Card" 
+                                className="w-full"
+                                />
+                        </div>
+                    <div className="code-card justify-item-center self-center hidden lg:inline">
                         <div className="code-wrapper">
                             <div className="code text-lg">
                                 <div className="code-line">

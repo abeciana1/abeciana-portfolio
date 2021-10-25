@@ -19,7 +19,7 @@ const HomePage = () => {
 
       const handleAboutScroll = () => {
         const offset = window.scrollY;
-        if (offset > 550) {
+        if (offset > 500) {
             setAboutAnimate(true)
         } else {
             setAboutAnimate(false)
