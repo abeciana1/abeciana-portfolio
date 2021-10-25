@@ -14,8 +14,8 @@ import Contact from '../HomePageSections/Contact'
 const HomePage = () => {
 
   const [aboutAnimate, setAboutAnimate] = useState(false)
-  const [portfolioAnimate, setPortfolioAnimate] = useState(false)
-  const [blogAnimate, setBlogAnimate] = useState(false)
+  // const [portfolioAnimate, setPortfolioAnimate] = useState(true)
+  // const [blogAnimate, setBlogAnimate] = useState(true)
 
       const handleAboutScroll = () => {
         const offset = window.scrollY;
@@ -26,30 +26,30 @@ const HomePage = () => {
         }
       };
   
-      const handlePortfolioScroll = () => {
-        const offset = window.scrollY;
-        if (offset > 900 && window.innerWidth > 768) {
-            setPortfolioAnimate(true)
-        } else {
-            setPortfolioAnimate(false)
-        }
-      }
+      // const handlePortfolioScroll = () => {
+      //   const offset = window.scrollY;
+      //   if (offset > 900 && window.innerWidth > 768) {
+      //       setPortfolioAnimate(true)
+      //   } else {
+      //       setPortfolioAnimate(false)
+      //   }
+      // }
   
-      const handleBlogScroll = () => {
-        const offset = window.scrollY;
-        if (offset > 1590 && window.innerWidth > 768) {
-            setBlogAnimate(true)
-        } else {
-            setBlogAnimate(false)
-        }
-      }
+      // const handleBlogScroll = () => {
+      //   const offset = window.scrollY;
+      //   if (offset > 1590 && window.innerWidth > 768) {
+      //       setBlogAnimate(true)
+      //   } else {
+      //       setBlogAnimate(false)
+      //   }
+      // }
 
     useEffect(() => {
       // console.log(window)
       if (window.innerWidth > 768) {
         window.addEventListener('scroll', handleAboutScroll);
-        window.addEventListener('scroll', handlePortfolioScroll);
-        window.addEventListener('scroll', handleBlogScroll);
+        // window.addEventListener('scroll', handlePortfolioScroll);
+        // window.addEventListener('scroll', handleBlogScroll);
       }
     });
 
@@ -62,8 +62,9 @@ const HomePage = () => {
         </Head>
         <Intro />
         <About aboutAnimate={aboutAnimate} />
-        <Portfolio portfolioAnimate={portfolioAnimate} />
-        <Blog blogAnimate={blogAnimate} />
+        <Portfolio/>
+        {/* <Portfolio portfolioAnimate={portfolioAnimate} /> */}
+        <Blog />
         <Reviews />
         <Contact />
     </React.Fragment>

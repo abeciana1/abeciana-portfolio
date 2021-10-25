@@ -4,11 +4,11 @@ const Blog = (props) => {
 
     return (
         <React.Fragment>
-            <section
+            {/* <section
                 id="blog"
             >
-            </section>
-                {props.blogAnimate && (
+            </section> */}
+                {/* {props.blogAnimate && ( */}
             <section
                 id="blog"
                 className="homepage-section blog-background mt-16 pb-16 my-4 z-40 hidden lg:block"
@@ -72,7 +72,7 @@ const Blog = (props) => {
                 </section>
             </section>
             </section>
-            )}
+            {/* )} */}
         </React.Fragment>
     )
 }

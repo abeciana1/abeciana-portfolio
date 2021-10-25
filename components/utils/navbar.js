@@ -47,7 +47,7 @@ const NavBar = () => {
                     className="flex lg:items-stretch md:justify-between"
                 >
                     <a 
-                        className="text-3xl sm:text-4xl md:text-3xl font-reross"
+                        className="text-3xl sm:text-4xl md:text-3xl font-reross cursor-pointer anim-text"
                         onClick={() => scrollToTop()}
                     >Alex Beciana</a>
                     <section
@@ -56,20 +56,20 @@ const NavBar = () => {
                         })}
                     >
                         <Link
-                            className="text-3xl hidden lg:block font-reross cursor-pointer hover:text-red"
+                            className="text-3xl hidden lg:block mr-5 font-reross cursor-pointer anim-text"
                             activeClass="active"
                             to="about"
                             spy={true}
                             smooth={true}
                             duration={1000}
                             exact="true"
-                            offset={-80}
+                            offset={-100}
                         >
                             about
                             {/* <a className="text-3xl hidden lg:block font-reross">about</a> */}
                         </Link>
                         <Link
-                            className="text-3xl hidden lg:block font-reross cursor-pointer hover:text-red"
+                            className="text-3xl hidden lg:block mr-5 font-reross cursor-pointer anim-text"
                             activeClass="active"
                             to="portfolio"
                             spy={true}
@@ -82,9 +82,9 @@ const NavBar = () => {
                             {/* <a className="text-3xl pl-5 lg:pl-10 hidden lg:block font-reross">portfolio</a> */}
                         </Link>
                         <Link
-                            className="text-3xl hidden lg:block font-reross cursor-pointer hover:text-red"
+                            className="text-3xl hidden lg:block mr-5 font-reross cursor-pointer anim-text"
                             activeClass="active"
-                            to="portfolio"
+                            to="blog"
                             spy={true}
                             smooth={true}
                             duration={1000}
@@ -96,7 +96,7 @@ const NavBar = () => {
                             {/* <a className="text-3xl pl-5 lg:pl-10 hidden lg:block font-reross">blog</a> */}
                         </Link>
                         <Link
-                            className="text-3xl hidden lg:block font-reross cursor-pointer hover:text-red"
+                            className="text-3xl hidden lg:block mr-5 font-reross cursor-pointer anim-text"
                             activeClass="active"
                             to="reviews"
                             spy={true}
@@ -110,7 +110,7 @@ const NavBar = () => {
                             {/* <a className="text-3xl pl-5 lg:pl-10 hidden lg:block font-reross">reviews</a> */}
                         </Link>
                         <Link
-                            className="text-3xl hidden lg:block font-reross cursor-pointer hover:text-red"
+                            className="text-3xl hidden lg:block mr-5 font-reross cursor-pointer anim-text"
                             activeClass="active"
                             to="contact"
                             spy={true}

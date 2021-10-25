@@ -9,7 +9,6 @@ const Contact = (props) => {
     return (
         <React.Fragment>
             <PageMargin>
-
                 <section
                     id="contact"
                     className="homepage-section mt-16 pb-16 flex flex-col justify-items-center item-stretch"

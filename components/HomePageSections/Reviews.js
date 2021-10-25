@@ -6,9 +6,10 @@ const Reviews = (props) => {
 
     return (
         <React.Fragment>
-            <div id="reviews"></div>
+            {/* <div id="reviews"></div> */}
             <PageMargin>
                 <section
+                    id="reviews"
                     className="homepage-section mt-16 pb-16 flex flex-col justify-items-center item-stretch"
                 >
                     <div
@@ -16,7 +17,7 @@ const Reviews = (props) => {
                     >
                         reviews
                     </div>
-                    <section className="my-32">
+                    <section className="py-16">
                         <Testimonial />
                     </section>
                 </section>
