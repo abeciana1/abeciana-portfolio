@@ -6,7 +6,6 @@ const Reviews = (props) => {
 
     return (
         <React.Fragment>
-            {/* <div id="reviews"></div> */}
             <PageMargin>
                 <section
                     id="reviews"
