@@ -10,7 +10,7 @@ const About = (props) => {
             <PageMargin>
                 <section
                     id="about"
-                    className="homepage-section sticky top-0 mt-16 flex flex-col md:grid md:grid-cols-2 justify-items-center item-stretch"
+                    className="homepage-section sticky top-0 flex flex-col md:grid md:grid-cols-2 justify-items-center item-stretch"
                 >
                         <section
                             className="self-center justify-self-start"
@@ -19,12 +19,13 @@ const About = (props) => {
                             <div
                                 className="text-5xl font-reross text-yellow leading-relaxed"
                             >
-                                about
+                                about me
                             </div>
                             <div
                                 className="text-5xl font-reross leading-relaxed"
                             >
-                                Alex Beciana
+                                {/* Alex Beciana */}
+                                Hi I'm Alex
                             </div>
                             <div
                                 className="leading-10 text-lg lg:w-3/4"
@@ -34,6 +35,7 @@ const About = (props) => {
                             <div
                                 className="pt-5 hidden lg:block"
                             >
+                                <h2 className="text-left text-3xl pb-5">Dev dad jokes</h2>
                                 <img src="https://readme-jokes.vercel.app/api" alt="Jokes Card" />
                             </div>
                             </section>
@@ -45,7 +47,7 @@ const About = (props) => {
                             <div className="profile-callout">
                                 <img 
                                     src="/profile-callout.png"
-                                    className="transform translate-x-10"
+                                    className="transform translate-x-10 hidden md:inline"
                                 />
                             </div>
                         : null

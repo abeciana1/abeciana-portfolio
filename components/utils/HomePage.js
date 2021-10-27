@@ -19,7 +19,7 @@ const HomePage = () => {
 
       const handleAboutScroll = () => {
         const offset = window.scrollY;
-        if (offset > 500) {
+        if (offset > 1) {
             setAboutAnimate(true)
         } else {
             setAboutAnimate(false)
@@ -56,7 +56,7 @@ const HomePage = () => {
   // console.log(blogAnimate)
   return (
     <React.Fragment>
-        <Intro />
+        {/* <Intro /> */}
         <About aboutAnimate={aboutAnimate} />
         <Portfolio/>
         <Blog />

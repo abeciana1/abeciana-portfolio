@@ -35,190 +35,193 @@ const Intro = () => {
                                 className="w-full"
                                 />
                         </div>
-                    <div className="code-card justify-item-center self-center hidden lg:inline">
-                        <div className="code-wrapper">
+                    {/* <div className="code-card justify-item-center self-center hidden lg:inline">
+                        <code>sdlfijh</code>
+                    </div> */}
+                    <code className="code-card justify-item-center self-center hidden lg:inline">
+                        <code className="code-wrapper">
                             <div className="code text-lg">
                                 <div className="code-line">
-                                    <span className="code-counter">
+                                    <code className="code-counter">
                                         1
-                                    </span>
+                                    </code>
                                     <span className="code-text">
-                                        <span className="declaration">const </span>
-                                        <span className="function">alexBeciana</span>
-                                        <span className="util"> {" = () => {"}</span>
+                                        <code className="declaration">const </code>
+                                        <code className="function">alexBeciana</code>
+                                        <code className="util"> {" = () => {"}</code>
                                     </span>
                                 </div>
                                 <div className="code-line">
-                                    <span className="code-counter">
+                                    <code className="code-counter">
                                         2
-                                    </span>
+                                    </code>
                                     <span className="code-text sub">
-                                        <span className="function">isCommunicative</span>
-                                        <span className="util">()</span>
+                                        <code className="function">isCommunicative</code>
+                                        <code className="util">()</code>
                                     </span>
                                 </div>
                                 <div className="code-line">
-                                    <span className="code-counter">
+                                    <code className="code-counter">
                                         3
-                                    </span>
+                                    </code>
                                     <span className="code-text sub">
-                                        <span className="function">isFlexibleAndAgile</span>
-                                        <span className="util">()</span>
+                                        <code className="function">isFlexibleAndAgile</code>
+                                        <code className="util">()</code>
                                     </span>
                                 </div>
                                 <div className="code-line">
-                                    <span className="code-counter">
+                                    <code className="code-counter">
                                         4
-                                    </span>
+                                    </code>
                                     <span className="code-text sub">
-                                        <span className="function">isEntrepreneurial</span>
-                                        <span className="util">()</span>
+                                        <code className="function">isEntrepreneurial</code>
+                                        <code className="util">()</code>
                                     </span>
                                 </div>
                                 <div className="code-line">
-                                    <span className="code-counter">
+                                    <code className="code-counter">
                                         5
-                                    </span>
+                                    </code>
                                     <span className="code-text sub">
-                                        <span className="declaration">let </span>
-                                        <span>techSkills </span>
-                                        <span className="util">{"= ["}</span>
-                                        <span className="string">"React"</span>
-                                        <span className="util">, </span>
+                                        <code className="declaration">let </code>
+                                        <code>techSkills </code>
+                                        <code className="util">{"= ["}</code>
+                                        <code className="string">"React"</code>
+                                        <code className="util">, </code>
                                     </span>
                                 </div>
                                 <div className="code-line">
-                                    <span className="code-counter">
+                                    <code className="code-counter">
                                         6
-                                    </span>
+                                    </code>
                                     <span className="code-text sub">
-                                        <span className="string">"Redux"</span>
-                                        <span className="util">, </span>
-                                        <span className="string">"JavaScript"</span>
-                                        <span className="util">, </span>
-                                        <span className="string">"OOP"</span>
-                                        <span className="util">, </span>
+                                        <code className="string">"Redux"</code>
+                                        <code className="util">, </code>
+                                        <code className="string">"JavaScript"</code>
+                                        <code className="util">, </code>
+                                        <code className="string">"OOP"</code>
+                                        <code className="util">, </code>
                                     </span>
                                 </div>
                                 <div className="code-line">
-                                    <span className="code-counter">
+                                    <code className="code-counter">
                                         7
-                                    </span>
+                                    </code>
                                     <span className="code-text sub">
-                                        <span className="string">"Ruby"</span>
-                                        <span className="util">, </span>
-                                        <span className="string">"Ruby on Rails"</span>
-                                        <span className="util">, </span>
-                                        <span className="string">"HTML"</span>
-                                        <span className="util">, </span>
+                                        <code className="string">"Ruby"</code>
+                                        <code className="util">, </code>
+                                        <code className="string">"Ruby on Rails"</code>
+                                        <code className="util">, </code>
+                                        <code className="string">"HTML"</code>
+                                        <code className="util">, </code>
                                     </span>
                                 </div>
                                 <div className="code-line">
-                                    <span className="code-counter">
+                                    <code className="code-counter">
                                         8
-                                    </span>
+                                    </code>
                                     <span className="code-text sub">
-                                        <span className="string">"CSS"</span>
-                                        <span className="util">, </span>
-                                        <span className="string">"Git"</span>
-                                        <span className="util">, </span>
-                                        <span className="string">"NextJS"</span>
-                                        <span className="util">, </span>
-                                        <span className="string">"Node"</span>
-                                        <span className="util">, </span>
+                                        <code className="string">"CSS"</code>
+                                        <code className="util">, </code>
+                                        <code className="string">"Git"</code>
+                                        <code className="util">, </code>
+                                        <code className="string">"NextJS"</code>
+                                        <code className="util">, </code>
+                                        <code className="string">"Node"</code>
+                                        <code className="util">, </code>
                                     </span>
                                 </div>
                                 <div className="code-line">
-                                    <span className="code-counter">
+                                    <code className="code-counter">
                                         9
-                                    </span>
+                                    </code>
                                     <span className="code-text sub">
-                                        <span className="string">"Express"</span>
-                                        <span className="util">, </span>
-                                        <span className="string">"Twilio"</span>
-                                        <span className="util">, </span>
+                                        <code className="string">"Express"</code>
+                                        <code className="util">, </code>
+                                        <code className="string">"Twilio"</code>
+                                        <code className="util">, </code>
                                     </span>
                                 </div>
                                 <div className="code-line">
-                                    <span className="code-counter">
+                                    <code className="code-counter">
                                         10
-                                    </span>
+                                    </code>
                                     <span className="code-text sub">
-                                        <span className="string">"TypeScript"</span>
-                                        <span className="util">, </span>
-                                        <span className="string">"REST"</span>
-                                        <span className="util">] </span>
+                                        <code className="string">"TypeScript"</code>
+                                        <code className="util">, </code>
+                                        <code className="string">"REST"</code>
+                                        <code className="util">] </code>
                                     </span>
                                 </div>
                                 <div className="code-line">
-                                    <span className="code-counter">
+                                    <code className="code-counter">
                                         11
-                                    </span>
+                                    </code>
                                     <span className="code-text sub">
-                                        <span className="declaration">let </span>
-                                        <span>otherSkills </span>
-                                        <span className="util">{"= ["}</span>
-                                        <span className="string">"Graphic </span>
-                                        <span className="util">, </span>
+                                        <code className="declaration">let </code>
+                                        <code>otherSkills </code>
+                                        <code className="util">{"= ["}</code>
+                                        <code className="string">"Graphic </code>
+                                        <code className="util">, </code>
                                     </span>
                                 </div>
                                 <div className="code-line">
-                                    <span className="code-counter">
+                                    <code className="code-counter">
                                         12
-                                    </span>
+                                    </code>
                                     <span className="code-text sub">
-                                        <span className="string">Design"</span>
-                                        <span className="util">, </span>
-                                        <span className="string">"Digital Marketing"</span>
-                                        <span className="util">] </span>
+                                        <code className="string">Design"</code>
+                                        <code className="util">, </code>
+                                        <code className="string">"Digital Marketing"</code>
+                                        <code className="util">] </code>
                                     </span>
                                 </div>
                                 <div className="code-line">
-                                    <span className="code-counter">
+                                    <code className="code-counter">
                                         13
-                                    </span>
+                                    </code>
                                     <span className="code-text sub">
-                                        <span>console</span>
-                                        <span className="util">.</span>
-                                        <span className="function">log</span>
-                                        <span className="util">(</span>
-                                        <span>techSkills</span>
-                                        <span className="util">)</span>
+                                        <code>console</code>
+                                        <code className="util">.</code>
+                                        <code className="function">log</code>
+                                        <code className="util">(</code>
+                                        <code>techSkills</code>
+                                        <code className="util">)</code>
                                     </span>
                                 </div>
                                 <div className="code-line">
-                                    <span className="code-counter">
+                                    <code className="code-counter">
                                         14
-                                    </span>
+                                    </code>
                                     <span className="code-text sub">
-                                        <span>console</span>
-                                        <span className="util">.</span>
-                                        <span className="function">log</span>
-                                        <span className="util">(</span>
-                                        <span>otherSkills</span>
-                                        <span className="util">)</span>
+                                        <code>console</code>
+                                        <code className="util">.</code>
+                                        <code className="function">log</code>
+                                        <code className="util">(</code>
+                                        <code>otherSkills</code>
+                                        <code className="util">)</code>
                                     </span>
                                 </div>
                                 <div className="code-line">
-                                    <span className="code-counter">
+                                    <code className="code-counter">
                                         15
-                                    </span>
+                                    </code>
                                     <span className="code-text">
-                                        <span className="util">{"}"}</span>
+                                        <code className="util">{"}"}</code>
                                     </span>
                                 </div>
                                 <div className="code-line">
-                                    <span className="code-counter">
+                                    <code className="code-counter">
                                         16
-                                    </span>
-                                    <span className="code-text">
-                                        <span className="function">alexBeciana</span>
-                                        <span className="util">()</span>
-                                    </span>
+                                    </code>
+                                    <code className="code-text">
+                                        <code className="function">alexBeciana</code>
+                                        <code className="util">()</code>
+                                    </code>
                                 </div>
                             </div>
-                    </div>
-                    </div>
+                    </code>
+                    </code>
                 </section>
             </PageMargin>
         </React.Fragment>

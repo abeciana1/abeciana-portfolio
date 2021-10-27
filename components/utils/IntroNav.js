@@ -4,10 +4,10 @@ import Link from 'next/link'
 
 const IntroNav = () => {
 
-    const [ yPosition, setYPosition ] = useState(235)
+    const [ yPosition, setYPosition ] = useState(203)
 
     const handleMouseEnter = (e) => {
-        // console.log("mouse enter", e)
+        console.log("mouse enter", e)
         setYPosition(e.target.offsetTop)
     }
 
@@ -31,7 +31,7 @@ const IntroNav = () => {
                 className="flex self-center justify-items-center item-stretch hidden lg:block"
                 onMouseEnter={(e) => handleMouseEnter(e)}
                 onMouseMove={(e) => handleMouseMove(e)}
-                onMouseLeave={(e) => setYPosition(235)}
+                onMouseLeave={(e) => setYPosition(203)}
             >
                     {/* <section className="nav"> */}
                     <span
