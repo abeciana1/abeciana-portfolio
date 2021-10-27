@@ -7,12 +7,12 @@ const IntroNav = () => {
     const [ yPosition, setYPosition ] = useState(235)
 
     const handleMouseEnter = (e) => {
-        console.log("mouse enter", e)
+        // console.log("mouse enter", e)
         setYPosition(e.target.offsetTop)
     }
 
     const handleMouseMove = (e) => {
-        console.log("mouse move", e)
+        // console.log("mouse move", e)
         // setYPosition(e.clientY)
         setYPosition(e.target.offsetTop)
     }
