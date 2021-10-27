@@ -18,7 +18,7 @@ const IntroNav = () => {
     }
 
     const handleMouseLeave = (e) => {
-        console.log("mouse leave", e)
+        // console.log("mouse leave", e)
         // setYPosition(e.clientY)
         setYPosition(e.target.offsetTop)
     }
