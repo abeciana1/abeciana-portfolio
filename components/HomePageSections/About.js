@@ -46,7 +46,7 @@ const About = (props) => {
                         {props.aboutAnimate ? 
                             <div className="profile-callout">
                                 <img 
-                                    src="/profile-callout.png"
+                                    src="/profile-callout-edited.png"
                                     className="transform translate-x-10 hidden md:inline"
                                 />
                             </div>
