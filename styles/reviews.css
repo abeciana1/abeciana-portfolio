@@ -1,0 +1,27 @@
+.testimonial-pic {
+    max-width: 206px;
+}
+
+.testimonial-rec {
+    max-width: 580px;
+    max-height: 287px;
+}
+
+.testimonial-rec2 {
+    max-width: 580px;
+    max-height: 287px;
+    width: 580px;
+    height: 287px;
+}
+
+@media (max-width: 426px) {
+    .testimonial-rec2 {
+        height: 580px;
+        width: 287px;
+    }
+
+    .testimonial-rec {
+        height: 580px;
+        width: 287px;
+    }
+}

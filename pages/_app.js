@@ -1,14 +1,23 @@
 import '../styles/globals.css'
+import '../styles/about-section.css'
+import '../styles/portfolio-section.css'
+import '../styles/blog-section.css'
+import '../styles/reviews.css'
+
 import 'tailwindcss/tailwind.css'
+
 import Head from 'next/head'
+
+import NavBar from '../components/utils/navbar'
 
 
 function MyApp({ Component, pageProps }) {
   return (
     <>
       <Head>
-        <link rel="stylesheet" href="https://use.typekit.net/bsh6twa.css"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
       </Head>
+      <NavBar/>
       <Component {...pageProps} />
     </>
   )
