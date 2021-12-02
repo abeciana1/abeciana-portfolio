@@ -1,5 +1,4 @@
 import React from 'react';
-import PostListing from '../utils/PostListing'
 
 const Blog = (props) => {
 
@@ -26,7 +25,6 @@ const Blog = (props) => {
                 <section
                     className="absolute md:grid md:grid-cols-3 justify-items-center item-stretch z-50 top-16"
                 >
-                    <PostListing/>
                         <section
                             className="self-center justify-self-start z-50"
                         >

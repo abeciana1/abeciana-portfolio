@@ -1,13 +1,19 @@
 import React from 'react';
 const { Client } = require("@notionhq/client")
 
+import PostCard from '../../components/utils/PostCard'
+import Dropdown from '../../components/utils/forms/Dropdown'
+
 const BlogHome = ({posts}) => {
 
-    console.log(posts)
 
     return (
         <React.Fragment>
-            
+            <section>
+                {posts.map((post) => {
+                    return <PostCard key={post.id} post={post} /> 
+                })}
+            </section>
         </React.Fragment>
     )
 }
