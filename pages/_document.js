@@ -11,7 +11,8 @@ const MyDocument = () => {
                 <link rel="stylesheet" href="https://use.typekit.net/bsh6twa.css" />
                 <link rel="preconnect" href="https://fonts.googleapis.com"/>
                 <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true" />
-                <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet"/>
+                <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet" />
+                {/* <script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/21004082.js"></script> */}
             </Head>
             <body>
                 <Main />
