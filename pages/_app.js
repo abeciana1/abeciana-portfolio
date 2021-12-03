@@ -8,19 +8,29 @@ import 'tailwindcss/tailwind.css'
 
 import Head from 'next/head'
 
-import NavBar from '../components/utils/navbar'
+import HomeNavBar from '../components/utils/HomeNavBar'
+import PageNavBar from '../components/utils/PageNavBar'
+
+import { withRouter } from 'next/router'
 
 
-function MyApp({ Component, pageProps }) {
+function MyApp({ Component, pageProps, router }) {
+
+  console.log(router);
+
   return (
     <>
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1"/>
       </Head>
-      <NavBar/>
+      {router.asPath === "/" ? 
+        <HomeNavBar />
+        :
+        <PageNavBar/>
+        }
       <Component {...pageProps} />
     </>
   )
 }
 
-export default MyApp
+export default withRouter(MyApp)
