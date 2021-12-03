@@ -33,6 +33,12 @@ export async function getStaticProps() {
             direction: 'ascending',
         },
     ],
+    filter: {
+        property: 'Status',
+        select: {
+            equals: 'Published'
+        }
+    }
     });
 
     return {

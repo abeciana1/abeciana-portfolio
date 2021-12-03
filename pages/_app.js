@@ -16,8 +16,6 @@ import { withRouter } from 'next/router'
 
 function MyApp({ Component, pageProps, router }) {
 
-  console.log(router);
-
   return (
     <>
       <Head>
