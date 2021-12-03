@@ -1,11 +1,13 @@
-import React from 'react';
+import React, {useState} from 'react';
 import Link from 'next/link'
 
+// TODO - Add blog post teaser comp on hover covering with meta data
+// TODO - Add column for excerpt tex -- use for hover cover ^^
 
 
 const PostCard = ({ post }) => {
-    
-    console.log(post.properties);
+
+    const [mouseHover, setHover] = useState(true)
 
     const slug = post["properties"]["Slug"]["rich_text"][0]["plain_text"]
     const featuredImage = post["properties"]["FeaturedImage"].files[0].file.url
@@ -15,29 +17,20 @@ const PostCard = ({ post }) => {
     const title = post["properties"]["Name"]["title"][0]["plain_text"]
     const publishedDate = post["properties"]["Published Date"]["date"]["start"]
 
-//     "Status": {
-//         "id": "%7CnIj",
-//         "type": "select",
-//         "select": {
-//             "id": "6d64b34b-6732-47ac-ac3f-a3b31f111148",
-//             "name": "Published",
-//             "color": "green"
-//         }
-//     },
-// }
-
-
     return (
         <React.Fragment>
             <Link
-                href={`/blog${slug}`}
+                href={`/blog/${slug}`}
             >
                 <a>
-                    <div>
-                        <img
-                            src={featuredImage}
-                            className=""
-                        />
+                    <div
+                        
+                    >
+                        {mouseHover ? 
+                                <img
+                                    src={featuredImage}
+                                />
+                        : null}
                     </div>
                 </a>
             </Link>

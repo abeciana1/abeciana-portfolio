@@ -5,6 +5,8 @@ import PostCard from '../../components/utils/PostCard'
 import Dropdown from '../../components/utils/forms/Dropdown'
 import PageMargin from '../../components/utils/PageMargin'
 
+// TODO - add blog post filtering
+
 const BlogHome = ({posts}) => {
 
 
