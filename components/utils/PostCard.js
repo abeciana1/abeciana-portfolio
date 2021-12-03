@@ -22,16 +22,17 @@ const PostCard = ({ post }) => {
             <Link
                 href={`/blog/${slug}`}
             >
-                <a>
-                    <div
-                        
-                    >
-                        {mouseHover ? 
+                <a
+                    onMouseEnter={() => setHover(!mouseHover)}
+                    onMouseLeave={() => setHover(!mouseHover)}
+                >
+                    {mouseHover ? 
+                        <div>
                                 <img
                                     src={featuredImage}
                                 />
-                        : null}
-                    </div>
+                        </div>
+                    : null}
                 </a>
             </Link>
         </React.Fragment>
