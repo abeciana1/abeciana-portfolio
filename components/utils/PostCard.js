@@ -7,6 +7,10 @@ const PostCard = ({ post }) => {
     
     console.log(post.properties);
 
+    const slug = post["properties"]["Slug"]["rich_text"][0]["plain_text"]
+    // const Tags;
+    const featuredImage = post["properties"]["FeaturedImage"].files[0].file.url
+
 // {
 //     "Tags": {
 //         "id": "3342",
@@ -128,9 +132,16 @@ const PostCard = ({ post }) => {
     return (
         <React.Fragment>
             <Link
-                href={`/blog/${post["properties"]["Slug"]["rich_text"][0]["plain_text"]}`}
+                href={`/blog${slug}`}
             >
-                <a>{`${post["properties"]["Slug"]["rich_text"][0]["plain_text"]}`}</a>
+                <a>
+                    <div>
+                        <img
+                            src={featuredImage}
+                            className=""
+                        />
+                    </div>
+                </a>
             </Link>
         </React.Fragment>
     )
