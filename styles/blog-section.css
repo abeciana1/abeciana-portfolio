@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 /* .blog-section {
         align-items: flex-start;
         display: flex;
@@ -152,4 +156,13 @@
     -webkit-animation-timing-function: ease-out;
             animation-timing-function: ease-out;
   }
+}
+
+@screen lg {
+        .post-card-hover {
+                max-width: 337.66px;
+                min-width: 337.66px;
+                max-height: 168.83px;
+                min-height: 168.83px;
+        }
 }

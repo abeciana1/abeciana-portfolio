@@ -3,13 +3,15 @@ import Link from 'next/link'
 import cx from 'classnames'
 import { Transition } from '@headlessui/react'
 
+import moment from 'moment'
+
 // TODO - Add blog post teaser comp on hover covering with meta data
 // TODO - Add column for excerpt tex -- use for hover cover ^^
 
 
 const PostCard = ({ post }) => {
 
-    const [mouseHover, setHover] = useState(false)
+    const [mouseHover, setHover] = useState(true)
 
     const slug = post["properties"]["Slug"]["rich_text"][0]["plain_text"]
     const featuredImage = post["properties"]["FeaturedImage"].files[0].file.url
@@ -19,7 +21,9 @@ const PostCard = ({ post }) => {
     const title = post["properties"]["Name"]["title"][0]["plain_text"]
     const publishedDate = post["properties"]["Published Date"]["date"]["start"]
 
-    console.log(post["properties"]["Tags"]["multi_select"]);
+    const excerpt = post["properties"]["Excerpt"]["rich_text"][0]["plain_text"]
+
+    // console.log(post["properties"]["Excerpt"]["rich_text"][0]["plain_text"]);
     return (
         <React.Fragment>
             <Link
@@ -37,19 +41,19 @@ const PostCard = ({ post }) => {
                         </div>
                     : 
                         <div
-                            className="w-full border border-2 border-black"
+                            className="post-card-hover w-full border border-2 border-black overflow-hidden overflow-clip"
                         >
                             <div
-                                className="font-medium text-lg px-2"
+                                className="font-medium text-lg px-2 flex flex-wrap"
                             >
-                                {title}
+                                {title + " — " + moment(new Date(publishedDate)).format("MMM Do YY")}
                             </div>
                             <div
                                 className="flex flex-wrap px-1"
                             >
                                 {post["properties"]["Tags"]["multi_select"].map((tag) => {
                                     return <span
-                                        className={cx("ml-1 my-1 py-0.5 px-1.5 rounded-full text-sm leading-tight", {
+                                        className={cx("ml-1 my-1 py-0.5 px-1.5 rounded-full text-xs leading-tight", {
                                             ['bg-yellow-700 text-white bg-opacity-60']: tag.color === "brown",
                                             ['bg-yellow-500	text-white bg-opacity-60']: tag.color === 'orange',
                                             ['bg-pink-300 text-white']: tag.color === 'pink',
@@ -63,6 +67,11 @@ const PostCard = ({ post }) => {
                                         })}
                                     >{tag.name}</span>
                                 })}
+                            </div>
+                            <div
+                                className="p-2"
+                            >
+                                {excerpt.substring(0, 80) + "..."}
                             </div>
                         </div>
                     }
