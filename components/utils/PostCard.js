@@ -11,7 +11,7 @@ import moment from 'moment'
 
 const PostCard = ({ post }) => {
 
-    const [mouseHover, setHover] = useState(true)
+    const [mouseHover, setHover] = useState(false)
 
     const slug = post["properties"]["Slug"]["rich_text"][0]["plain_text"]
     const featuredImage = post["properties"]["FeaturedImage"].files[0].file.url
@@ -30,27 +30,28 @@ const PostCard = ({ post }) => {
                 href={`/blog/${slug}`}
             >
                 <a
+                    className="z-50"
                     onMouseEnter={() => setHover(!mouseHover)}
                     onMouseLeave={() => setHover(!mouseHover)}
                 >
-                    {mouseHover ? 
-                        <div>
+                        <div
+                            
+                        >
                             <img
                                 src={featuredImage}
                             />
                         </div>
-                    : 
                     <Transition
-                        show={true}
-                        enter="transition ease-in-out duration-900 transform"
-                        enterFrom="-translate-x-full"
-                        enterTo="translate-x-0"
-                        leave="transition ease-in-out duration-900 transform"
-                        leaveFrom="translate-x-0"
-                        leaveTo="-translate-x-full"
+                        show={mouseHover}
+                        enter="transition ease-in-out duration-700 transform"
+                        enterFrom="-translate-y-0 opacity-0"
+                        enterTo="translate-y-0 opacity-100"
+                        leave="transition ease-in-out duration-700 transform"
+                        leaveFrom="translate-y-0 opacity-100"
+                        leaveTo="-translate-y-0 opacity-0"
                     >
                         <div
-                            className="post-card-hover w-full border border-2 border-black overflow-hidden"
+                            className="w-full border border-2 border-black z-40"
                         >
                             <div
                                 className="font-medium text-lg px-2 flex flex-wrap"
@@ -84,7 +85,6 @@ const PostCard = ({ post }) => {
                             </div>
                         </div>
                     </Transition>
-                    }
                 </a>
             </Link>
         </React.Fragment>
