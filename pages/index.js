@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import Head from 'next/head'
+const { Client } = require("@notionhq/client")
 
 //! import home page sections here
 import Intro from '../components/HomePageSections/Intro'
@@ -9,7 +10,11 @@ import Blog from '../components/HomePageSections/Blog'
 import Reviews from '../components/HomePageSections/Reviews'
 import Contact from '../components/HomePageSections/Contact'
 
-const HomePage = () => {
+const HomePage = (props) => {
+
+  const {
+    posts
+  } = props
 
   const [aboutAnimate, setAboutAnimate] = useState(false)
 
@@ -32,11 +37,39 @@ const HomePage = () => {
         </div>
         <About aboutAnimate={aboutAnimate} />
         <Portfolio/>
-        <Blog />
+        <Blog
+          posts={posts}
+        />
         <Reviews />
         <Contact />
     </React.Fragment>
   )
+}
+
+export async function getStaticProps() {
+    const notion = new Client({ auth: process.env.NOTION_API_KEY });
+    const response = await notion.databases.query({
+        database_id: process.env.NOTION_DATABASE_ID,
+        sorts: [
+        {
+            property: 'Published Date',
+            direction: 'ascending',
+        },
+    ],
+    filter: {
+        property: 'Status',
+        select: {
+            equals: 'Published'
+        }
+    }
+    });
+
+    return {
+        props: {
+            posts: response.results,
+        },
+        revalidate: 1,
+    };
 }
 
 export default HomePage
