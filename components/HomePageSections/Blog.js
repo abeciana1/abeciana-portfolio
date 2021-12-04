@@ -18,7 +18,7 @@ const Blog = (props) => {
                         className="blog-background w-4/12 mt-32"
                     />
                     <div
-                        className="absolute text-5xl pt-4 font-reross flex flex-col text-yellow leading-relaxed ml-5 md:ml-10 top-5"
+                        className="absolute text-5xl pt-4 font-reross flex flex-col text-altYellow leading-relaxed ml-5 md:ml-10 top-5"
                     >
                         blog
                     </div>

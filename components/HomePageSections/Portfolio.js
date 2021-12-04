@@ -21,7 +21,7 @@ const Portfolio = (props) => {
                             className=""
                         >
                             <div
-                                className="justify-self-start text-5xl font-reross text-yellow"
+                                className="justify-self-start text-5xl font-reross text-altYellow"
                             >
                                 portfolio
                                 <div

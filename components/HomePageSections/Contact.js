@@ -14,7 +14,7 @@ const Contact = (props) => {
                     className="homepage-section mt-16 pb-16 flex flex-col justify-items-center item-stretch"
                 >
                     <div
-                        className="text-5xl font-reross text-yellow leading-relaxed"
+                        className="text-5xl font-reross text-altYellow leading-relaxed"
                     >
                         contact
                     </div>

@@ -17,7 +17,7 @@ const About = (props) => {
                         >
                             <section>
                             <div
-                                className="text-5xl font-reross text-yellow leading-relaxed"
+                                className="text-5xl font-reross text-altYellow leading-relaxed"
                             >
                                 about me
                             </div>
