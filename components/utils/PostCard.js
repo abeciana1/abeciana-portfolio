@@ -30,7 +30,7 @@ const PostCard = ({ post }) => {
                 href={`/blog/${slug}`}
             >
                 <a
-                    className={cx("z-50", {
+                    className={cx("z-40", {
                         ['shadow-xl rounded-lg']: mouseHover
                     })}
                     onMouseEnter={() => setHover(!mouseHover)}
@@ -53,7 +53,7 @@ const PostCard = ({ post }) => {
                         leaveTo="-translate-y-0 opacity-0"
                     >
                         <div
-                            className="w-full border-black rounded-lg z-40"
+                            className="w-full border-black rounded-lg z-30"
                         >
                             <div
                                 className="font-medium text-lg px-2 flex flex-wrap"
