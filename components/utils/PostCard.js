@@ -41,7 +41,13 @@ const PostCard = ({ post }) => {
                         </div>
                     : 
                     <Transition
-                        
+                        show={true}
+                        enter="transition ease-in-out duration-900 transform"
+                        enterFrom="-translate-x-full"
+                        enterTo="translate-x-0"
+                        leave="transition ease-in-out duration-900 transform"
+                        leaveFrom="translate-x-0"
+                        leaveTo="-translate-x-full"
                     >
                         <div
                             className="post-card-hover w-full border border-2 border-black overflow-hidden"
