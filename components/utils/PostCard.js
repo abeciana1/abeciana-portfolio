@@ -11,7 +11,7 @@ import moment from 'moment'
 
 const PostCard = ({ post }) => {
 
-    const [mouseHover, setHover] = useState(true)
+    const [mouseHover, setHover] = useState(false)
 
     const slug = post["properties"]["Slug"]["rich_text"][0]["plain_text"]
     const featuredImage = post["properties"]["FeaturedImage"].files[0].file.url
@@ -41,7 +41,7 @@ const PostCard = ({ post }) => {
                         </div>
                     : 
                         <div
-                            className="post-card-hover w-full border border-2 border-black overflow-hidden overflow-clip"
+                            className="post-card-hover w-full border border-2 border-black overflow-hidden"
                         >
                             <div
                                 className="font-medium text-lg px-2 flex flex-wrap"
@@ -67,11 +67,11 @@ const PostCard = ({ post }) => {
                                         })}
                                     >{tag.name}</span>
                                 })}
-                            </div>
-                            <div
-                                className="p-2"
-                            >
-                                {excerpt.substring(0, 80) + "..."}
+                                <div
+                                    className="p-2"
+                                >
+                                    {excerpt}
+                                </div>
                             </div>
                         </div>
                     }
