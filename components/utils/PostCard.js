@@ -11,7 +11,7 @@ import moment from 'moment'
 
 const PostCard = ({ post }) => {
 
-    const [mouseHover, setHover] = useState(false)
+    const [mouseHover, setHover] = useState(true)
 
     const slug = post["properties"]["Slug"]["rich_text"][0]["plain_text"]
     const featuredImage = post["properties"]["FeaturedImage"].files[0].file.url
@@ -40,6 +40,9 @@ const PostCard = ({ post }) => {
                             />
                         </div>
                     : 
+                    <Transition
+                        
+                    >
                         <div
                             className="post-card-hover w-full border border-2 border-black overflow-hidden"
                         >
@@ -74,6 +77,7 @@ const PostCard = ({ post }) => {
                                 </div>
                             </div>
                         </div>
+                    </Transition>
                     }
                 </a>
             </Link>
