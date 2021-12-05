@@ -11,7 +11,7 @@ const Contact = (props) => {
             <PageMargin>
                 <section
                     id="contact"
-                    className="homepage-section mt-16 pb-16 flex flex-col justify-items-center item-stretch"
+                    className="homepage-section mt-32 pb-16 flex flex-col justify-items-center item-stretch"
                 >
                     <div
                         className="text-5xl font-reross text-altYellow leading-relaxed"

@@ -21,7 +21,7 @@ const Blog = ({posts}) => {
                     blog
                     </div>
                     <section
-                        className="absolute md:grid md:grid-cols-3 justify-items-center item-stretch z-50 top-16 gap-12 mx-5 md:mx-10"
+                        className="absolute md:grid md:grid-cols-3 justify-items-center item-stretch z-50 top-32 gap-12 mx-5 md:mx-10"
                     >
                             <section
                                 className="self-center justify-self-start z-50"
@@ -30,19 +30,19 @@ const Blog = ({posts}) => {
                             </section>
                             <section className="self-center justify-self-end z-50">
                                 <PostCard key={posts[1].id} post={posts[1]} />
-                                <div
+                                {/* <div
                                     className="pt-12"
                                 >
                                     <PostCard key={posts[2].id} post={posts[2]} />
-                                </div>
+                                </div> */}
                             </section>
                             <section className="self-center justify-self-end z-50">
-                                <PostCard key={posts[3].id} post={posts[3]} />
-                                <div
+                                <PostCard key={posts[2].id} post={posts[2]} />
+                                {/* <div
                                     className="pt-12"
                                 >
                                     <PostCard key={posts[4].id} post={posts[4]} />
-                                </div>
+                                </div> */}
                             </section>
                         </section>
                 <section className="mt-10">

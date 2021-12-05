@@ -10,6 +10,20 @@ import Blog from '../components/HomePageSections/Blog'
 import Reviews from '../components/HomePageSections/Reviews'
 import Contact from '../components/HomePageSections/Contact'
 
+// TODO - delete homepage file (irrelevant)
+// TODO - create mobile rendering of blog section on homepage
+// TODO - Restyle and design blog page
+// TODO - Create about page
+// TODO - Create contact page
+// TODO - Create portfolio page
+// TODO - Redo blog section - just 6 posts, grid, heading, 'see more' button
+// TODO - Reach clients for testimonials
+// TODO - Add testimonials to graphcms
+// TODO - create image for contact section
+// TODO - Hook up hubspot for site
+// TODO - Add button on about section to go to full page
+// TODO - Delete intro nav (irrevelent)
+
 const HomePage = (props) => {
 
   const {
