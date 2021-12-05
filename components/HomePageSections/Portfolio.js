@@ -1,7 +1,7 @@
 import React from 'react';
 import PortfolioComp from '../utils/PortfolioComp'
 import PageMargin from '../utils/PageMargin'
-// import Link from 'next/link'
+import Link from 'next/link'
 
 const Portfolio = (props) => {
 
@@ -35,6 +35,24 @@ const Portfolio = (props) => {
                             className="col-span-2 self-start lg:pb-32"
                         >
                         <PortfolioComp/>
+                    <section className="mt-10">
+                    <section className="justify-self-start">
+                        <Link
+                            href="/blog"
+                        >
+                            <button
+                                className="bg-black text-lg text-white font-medium py-2 px-10 rounded-full flex content-center"
+                            >
+                                See more
+                                <span>
+                                    <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 pt-1 ml-2" fill="none" viewBox="0 0 24 24" stroke="white">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                                    </svg>
+                                </span>
+                            </button>
+                        </Link>
+                    </section>
+                </section>
                         </section>
                     </section>
                 </section>
