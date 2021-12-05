@@ -53,7 +53,7 @@ export async function getStaticProps() {
         sorts: [
         {
             property: 'Published Date',
-            direction: 'ascending',
+            direction: 'descending',
         },
     ],
     filter: {
