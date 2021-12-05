@@ -5,8 +5,6 @@ import cx from 'classnames'
 
 const About = (props) => {
 
-    console.log(props);
-
     return (
         <React.Fragment>
             <PageMargin>

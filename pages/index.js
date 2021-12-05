@@ -16,9 +16,9 @@ import Contact from '../components/HomePageSections/Contact'
 // TODO - Create portfolio page
 // TODO - Reach clients for testimonials
 // TODO - Add testimonials to graphcms
-// TODO - create image for contact section
 // TODO - Hook up hubspot for site
 // TODO - Add button on about section to go to full page
+// TODO - Create about page subnav
 
 const HomePage = (props) => {
 
