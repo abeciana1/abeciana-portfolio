@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
 import PageMargin from '../utils/PageMargin'
+import { withRouter } from 'next/router'
+import cx from 'classnames'
 
 const About = (props) => {
 
-    // const [aboutAnimate, setAboutAnimate] = useState(false)
+    console.log(props);
 
     return (
         <React.Fragment>
@@ -15,12 +17,18 @@ const About = (props) => {
                         <section
                             className="self-center justify-self-start"
                         >
-                            <section>
-                            <div
-                                className="text-5xl font-reross text-altYellow leading-relaxed"
-                            >
-                                about me
-                            </div>
+                        <section className={cx({
+                                ['mt-10']: props.router.asPath === '/'
+                            })}>
+                            {props.router.asPath === '/' ?    
+                                null
+                                :
+                                <div
+                                    className="text-5xl font-reross text-altYellow leading-relaxed"
+                                >
+                                    about me
+                                </div>
+                            }
                             <h1
                                 className="text-5xl font-reross leading-relaxed"
                             >
@@ -58,4 +66,4 @@ const About = (props) => {
     )
 }
 
-export default About
+export default withRouter(About)
