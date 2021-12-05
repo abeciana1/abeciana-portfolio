@@ -15,7 +15,7 @@ const Portfolio = (props) => {
                 <section
                 >
                     <section
-                        className="homepage-section mt-16 lg:pb-32 flex flex-col md:grid md:grid-cols-2 justify-items-stretch items-stretch"
+                        className="homepage-section mt-16 flex flex-col md:grid md:grid-cols-2 justify-items-stretch items-stretch"
                     >
                         <section
                             className=""
@@ -32,7 +32,7 @@ const Portfolio = (props) => {
                             </div>
                         </section>
                         <section
-                            className="col-span-2 self-start lg:pb-56"
+                            className="col-span-2 self-start lg:pb-32"
                         >
                         <PortfolioComp/>
                         </section>
