@@ -19,6 +19,7 @@ import Contact from '../components/HomePageSections/Contact'
 // TODO - Hook up hubspot for site
 // TODO - Add button on about section to go to full page
 // TODO - Create about page subnav
+// TODO - Create scroll to top button reuse comp
 
 const HomePage = (props) => {
 
