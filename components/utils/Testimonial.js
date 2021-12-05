@@ -15,7 +15,7 @@ const Testimonial = (props) => {
                     >
                         <img
                             src="/tashawn-williams-picture.jpeg"
-                            className="rounded-full bg-yellow p-3"
+                            className="rounded-full bg-altYellow p-3"
                         />
                     </div>
                 </div>
@@ -32,7 +32,6 @@ const Testimonial = (props) => {
                             Alex has proven that he is self motivated and committed to learning and growing as a developer. I firmly believe he will be a valuable addition to any team.
                         </div>
                         <div
-                            // className="absolute testimonial-rec2 bg-blue shadow-xl rounded-3xl ml-12 lg:ml-10 mt-16 z-0"
                             className="absolute testimonial-rec2 bg-altBlue shadow-xl rounded-3xl ml-12 lg:ml-10 mt-16 z-0"
                         ></div>
                     </div>
