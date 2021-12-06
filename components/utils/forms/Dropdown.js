@@ -43,7 +43,6 @@ const Dropdown = (props) => {
                                 className="shadow-xl w-full md:w-1/2 py-2 rounded-xl border-2 border-black divide-y-2 divide-black"
                             >
                                 {options?.map((option, idx) => {
-
                                     return (
                                         <div
                                             onClick={(e) => {

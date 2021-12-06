@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 const { Client } = require("@notionhq/client")
-
+import { Link, animateScroll as scroll } from "react-scroll";
 import FeaturedPostCard from '../../components/utils/FeaturedPostCard'
 import PostCard from '../../components/utils/PostCard'
 import Dropdown from '../../components/utils/forms/Dropdown'
@@ -35,14 +35,38 @@ const BlogHome = ({ posts, descPosts }) => {
                     className="text-5xl font-reross text-altYellow leading-relaxed"
                 >my blog</h1>
                 <section>
-                    <Dropdown
+                    <Link
+                        className="text-3xl hidden lg:block mr-5 font-reross cursor-pointer anim-text"
+                        activeClass="active"
+                        to="recent"
+                        spy={true}
+                        smooth={true}
+                        duration={1000}
+                        exact="true"
+                        offset={5}
+                    >
+                        recent
+                    </Link>
+                    <Link
+                        className="text-3xl hidden lg:block mr-5 font-reross cursor-pointer anim-text"
+                        activeClass="active"
+                        to="all"
+                        spy={true}
+                        smooth={true}
+                        duration={1000}
+                        exact="true"
+                        offset={-100}
+                    >
+                        all
+                    </Link>
+                    {/* <Dropdown
                         className="w-1/2"
                         defaultVal={blogType ? 'Recent posts' : 'All posts'}
                         options={postType}
                         onChange={(e) => selectHandler(e)}
-                    />
+                    /> */}
                 </section>
-                {blogType ?
+                {/* {blogType ? */}
                     <>
                         <h2
                             id="recent"
@@ -61,7 +85,7 @@ const BlogHome = ({ posts, descPosts }) => {
                             })}
                         </section>
                     </>
-                    :
+                    {/* : */}
                 <>
                     <h2
                         id="all"
@@ -75,7 +99,7 @@ const BlogHome = ({ posts, descPosts }) => {
                         })}
                     </section>
                 </>
-                }
+                {/* } */}
             </PageMargin>
         </React.Fragment>
     )

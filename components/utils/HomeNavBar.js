@@ -66,7 +66,6 @@ function HomeNavBar() {
                                 offset={-100}
                             >
                                 about
-                                {/* <a className="text-3xl hidden lg:block font-reross">about</a> */}
                             </Link>
                             <Link
                                 className="text-3xl hidden lg:block mr-5 font-reross cursor-pointer anim-text"
