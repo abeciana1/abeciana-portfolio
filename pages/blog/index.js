@@ -10,22 +10,6 @@ import PageMargin from '../../components/utils/PageMargin'
 
 const BlogHome = ({ posts, descPosts }) => {
 
-    // const postType = [
-    //     'Recent posts',
-    //     'All posts'
-    // ]
-
-    // const [ blogType, setBlogType ]  = useState(true)
-
-    // const selectHandler = (e) => {
-    //     console.log("txt", e.target.innerText)
-    //     if (e.target.innerText === 'Recent posts') {
-    //         setBlogType(true)
-    //     } else {
-    //         setBlogType(false)
-    //     }
-    // }
-
     return (
         <React.Fragment>
             <PageMargin>

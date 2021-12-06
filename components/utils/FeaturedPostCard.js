@@ -3,7 +3,9 @@ import Link from 'next/link'
 import moment from 'moment';
 import cx from 'classnames'
 
-const FeaturedPostCard = ({post}) => {
+const FeaturedPostCard = ({ post }) => {
+    
+    console.log(post);
 
     const slug = post["properties"]["Slug"]["rich_text"][0]["plain_text"]
     const featuredImage = post["properties"]["FeaturedImage"].files[0].file.url
