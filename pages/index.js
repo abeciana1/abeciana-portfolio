@@ -56,7 +56,11 @@ const HomePage = (props) => {
           posts={posts}
         />
         <Reviews />
-        <Contact />
+        <section
+          className="mt-32"
+        >
+          <Contact />
+        </section>
     </React.Fragment>
   )
 }
