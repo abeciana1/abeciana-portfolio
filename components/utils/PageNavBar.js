@@ -55,7 +55,7 @@ const PageNavBar = () => {
                             className={cx("self-center float-right flex justify-end", {})}
                         >
                             <Link
-                                href="/#about"
+                                href="/about"
                             >
                                 <a
                                     className="text-3xl hidden lg:block mr-5 font-reross cursor-pointer anim-text"

@@ -20,6 +20,11 @@ import Contact from '../components/HomePageSections/Contact'
 // TODO - Add button on about section to go to full page
 // TODO - Create about page subnav
 // TODO - Create scroll to top button reuse comp
+// TODO - Add resume - available to download
+// TODO - render actual blog post
+// TODO - Add icons to public profiles
+// TODO - Add social share buttons for blog posts
+// TODO - Create meta data for pages
 
 const HomePage = (props) => {
 
