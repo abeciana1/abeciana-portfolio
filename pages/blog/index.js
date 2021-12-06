@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 const { Client } = require("@notionhq/client")
 
 import FeaturedPostCard from '../../components/utils/FeaturedPostCard'
@@ -10,6 +10,23 @@ import PageMargin from '../../components/utils/PageMargin'
 
 const BlogHome = ({ posts, descPosts }) => {
 
+    const postType = [
+        'Recent posts',
+        'All posts'
+    ]
+
+    const [ blogType, setBlogType ]  = useState(true)
+
+    const selectHandler = (e) => {
+        console.log("txt", e.target.innerText)
+        if (e.target.innerText === 'Recent posts') {
+            setBlogType(true)
+        } else {
+            setBlogType(false)
+        }
+    }
+
+    console.log(blogType);
 
     return (
         <React.Fragment>
@@ -17,33 +34,48 @@ const BlogHome = ({ posts, descPosts }) => {
                 <h1
                     className="text-5xl font-reross text-altYellow leading-relaxed"
                 >my blog</h1>
-                <h2
-                    id="recent"
-                    className="text-4xl font-reross text-altYellow leading-relaxed"
-                >recent posts</h2>
-                <section
-                    className="py-12 md:mx-16 lg:mx-44"
-                >
-                    <FeaturedPostCard key={descPosts[0].id} post={descPosts[0]} />
+                <section>
+                    <Dropdown
+                        className="w-1/2"
+                        defaultVal={blogType ? 'Recent posts' : 'All posts'}
+                        options={postType}
+                        onChange={(e) => selectHandler(e)}
+                    />
                 </section>
-                <section
-                    className="pb-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12"
-                >
-                    {descPosts.slice(1, 4).map((post) => {
-                        return <FeaturedPostCard key={post.id} post={post} />
-                    })}
-                </section>
-                <h2
-                    id="all"
-                    className="text-4xl font-reross text-altYellow leading-relaxed"
-                >all posts</h2>
-                <section
-                    className="py-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12"
-                >
-                    {posts.map((post) => {
-                        return <PostCard key={post.id} post={post} /> 
-                    })}
-                </section>
+                {blogType ?
+                    <>
+                        <h2
+                            id="recent"
+                            className="text-4xl font-reross text-altYellow leading-relaxed"
+                        >recent posts</h2>
+                        <section
+                            className="py-12 md:mx-16 lg:mx-44"
+                        >
+                            <FeaturedPostCard key={descPosts[0].id} post={descPosts[0]} />
+                        </section>
+                        <section
+                            className="pb-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12"
+                        >
+                            {descPosts.slice(1, 4).map((post) => {
+                                return <FeaturedPostCard key={post.id} post={post} />
+                            })}
+                        </section>
+                    </>
+                    :
+                <>
+                    <h2
+                        id="all"
+                        className="text-4xl font-reross text-altYellow leading-relaxed"
+                    >all posts</h2>
+                    <section
+                        className="py-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12"
+                    >
+                        {posts.map((post) => {
+                            return <PostCard key={post.id} post={post} /> 
+                        })}
+                    </section>
+                </>
+                }
             </PageMargin>
         </React.Fragment>
     )
