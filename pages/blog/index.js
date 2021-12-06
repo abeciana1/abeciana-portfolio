@@ -3,30 +3,28 @@ const { Client } = require("@notionhq/client")
 import { Link, animateScroll as scroll } from "react-scroll";
 import FeaturedPostCard from '../../components/utils/FeaturedPostCard'
 import PostCard from '../../components/utils/PostCard'
-import Dropdown from '../../components/utils/forms/Dropdown'
+// import Dropdown from '../../components/utils/forms/Dropdown'
 import PageMargin from '../../components/utils/PageMargin'
 
 // TODO - add blog post filtering
 
 const BlogHome = ({ posts, descPosts }) => {
 
-    const postType = [
-        'Recent posts',
-        'All posts'
-    ]
+    // const postType = [
+    //     'Recent posts',
+    //     'All posts'
+    // ]
 
-    const [ blogType, setBlogType ]  = useState(true)
+    // const [ blogType, setBlogType ]  = useState(true)
 
-    const selectHandler = (e) => {
-        console.log("txt", e.target.innerText)
-        if (e.target.innerText === 'Recent posts') {
-            setBlogType(true)
-        } else {
-            setBlogType(false)
-        }
-    }
-
-    console.log(blogType);
+    // const selectHandler = (e) => {
+    //     console.log("txt", e.target.innerText)
+    //     if (e.target.innerText === 'Recent posts') {
+    //         setBlogType(true)
+    //     } else {
+    //         setBlogType(false)
+    //     }
+    // }
 
     return (
         <React.Fragment>
