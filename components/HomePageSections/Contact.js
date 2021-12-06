@@ -13,11 +13,11 @@ const Contact = (props) => {
                     id="contact"
                     className="homepage-section pb-16 flex flex-col justify-items-center item-stretch"
                 >
-                    <h2
+                    <h1
                         className="text-5xl font-reross text-altYellow leading-relaxed"
                     >
                         contact
-                    </h2>
+                    </h1>
                     <section
                         className="grid grid-cols-1 md:grid-cols-2 gap-12 content-center mt-10"
                     >

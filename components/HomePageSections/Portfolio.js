@@ -20,7 +20,7 @@ const Portfolio = (props) => {
                         <section
                             className=""
                         >
-                            <h2
+                            <h1
                                 className="justify-self-start text-5xl font-reross text-altYellow"
                             >
                                 portfolio
@@ -29,7 +29,7 @@ const Portfolio = (props) => {
                                 >
                                     chevrons for switching
                                 </div>
-                            </h2>
+                            </h1>
                         </section>
                         <section
                             className="col-span-2 self-start lg:pb-32"

@@ -12,13 +12,12 @@ import Contact from '../components/HomePageSections/Contact'
 // TODO - create mobile rendering of blog section on homepage
 // TODO - Restyle and design blog page
 // TODO - Create about page
-// TODO - Create contact page
 // TODO - Create portfolio page
 // TODO - Reach clients for testimonials
 // TODO - Add testimonials to graphcms
 // TODO - Hook up hubspot for site
 // TODO - Add button on about section to go to full page
-// TODO - Create about page subnav
+// TODO - Create about page subnav based on hover
 // TODO - Create scroll to top button reuse comp
 // TODO - Add resume - available to download
 // TODO - render actual blog post

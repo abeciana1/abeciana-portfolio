@@ -22,7 +22,7 @@ const PostCard = ({ post }) => {
     const publishedDate = post["properties"]["Published Date"]["date"]["start"]
 
     const excerpt = post["properties"]["Excerpt"]["rich_text"][0]["plain_text"]
-    
+
     return (
         <React.Fragment>
             <Link

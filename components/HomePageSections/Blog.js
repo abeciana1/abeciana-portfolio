@@ -11,11 +11,11 @@ const Blog = ({posts}) => {
                 id="blog"
                 className="homepage-section blog-background mt-16 pb-16 z-40 hidden lg:block"
                 >
-                    <h2
+                    <h1
                         className="text-5xl pt-4 font-reross flex flex-col text-altYellow leading-relaxed ml-5 md:ml-10"
                     >
                     recent blog posts
-                    </h2>
+                    </h1>
                     <section
                         className="grid lg:grid-cols-3 justify-items-center item-stretch z-50 gap-12 my-12 mx-5 md:mx-10"
                     >
