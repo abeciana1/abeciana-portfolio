@@ -28,7 +28,7 @@ class ContactForm extends React.Component {
                     className=""
                 >
                     <section
-                        className="lg:mx-32 mt-10 bg-black rounded-3xl w-full md:w-3/4 lg:w-1/2 xl:w-1/3"
+                        className="bg-black rounded-3xl w-full"
                     >
                         <h2 className="text-white text-5xl pt-5 pl-10">say hi!</h2>
                         <form
@@ -84,7 +84,7 @@ class ContactForm extends React.Component {
                             <br />
                             <input
                                 type="submit"
-                                className="bg-yellow text-black text-lg py-1 px-2 rounded-xl cursor-pointer"
+                                className="bg-altYellow text-black text-lg py-1 px-2 rounded-xl cursor-pointer"
                             />
                         </form>
                     </section>

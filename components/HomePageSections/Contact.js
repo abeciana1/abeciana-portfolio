@@ -11,15 +11,27 @@ const Contact = (props) => {
             <PageMargin>
                 <section
                     id="contact"
-                    className="homepage-section mt-16 pb-16 flex flex-col justify-items-center item-stretch"
+                    className="homepage-section pb-16 flex flex-col justify-items-center item-stretch"
                 >
-                    <div
-                        className="text-5xl font-reross text-yellow leading-relaxed"
+                    <h1
+                        className="text-5xl font-reross text-altYellow leading-relaxed"
                     >
                         contact
-                    </div>
-                    <section>
+                    </h1>
+                    <section
+                        className="grid grid-cols-1 md:grid-cols-2 gap-12 content-center mt-10"
+                    >
                         <ContactForm />
+                            <div
+                                className="text-center"
+                            >
+                                <img 
+                                    src="/profile-callout-edited.png"
+                                    className="hidden md:inline"
+                                />
+                            </div>
+                        {/* <section>
+                        </section> */}
                     </section>
                 </section>
             </PageMargin>

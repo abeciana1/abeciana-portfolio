@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
 import PageMargin from '../utils/PageMargin'
+import { withRouter } from 'next/router'
+import cx from 'classnames'
+import Link from 'next/link'
 
 const About = (props) => {
-
-    // const [aboutAnimate, setAboutAnimate] = useState(false)
 
     return (
         <React.Fragment>
@@ -15,23 +16,49 @@ const About = (props) => {
                         <section
                             className="self-center justify-self-start"
                         >
-                            <section>
-                            <div
-                                className="text-5xl font-reross text-yellow leading-relaxed"
-                            >
-                                about me
-                            </div>
-                            <div
+                        <section className={cx({
+                                ['mt-10']: props.router.asPath === '/'
+                            })}>
+                            {props.router.asPath === '/' ?    
+                                null
+                                :
+                                <div
+                                    className="text-5xl font-reross text-altYellow leading-relaxed"
+                                >
+                                    about me
+                                </div>
+                            }
+                            <h1
                                 className="text-5xl font-reross leading-relaxed"
                             >
-                                {/* Alex Beciana */}
-                                Hi I'm Alex
-                            </div>
+                                Hi I'm Alex Beciana
+                            </h1>
                             <div
-                                className="leading-10 text-lg lg:w-3/4"
+                                className="leading-10 text-lg"
                             >
                                 Full-stack software engineer with an entrepreneurial spirit with 5 years of digital marketing, product management, and community management experience, working in tech (startup to FAANG), education, and music as well as leading a profitable startup. I'm a recent Flatiron School graduate and accustomed to the Agile methodology, working across technical and non-technical teams, and managing project roadmaps.
                             </div>
+                            {props.router.asPath === "/" ?
+                                <section className="mt-5">
+                                    <section className="justify-self-start ">
+                                        <Link
+                                            href="/about"
+                                        >
+                                            <button
+                                                className="bg-altRed text-lg text-white font-medium py-2 px-10 rounded-full flex content-center"
+                                            >
+                                                Experience & skills
+                                                <span>
+                                                    <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 pt-1 ml-2" fill="none" viewBox="0 0 24 24" stroke="white">
+                                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                                                    </svg>
+                                                </span>
+                                            </button>
+                                        </Link>
+                                    </section>
+                                </section>
+                                : null
+                            }
                             <div
                                 className="pt-5 hidden lg:block"
                             >
@@ -59,4 +86,4 @@ const About = (props) => {
     )
 }
 
-export default About
+export default withRouter(About)

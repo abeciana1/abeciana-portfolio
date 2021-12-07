@@ -5,9 +5,11 @@ import cx from 'classnames'
 import { Link, animateScroll as scroll } from "react-scroll";
 // import Hamburger from 'hamburger-react'
 import { Squash as Hamburger } from 'hamburger-react'
+import { withRouter } from 'next/router'
 
 
-function NavBar() {
+
+function HomeNavBar() {
 
     const scrollToTop = () => {
         scroll.scrollToTop();
@@ -42,9 +44,7 @@ function NavBar() {
             <section
                 id={navBarId}
                 className="bg-white z-50">
-
                 <PageMargin>
-
                     <section
                         className="hidden lg:block flex lg:items-stretch"
                     >
@@ -66,7 +66,6 @@ function NavBar() {
                                 offset={-100}
                             >
                                 about
-                                {/* <a className="text-3xl hidden lg:block font-reross">about</a> */}
                             </Link>
                             <Link
                                 className="text-3xl hidden lg:block mr-5 font-reross cursor-pointer anim-text"
@@ -91,8 +90,7 @@ function NavBar() {
                                 exact="true"
                                 offset={-80}
                             >
-                                                              blog
-                                {/* <a className="text-3xl pl-5 lg:pl-10 hidden lg:block font-reross">blog</a> */}
+                                blog
                             </Link>
                             <Link
                                 className="text-3xl hidden lg:block mr-5 font-reross cursor-pointer anim-text"
@@ -148,4 +146,4 @@ function NavBar() {
     );
 }
 
-export default NavBar
+export default HomeNavBar

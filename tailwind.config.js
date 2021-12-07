@@ -12,9 +12,9 @@ module.exports = {
       ...defaultTheme.colors,
       white: "#F8F8F8",
       black: "#292F36",
-      red: "#DF2935",
-      yellow: "#F7B538",
-      blue: "#3C91E6"
+      altRed: "#DF2935",
+      altYellow: "#F7B538",
+      altBlue: "#3C91E6"
     },
     extend: {},
   },

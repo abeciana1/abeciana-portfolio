@@ -21,7 +21,7 @@ const PortfolioComp = (props) => {
                             Alex has proven that he is self motivated and committed to learning and growing as a developer. I firmly believe he will be a valuable addition to any team.
                         </div>
                         <div
-                            className="testimonial-rec2 bg-red shadow-xl rounded-3xl ml-12 lg:ml-44 mt-16 z-0 left-5 lg:left-0"
+                            className="testimonial-rec2 bg-altRed shadow-xl rounded-3xl ml-12 lg:ml-44 mt-16 z-0 left-5 lg:left-0"
                         ></div>
                     {/* </div> */}
         </React.Fragment>
