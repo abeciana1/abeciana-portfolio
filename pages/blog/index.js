@@ -8,7 +8,9 @@ import PageMargin from '../../components/utils/PageMargin'
 
 // TODO - add blog post filtering
 
-const BlogHome = ({ posts, descPosts }) => {
+const BlogHome = ({ posts, descPosts, blogResponse }) => {
+
+    // console.log(blogResponse)
 
     return (
         <React.Fragment>
@@ -121,10 +123,29 @@ export async function getStaticProps() {
     }
     });
 
+    let blogSlug = 'responsive-search-react'
+
+    const blogResponse = await notion.databases.query({
+        database_id: process.env.NOTION_DATABASE_ID,
+        sorts: [
+        {
+            property: 'Published Date',
+            direction: 'ascending',
+        },
+    ],
+    filter: {
+        property: 'Slug',
+        text: {
+            contains: blogSlug
+        }
+    }
+    });
+
     return {
         props: {
             posts: response.results,
-            descPosts: descResponse.results
+            descPosts: descResponse.results,
+            blogResponse: blogResponse.results
         },
         revalidate: 1,
     };

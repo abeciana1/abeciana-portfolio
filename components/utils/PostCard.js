@@ -11,6 +11,8 @@ import moment from 'moment'
 
 const PostCard = ({ post }) => {
 
+    // console.log(post)
+
     const [mouseHover, setHover] = useState(false)
 
     const slug = post["properties"]["Slug"]["rich_text"][0]["plain_text"]
@@ -19,7 +21,7 @@ const PostCard = ({ post }) => {
         tag.name
     })
     const title = post["properties"]["Name"]["title"][0]["plain_text"]
-    const publishedDate = post["properties"]["Published Date"]["date"]["start"]
+    const publishedDate = post["properties"]["PublishedDate"]["date"]["start"]
 
     const excerpt = post["properties"]["Excerpt"]["rich_text"][0]["plain_text"]
 
