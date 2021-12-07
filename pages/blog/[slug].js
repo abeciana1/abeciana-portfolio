@@ -25,10 +25,27 @@ const BlogPost = ({ post, blocks }) => {
                 <title>Alex Beciana | {post.Name}</title>
             </Head>
             <PageMargin>
-                <h1>{post.Name}</h1>
-                <NotionRenderer
-                    blockMap={blocks}
-                />
+                <section
+                    className="py-10 leading-8"
+                >
+                    <section>
+                        <h1
+                            className="text-4xl lg:text-5xl py-5"
+                        >{post.Name}</h1>
+                        <p
+                            className="py-2 italic"
+                        >
+                            {Excerpt}
+                        </p>
+                    </section>
+                    <section
+                        className="py-4 break-words"
+                    >
+                        <NotionRenderer
+                            blockMap={blocks}
+                        />
+                    </section>
+                </section>
             </PageMargin>
         </React.Fragment>
     )
