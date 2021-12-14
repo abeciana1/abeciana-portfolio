@@ -82,7 +82,7 @@ const About = (props) => {
                         : null
                         }
                             <div
-                                className="pt-5 hidden lg:block"
+                                className="pt-5 hidden sm:block"
                             >
                                 <h2 className="text-left text-3xl pb-5">Dev dad jokes</h2>
                                 <img src="https://readme-jokes.vercel.app/api" alt="Jokes Card" />
