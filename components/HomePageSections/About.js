@@ -45,7 +45,7 @@ const About = (props) => {
                                             href="/about"
                                         >
                                             <button
-                                                className="bg-altRed text-lg text-white font-medium py-2 px-10 rounded-full flex content-center"
+                                                className="bg-altRed hover:bg-black text-lg text-white font-medium py-2 px-10 rounded-full flex content-center"
                                             >
                                                 Experience & skills
                                                 <span>
@@ -59,26 +59,34 @@ const About = (props) => {
                                 </section>
                                 : null
                             }
-                            <div
+                            {/* <div
                                 className="pt-5 hidden lg:block"
                             >
                                 <h2 className="text-left text-3xl pb-5">Dev dad jokes</h2>
                                 <img src="https://readme-jokes.vercel.app/api" alt="Jokes Card" />
-                            </div>
+                            </div> */}
                             </section>
                         </section>
                         <section
                             className="self-center justify-self-start"
                         >
-                        {props.aboutAnimate ? 
+                        {props.aboutAnimate ?
+                            <>
                             <div className="profile-callout">
                                 <img 
                                     src="/profile-callout-edited.png"
                                     className="transform translate-x-10 hidden md:inline"
                                 />
                             </div>
+                            </>
                         : null
                         }
+                            <div
+                                className="pt-5 hidden lg:block"
+                            >
+                                <h2 className="text-left text-3xl pb-5">Dev dad jokes</h2>
+                                <img src="https://readme-jokes.vercel.app/api" alt="Jokes Card" />
+                            </div>
                         </section>
                 </section>
             </PageMargin>
