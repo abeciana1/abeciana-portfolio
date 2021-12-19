@@ -10,7 +10,6 @@ import Reviews from '../components/HomePageSections/Reviews'
 import Contact from '../components/HomePageSections/Contact'
 
 // TODO - create mobile rendering of blog section on homepage
-// TODO - Restyle and design blog page
 // TODO - Create about page
 // TODO - Create portfolio page
 // TODO - Reach clients for testimonials
@@ -24,6 +23,8 @@ import Contact from '../components/HomePageSections/Contact'
 // TODO - Add icons to public profiles
 // TODO - Add social share buttons for blog posts
 // TODO - Create meta data for pages
+// TODO - create SEO title and description for blog posts
+// TODO - create reusable comp for smooth scroll - consolidate navbar comps
 
 const HomePage = (props) => {
 
@@ -70,7 +71,7 @@ export async function getStaticProps() {
         database_id: process.env.NOTION_DATABASE_ID,
         sorts: [
         {
-            property: 'Published Date',
+            property: 'PublishedDate',
             direction: 'descending',
         },
     ],

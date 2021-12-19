@@ -28,7 +28,7 @@ class ContactForm extends React.Component {
                     className=""
                 >
                     <section
-                        className="bg-black rounded-3xl w-full"
+                        className="bg-black rounded-xl w-full"
                     >
                         <h2 className="text-white text-5xl pt-5 pl-10">say hi!</h2>
                         <form
