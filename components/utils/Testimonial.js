@@ -5,6 +5,11 @@ const Testimonial = (props) => {
     return (
         <React.Fragment>
             <section
+                className="text-center"
+            >
+
+            </section>
+            {/* <section
                 className="relative testimonial flex flex-col lg:flex-row pb-32"
             >
                 <div
@@ -35,7 +40,7 @@ const Testimonial = (props) => {
                             className="absolute testimonial-rec2 bg-altBlue shadow-xl rounded-3xl ml-12 lg:ml-10 mt-16 z-0"
                         ></div>
                     </div>
-            </section>
+            </section> */}
         </React.Fragment>
     )
 }
