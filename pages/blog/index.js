@@ -8,19 +8,19 @@ import PageMargin from '../../components/utils/PageMargin'
 
 // TODO - add blog post filtering
 
-const BlogHome = ({ posts, descPosts, blogResponse }) => {
-
-    // console.log(blogResponse)
+const BlogHome = ({ posts, descPosts }) => {
 
     return (
         <React.Fragment>
             <PageMargin>
                 <h1
                     className="text-5xl font-reross text-altYellow leading-relaxed"
-                >my blog</h1>
-                <section>
+                >blog</h1>
+                <section
+                    className="flex text-3xl"
+                >
                     <Link
-                        className="text-3xl hidden lg:block mr-5 font-reross cursor-pointer anim-text"
+                        className="mr-5 font-reross cursor-pointer anim-text"
                         activeClass="active"
                         to="recent"
                         spy={true}
@@ -29,10 +29,11 @@ const BlogHome = ({ posts, descPosts, blogResponse }) => {
                         exact="true"
                         offset={5}
                     >
-                        recent
+                        recent posts
                     </Link>
+                    |
                     <Link
-                        className="text-3xl hidden lg:block mr-5 font-reross cursor-pointer anim-text"
+                        className="ml-5 font-reross cursor-pointer anim-text"
                         activeClass="active"
                         to="all"
                         spy={true}
@@ -41,7 +42,7 @@ const BlogHome = ({ posts, descPosts, blogResponse }) => {
                         exact="true"
                         offset={-100}
                     >
-                        all
+                        all posts
                     </Link>
                     {/* <Dropdown
                         className="w-1/2"
@@ -50,7 +51,6 @@ const BlogHome = ({ posts, descPosts, blogResponse }) => {
                         onChange={(e) => selectHandler(e)}
                     /> */}
                 </section>
-                {/* {blogType ? */}
                     <>
                         <h2
                             id="recent"
@@ -69,7 +69,6 @@ const BlogHome = ({ posts, descPosts, blogResponse }) => {
                             })}
                         </section>
                     </>
-                    {/* : */}
                 <>
                     <h2
                         id="all"
@@ -83,7 +82,6 @@ const BlogHome = ({ posts, descPosts, blogResponse }) => {
                         })}
                     </section>
                 </>
-                {/* } */}
             </PageMargin>
         </React.Fragment>
     )
@@ -95,7 +93,7 @@ export async function getStaticProps() {
         database_id: process.env.NOTION_DATABASE_ID,
         sorts: [
         {
-            property: 'Published Date',
+            property: 'PublishedDate',
             direction: 'ascending',
         },
     ],
@@ -111,7 +109,7 @@ export async function getStaticProps() {
         database_id: process.env.NOTION_DATABASE_ID,
         sorts: [
         {
-            property: 'Published Date',
+            property: 'PublishedDate',
             direction: 'descending',
         },
     ],
@@ -129,7 +127,7 @@ export async function getStaticProps() {
         database_id: process.env.NOTION_DATABASE_ID,
         sorts: [
         {
-            property: 'Published Date',
+            property: 'PublishedDate',
             direction: 'ascending',
         },
     ],

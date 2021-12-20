@@ -6,6 +6,8 @@ import Link from 'next/link'
 
 const About = (props) => {
 
+    
+
     return (
         <React.Fragment>
             <PageMargin>
