@@ -11,6 +11,7 @@ import PageMargin from '../../components/utils/PageMargin'
 const BlogHome = ({ posts, descPosts, blogResponse }) => {
 
     // console.log(blogResponse)
+    console.log(process.env.TESTING);
 
     return (
         <React.Fragment>
@@ -95,7 +96,7 @@ export async function getStaticProps() {
         database_id: process.env.NOTION_DATABASE_ID,
         sorts: [
         {
-            property: 'Published Date',
+            property: 'PublishedDate',
             direction: 'ascending',
         },
     ],
@@ -111,7 +112,7 @@ export async function getStaticProps() {
         database_id: process.env.NOTION_DATABASE_ID,
         sorts: [
         {
-            property: 'Published Date',
+            property: 'PublishedDate',
             direction: 'descending',
         },
     ],
@@ -129,7 +130,7 @@ export async function getStaticProps() {
         database_id: process.env.NOTION_DATABASE_ID,
         sorts: [
         {
-            property: 'Published Date',
+            property: 'PublishedDate',
             direction: 'ascending',
         },
     ],
