@@ -3,7 +3,6 @@ const { Client } = require("@notionhq/client")
 import { Link, animateScroll as scroll } from "react-scroll";
 import FeaturedPostCard from '../../components/utils/FeaturedPostCard'
 import PostCard from '../../components/utils/PostCard'
-// import Dropdown from '../../components/utils/forms/Dropdown'
 import PageMargin from '../../components/utils/PageMargin'
 
 // TODO - add blog post filtering
