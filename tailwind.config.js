@@ -14,7 +14,8 @@ module.exports = {
       black: "#292F36",
       altRed: "#DF2935",
       altYellow: "#F7B538",
-      altBlue: "#3C91E6"
+      altBlue: "#3C91E6",
+      altGray: "#BEC5C5"
     },
     fontWeight: {
       extraLight: 100,
