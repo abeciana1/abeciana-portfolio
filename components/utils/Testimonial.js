@@ -7,7 +7,7 @@ const Testimonial = (props) => {
         <React.Fragment>
             <div className="text-center">
                 <h3
-                    className="text-2xl"
+                    className="text-3xl"
                 >
                     ...valuable addition to any team.
                 </h3>
