@@ -16,7 +16,7 @@ const Reviews = (props) => {
                     >
                         reviews
                     </h1>
-                    <section className="py-16">
+                    <section className="py-5">
                         <Testimonial />
                     </section>
                 </section>

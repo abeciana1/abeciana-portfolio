@@ -8,18 +8,12 @@ const Portfolio = (props) => {
     return (
         <React.Fragment>
             <PageMargin>
-                <div
-                    id="portfolio"
-                    className="pt-16"
-                ></div>
                 <section
+                    id="portfolio"
                 >
                     <section
-                        className="homepage-section mt-16 flex flex-col md:grid md:grid-cols-2 justify-items-stretch items-stretch"
+                        className="homepage-section mt-16 justify-items-stretch items-stretch"
                     >
-                        <section
-                            className=""
-                        >
                             <h1
                                 className="justify-self-start text-5xl font-reross text-altYellow"
                             >
@@ -30,10 +24,6 @@ const Portfolio = (props) => {
                                     chevrons for switching
                                 </div>
                             </h1>
-                        </section>
-                        <section
-                            className="col-span-2 self-start lg:pb-32"
-                        >
                         <PortfolioComp/>
                     <section className="mt-10">
                     <section className="justify-self-start">
@@ -53,7 +43,6 @@ const Portfolio = (props) => {
                         </Link>
                     </section>
                 </section>
-                        </section>
                     </section>
                 </section>
             </PageMargin>
