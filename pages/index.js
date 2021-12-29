@@ -24,6 +24,7 @@ import Contact from '../components/HomePageSections/Contact'
 // TODO - Add social share buttons for blog posts
 // TODO - Create meta data for pages
 // TODO - create SEO title and description for blog posts
+// TODO - Add mobile nav menu rendering
 
 const HomePage = (props) => {
 
