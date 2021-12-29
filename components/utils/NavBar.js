@@ -1,15 +1,19 @@
 import React, { useState, useEffect } from 'react';
-// import Link from 'next/link'
+import Link from 'next/link'
 import PageMargin from './PageMargin'
 import cx from 'classnames'
-import { Link, animateScroll as scroll } from "react-scroll";
-// import Hamburger from 'hamburger-react'
 import { Squash as Hamburger } from 'hamburger-react'
 import { withRouter } from 'next/router'
 
+import SmoothScrollLink from './SmoothScrollLink'
+import { animateScroll as scroll } from "react-scroll";
 
 
-function HomeNavBar() {
+const NavBar = (props) => {
+
+    const {
+        router
+    } = props
 
     const scrollToTop = () => {
         scroll.scrollToTop();
@@ -38,7 +42,6 @@ function HomeNavBar() {
         navBarId = 'scrolled';
     }
 
-
     return (
         <React.Fragment>
             <section
@@ -48,14 +51,26 @@ function HomeNavBar() {
                     <section
                         className="hidden lg:block flex lg:items-stretch"
                     >
-                        <a
-                            className="text-3xl sm:text-4xl md:text-3xl font-reross cursor-pointer anim-text"
-                            onClick={() => scrollToTop()}
-                        >Alex Beciana</a>
+                        {router.asPath === '/' ?
+                            <a
+                                className="text-3xl sm:text-4xl md:text-3xl font-reross cursor-pointer anim-text"
+                                onClick={() => scrollToTop()}
+                            >Alex Beciana</a>
+                        :
+                        <Link
+                            href="/"
+                        >
+                            <a
+                                className="text-3xl sm:text-4xl md:text-3xl font-reross cursor-pointer anim-text"
+                            >Alex Beciana</a>
+                        </Link>
+                        }
                         <section
                             className={cx("self-center float-right flex justify-end", {})}
                         >
-                            <Link
+                        {router.asPath === '/' ?
+                        <>
+                            <SmoothScrollLink
                                 className="text-3xl hidden lg:block mr-5 font-reross cursor-pointer anim-text"
                                 activeClass="active"
                                 to="about"
@@ -64,10 +79,9 @@ function HomeNavBar() {
                                 duration={1000}
                                 exact="true"
                                 offset={-100}
-                            >
-                                about
-                            </Link>
-                            <Link
+                                linkText="about"
+                            />
+                            <SmoothScrollLink
                                 className="text-3xl hidden lg:block mr-5 font-reross cursor-pointer anim-text"
                                 activeClass="active"
                                 to="portfolio"
@@ -75,12 +89,10 @@ function HomeNavBar() {
                                 smooth={true}
                                 duration={1000}
                                 exact="true"
-                                offset={-80}
-                            >
-                                portfolio
-                                {/* <a className="text-3xl pl-5 lg:pl-10 hidden lg:block font-reross">portfolio</a> */}
-                            </Link>
-                            <Link
+                                offset={-120}
+                                linkText="portfolio"
+                            />
+                            <SmoothScrollLink
                                 className="text-3xl hidden lg:block mr-5 font-reross cursor-pointer anim-text"
                                 activeClass="active"
                                 to="blog"
@@ -89,10 +101,9 @@ function HomeNavBar() {
                                 duration={1000}
                                 exact="true"
                                 offset={-80}
-                            >
-                                blog
-                            </Link>
-                            <Link
+                                linkText="blog"
+                            />
+                            <SmoothScrollLink
                                 className="text-3xl hidden lg:block mr-5 font-reross cursor-pointer anim-text"
                                 activeClass="active"
                                 to="reviews"
@@ -101,11 +112,9 @@ function HomeNavBar() {
                                 duration={1000}
                                 exact="true"
                                 offset={-100}
-                            >
-                                reviews
-                                {/* <a className="text-3xl pl-5 lg:pl-10 hidden lg:block font-reross">reviews</a> */}
-                            </Link>
-                            <Link
+                                linkText="reviews"
+                            />
+                            <SmoothScrollLink
                                 className="text-3xl hidden lg:block mr-5 font-reross cursor-pointer anim-text"
                                 activeClass="active"
                                 to="contact"
@@ -114,10 +123,48 @@ function HomeNavBar() {
                                 duration={1000}
                                 exact="true"
                                 offset={-80}
+                                linkText="contact"
+                            />
+                        </>
+                        :
+                        <>
+                            <Link
+                                href="/about"
                             >
-                                contact
-                                {/* <a className="text-3xl pl-5 lg:pl-10 hidden lg:block font-reross">contact</a> */}
+                                <a
+                                    className="text-3xl hidden lg:block mr-5 font-reross cursor-pointer anim-text"
+                                >about</a>
                             </Link>
+                            <Link
+                                href="/portfolio"
+                            >
+                                <a
+                                    className="text-3xl hidden lg:block mr-5 font-reross cursor-pointer anim-text"
+                                >portfolio</a>
+                            </Link>
+                            <Link
+                                href="/blog"
+                            >
+                                <a
+                                    className="text-3xl hidden lg:block mr-5 font-reross cursor-pointer anim-text"
+                                >blog</a>
+                            </Link>
+                            <Link
+                                href="/reviews"
+                            >
+                                <a
+                                    className="text-3xl hidden lg:block mr-5 font-reross cursor-pointer anim-text"
+                                >reviews</a>
+                            </Link>
+                            <Link
+                                href="/contact"
+                            >
+                                <a
+                                    className="text-3xl hidden lg:block mr-5 font-reross cursor-pointer anim-text"
+                                >contact</a>
+                            </Link>
+                        </>
+                        }
                         </section>
                     </section>
                     <section
@@ -143,7 +190,7 @@ function HomeNavBar() {
                 </PageMargin>
             </section>
         </React.Fragment>
-    );
+    )
 }
 
-export default HomeNavBar
+export default withRouter(NavBar)
