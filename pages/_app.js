@@ -8,9 +8,7 @@ import '../styles/notion.css'
 import 'tailwindcss/tailwind.css'
 
 import Head from 'next/head'
-
-import HomeNavBar from '../components/utils/HomeNavBar'
-import PageNavBar from '../components/utils/PageNavBar'
+import NavBar from '../components/utils/NavBar'
 
 import { withRouter } from 'next/router'
 
@@ -22,11 +20,7 @@ function MyApp({ Component, pageProps, router }) {
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1"/>
       </Head>
-      {router.asPath === "/" ? 
-        <HomeNavBar />
-        :
-        <PageNavBar/>
-        }
+      <NavBar/>
       <Component {...pageProps} />
     </>
   )
