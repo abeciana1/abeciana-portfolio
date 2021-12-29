@@ -100,7 +100,7 @@ function HomeNavBar() {
                                 smooth={true}
                                 duration={1000}
                                 exact="true"
-                                offset={-80}
+                                offset={-100}
                             >
                                 reviews
                                 {/* <a className="text-3xl pl-5 lg:pl-10 hidden lg:block font-reross">reviews</a> */}
