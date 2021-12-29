@@ -5,10 +5,17 @@ import cx from 'classnames'
 import { Squash as Hamburger } from 'hamburger-react'
 import { withRouter } from 'next/router'
 
+import SmoothScrollLink from './SmoothScrollLink'
+import { animateScroll as scroll } from "react-scroll";
 
-const NavBar = () => {
 
-        const scrollToTop = () => {
+const NavBar = (props) => {
+
+    const {
+        router
+    } = props
+
+    const scrollToTop = () => {
         scroll.scrollToTop();
     };
 
@@ -44,6 +51,12 @@ const NavBar = () => {
                     <section
                         className="hidden lg:block flex lg:items-stretch"
                     >
+                        {router.asPath === '/' ?
+                            <a
+                                className="text-3xl sm:text-4xl md:text-3xl font-reross cursor-pointer anim-text"
+                                onClick={() => scrollToTop()}
+                            >Alex Beciana</a>
+                        :
                         <Link
                             href="/"
                         >
@@ -51,9 +64,70 @@ const NavBar = () => {
                                 className="text-3xl sm:text-4xl md:text-3xl font-reross cursor-pointer anim-text"
                             >Alex Beciana</a>
                         </Link>
+                        }
                         <section
                             className={cx("self-center float-right flex justify-end", {})}
                         >
+                        {router.asPath === '/' ?
+                        <>
+                            <SmoothScrollLink
+                                className="text-3xl hidden lg:block mr-5 font-reross cursor-pointer anim-text"
+                                activeClass="active"
+                                to="about"
+                                spy={true}
+                                smooth={true}
+                                duration={1000}
+                                exact="true"
+                                offset={-100}
+                                linkText="about"
+                            />
+                            <SmoothScrollLink
+                                className="text-3xl hidden lg:block mr-5 font-reross cursor-pointer anim-text"
+                                activeClass="active"
+                                to="portfolio"
+                                spy={true}
+                                smooth={true}
+                                duration={1000}
+                                exact="true"
+                                offset={-120}
+                                linkText="portfolio"
+                            />
+                            <SmoothScrollLink
+                                className="text-3xl hidden lg:block mr-5 font-reross cursor-pointer anim-text"
+                                activeClass="active"
+                                to="blog"
+                                spy={true}
+                                smooth={true}
+                                duration={1000}
+                                exact="true"
+                                offset={-80}
+                                linkText="blog"
+                            />
+                            <SmoothScrollLink
+                                className="text-3xl hidden lg:block mr-5 font-reross cursor-pointer anim-text"
+                                activeClass="active"
+                                to="reviews"
+                                spy={true}
+                                smooth={true}
+                                duration={1000}
+                                exact="true"
+                                offset={-100}
+                                linkText="reviews"
+                            />
+                            <SmoothScrollLink
+                                className="text-3xl hidden lg:block mr-5 font-reross cursor-pointer anim-text"
+                                activeClass="active"
+                                to="contact"
+                                spy={true}
+                                smooth={true}
+                                duration={1000}
+                                exact="true"
+                                offset={-80}
+                                linkText="contact"
+                            />
+                        </>
+                        :
+                        <>
                             <Link
                                 href="/about"
                             >
@@ -89,6 +163,8 @@ const NavBar = () => {
                                     className="text-3xl hidden lg:block mr-5 font-reross cursor-pointer anim-text"
                                 >contact</a>
                             </Link>
+                        </>
+                        }
                         </section>
                     </section>
                     <section
@@ -117,4 +193,4 @@ const NavBar = () => {
     )
 }
 
-export default NavBar
+export default withRouter(NavBar)
