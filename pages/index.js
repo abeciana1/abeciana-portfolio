@@ -12,7 +12,7 @@ import Contact from '../components/HomePageSections/Contact'
 // TODO - create mobile rendering of blog section on homepage
 // TODO - Create about page
 // TODO - Create portfolio page
-// TODO - Reach clients for testimonials
+// TODO - Reach out to clients for testimonials
 // TODO - Add testimonials to graphcms
 // TODO - Hook up hubspot for site
 // TODO - Add button on about section to go to full page
@@ -24,7 +24,6 @@ import Contact from '../components/HomePageSections/Contact'
 // TODO - Add social share buttons for blog posts
 // TODO - Create meta data for pages
 // TODO - create SEO title and description for blog posts
-// TODO - create reusable comp for smooth scroll - consolidate navbar comps
 
 const HomePage = (props) => {
 
