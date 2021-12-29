@@ -25,6 +25,8 @@ import Contact from '../components/HomePageSections/Contact'
 // TODO - Create meta data for pages
 // TODO - create SEO title and description for blog posts
 // TODO - Add mobile nav menu rendering
+// TODO - Optimize all images with next/image comp
+// TODO - Review web metrics and optimize
 
 const HomePage = (props) => {
 
