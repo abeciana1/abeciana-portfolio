@@ -60,6 +60,7 @@ const HomePage = (props) => {
       <About aboutAnimate={aboutAnimate} />
       <section
         id="renderedSection"
+        className="mt-20"
       >
         <Portfolio/>
         <Blog

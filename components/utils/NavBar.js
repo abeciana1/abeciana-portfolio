@@ -100,7 +100,7 @@ const NavBar = (props) => {
                                 smooth={true}
                                 duration={1000}
                                 exact="true"
-                                offset={-80}
+                                offset={-120}
                                 linkText="blog"
                             />
                             <SmoothScrollLink
@@ -111,7 +111,7 @@ const NavBar = (props) => {
                                 smooth={true}
                                 duration={1000}
                                 exact="true"
-                                offset={-100}
+                                offset={-120}
                                 linkText="reviews"
                             />
                             <SmoothScrollLink
@@ -122,7 +122,7 @@ const NavBar = (props) => {
                                 smooth={true}
                                 duration={1000}
                                 exact="true"
-                                offset={-80}
+                                offset={-120}
                                 linkText="contact"
                             />
                         </>
