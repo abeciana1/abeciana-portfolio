@@ -2,12 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
-/* html {
-  min-width: 320px;
-} */
 
 h1, h2, h3, h4, h5, h6 {
-  /* font-family: carlmarx, sans-serif; */
   font-family: reross-quadratic, sans-serif;
   color: #292F36;
   font-weight: 400;
