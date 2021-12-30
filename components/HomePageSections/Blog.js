@@ -1,7 +1,6 @@
 import React from 'react';
 import PostCard from '../utils/PostCard'
 import Link from 'next/link'
-import PageMargin from '../utils/PageMargin'
 
 const Blog = ({posts}) => {
 

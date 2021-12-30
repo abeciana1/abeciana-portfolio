@@ -10,8 +10,6 @@ import Reviews from '../components/HomePageSections/Reviews'
 import Contact from '../components/HomePageSections/Contact'
 
 // TODO - create mobile rendering of blog section on homepage
-// TODO - Create about page
-// TODO - Create portfolio page
 // TODO - Reach out to clients for testimonials
 // TODO - Add testimonials to graphcms
 // TODO - Hook up hubspot for site
@@ -28,10 +26,15 @@ import Contact from '../components/HomePageSections/Contact'
 // TODO - Optimize all images with next/image comp
 // TODO - Review web metrics and optimize
 
+// const renderComp = () => {
+
+// }
+
 const HomePage = (props) => {
 
   const {
-    posts
+    posts,
+    selectedComp
   } = props
 
   const [aboutAnimate, setAboutAnimate] = useState(false)

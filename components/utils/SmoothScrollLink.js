@@ -19,7 +19,7 @@ const SmoothScrollLink = (props) => {
     return (
         <>
             <Link
-                className={className}
+                // className={className}
                 activeClass={activeClass}
                 to={to}
                 spy={spy}
@@ -28,7 +28,12 @@ const SmoothScrollLink = (props) => {
                 exact={exact}
                 offset={offset}
             >
-                {linkText}
+                <a
+                    className={className}
+                    onClick={() => console.log("clicking")}
+                >
+                    {linkText}
+                </a>
             </Link>
         </>
     )
