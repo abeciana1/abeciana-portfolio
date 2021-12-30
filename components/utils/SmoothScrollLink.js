@@ -13,7 +13,8 @@ const SmoothScrollLink = (props) => {
         duration,
         exact,
         offset,
-        linkText
+        linkText,
+        setSelectedComp
     } = props
 
     return (
@@ -29,7 +30,7 @@ const SmoothScrollLink = (props) => {
             >
                 <a
                     className={className}
-                    onClick={() => console.log("clicking")}
+                    onClick={() => setSelectedComp(linkText)}
                 >
                     {linkText}
                 </a>

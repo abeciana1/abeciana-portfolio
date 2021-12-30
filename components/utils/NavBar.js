@@ -12,7 +12,8 @@ import { animateScroll as scroll } from "react-scroll";
 const NavBar = (props) => {
 
     const {
-        router
+        router,
+        setSelectedComp
     } = props
 
     const scrollToTop = () => {
@@ -80,6 +81,7 @@ const NavBar = (props) => {
                                 exact="true"
                                 offset={-100}
                                 linkText="about"
+                                setSelectedComp={setSelectedComp}
                             />
                             <SmoothScrollLink
                                 className="text-3xl hidden lg:block mr-5 font-reross cursor-pointer anim-text"
@@ -91,6 +93,7 @@ const NavBar = (props) => {
                                 exact="true"
                                 offset={-120}
                                 linkText="portfolio"
+                                setSelectedComp={setSelectedComp}
                             />
                             <SmoothScrollLink
                                 className="text-3xl hidden lg:block mr-5 font-reross cursor-pointer anim-text"
@@ -102,6 +105,7 @@ const NavBar = (props) => {
                                 exact="true"
                                 offset={-120}
                                 linkText="blog"
+                                setSelectedComp={setSelectedComp}
                             />
                             <SmoothScrollLink
                                 className="text-3xl hidden lg:block mr-5 font-reross cursor-pointer anim-text"
@@ -113,6 +117,7 @@ const NavBar = (props) => {
                                 exact="true"
                                 offset={-120}
                                 linkText="reviews"
+                                setSelectedComp={setSelectedComp}
                             />
                             <SmoothScrollLink
                                 className="text-3xl hidden lg:block mr-5 font-reross cursor-pointer anim-text"
@@ -124,6 +129,7 @@ const NavBar = (props) => {
                                 exact="true"
                                 offset={-120}
                                 linkText="contact"
+                                setSelectedComp={setSelectedComp}
                             />
                         </>
                         :

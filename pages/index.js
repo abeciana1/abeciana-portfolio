@@ -26,10 +26,6 @@ import Contact from '../components/HomePageSections/Contact'
 // TODO - Optimize all images with next/image comp
 // TODO - Review web metrics and optimize
 
-// const renderComp = () => {
-
-// }
-
 const HomePage = (props) => {
 
   const {
@@ -44,6 +40,33 @@ const HomePage = (props) => {
     useEffect(() => {
       setAboutAnimate(true)
     }, []);
+  
+  const renderComp = (renderComponent) => {
+
+  switch (renderComponent) {
+    case "blog":
+      return (
+        <Blog
+          posts={posts}
+          descPosts={descPosts}
+        />
+      );
+    case "portfolio":
+      return <Portfolio />
+    case "reviews":
+      return <Reviews />
+    case "contact":
+      return (
+        <section
+          className="mt-32"
+        >
+          <Contact />
+        </section>
+      )
+    default:
+      return null
+  }
+}
 
   return (
     <React.Fragment>
@@ -62,17 +85,7 @@ const HomePage = (props) => {
         id="renderedSection"
         className="mt-20"
       >
-        <Portfolio/>
-        <Blog
-          posts={posts}
-          descPosts={descPosts}
-        />
-        <Reviews />
-        <section
-          className="mt-32"
-        >
-          <Contact />
-        </section>
+        {renderComp(selectedComp)}
       </section>
     </React.Fragment>
   )

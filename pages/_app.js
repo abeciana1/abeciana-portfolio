@@ -18,7 +18,9 @@ import { withRouter } from 'next/router'
 
 function MyApp({ Component, pageProps, router }) {
 
-  const [ selectedComp, SetselectedComp ] = useState('')
+  const [selectedComp, setSelectedComp] = useState('')
+  
+  console.log(selectedComp);
 
   return (
     <>
@@ -27,6 +29,7 @@ function MyApp({ Component, pageProps, router }) {
       </Head>
       <NavBar
         selectedComp={selectedComp}
+        setSelectedComp={setSelectedComp}
       />
       <Component
         {...pageProps}
