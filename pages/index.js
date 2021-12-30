@@ -34,6 +34,8 @@ const HomePage = (props) => {
 
   const {
     posts,
+    descPosts,
+    blogResponse,
     selectedComp
   } = props
 
@@ -77,6 +79,22 @@ export async function getStaticProps() {
         sorts: [
         {
             property: 'PublishedDate',
+            direction: 'ascending',
+        },
+    ],
+    filter: {
+        property: 'Status',
+        select: {
+            equals: 'Published'
+        }
+    }
+    });
+
+    const descResponse = await notion.databases.query({
+        database_id: process.env.NOTION_DATABASE_ID,
+        sorts: [
+        {
+            property: 'PublishedDate',
             direction: 'descending',
         },
     ],
@@ -88,9 +106,29 @@ export async function getStaticProps() {
     }
     });
 
+    let blogSlug = 'responsive-search-react'
+
+    const blogResponse = await notion.databases.query({
+        database_id: process.env.NOTION_DATABASE_ID,
+        sorts: [
+        {
+            property: 'PublishedDate',
+            direction: 'ascending',
+        },
+    ],
+    filter: {
+        property: 'Slug',
+        text: {
+            contains: blogSlug
+        }
+    }
+    });
+
     return {
         props: {
             posts: response.results,
+            descPosts: descResponse.results,
+            blogResponse: blogResponse.results
         },
         revalidate: 1,
     };
