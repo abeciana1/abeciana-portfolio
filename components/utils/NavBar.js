@@ -13,6 +13,7 @@ const NavBar = (props) => {
 
     const {
         router,
+        selectedComp,
         setSelectedComp
     } = props
 
@@ -135,37 +136,42 @@ const NavBar = (props) => {
                         :
                         <>
                             <Link
-                                href="/about"
+                                href="/#renderedSection"
                             >
                                 <a
+                                    onClick={() => setSelectedComp("about")}
                                     className="text-3xl hidden lg:block mr-5 font-reross cursor-pointer anim-text"
                                 >about</a>
                             </Link>
                             <Link
-                                href="/portfolio"
+                                href="/#renderedSection"
                             >
                                 <a
+                                    onClick={() => setSelectedComp("portfolio")}
                                     className="text-3xl hidden lg:block mr-5 font-reross cursor-pointer anim-text"
                                 >portfolio</a>
                             </Link>
                             <Link
-                                href="/blog"
+                                href="/#renderedSection"
                             >
                                 <a
+                                    onClick={() => setSelectedComp("blog")}
                                     className="text-3xl hidden lg:block mr-5 font-reross cursor-pointer anim-text"
                                 >blog</a>
                             </Link>
                             <Link
-                                href="/reviews"
+                                href="/#renderedSection"
                             >
                                 <a
+                                    onClick={() => setSelectedComp("reviews")}
                                     className="text-3xl hidden lg:block mr-5 font-reross cursor-pointer anim-text"
                                 >reviews</a>
                             </Link>
                             <Link
-                                href="/contact"
+                                href="/#renderedSection"
                             >
                                 <a
+                                    onClick={() => setSelectedComp("contact")}
                                     className="text-3xl hidden lg:block mr-5 font-reross cursor-pointer anim-text"
                                 >contact</a>
                             </Link>
