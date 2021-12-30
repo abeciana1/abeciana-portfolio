@@ -12,11 +12,8 @@ import Contact from '../components/HomePageSections/Contact'
 // TODO - Reach out to clients for testimonials
 // TODO - Add testimonials to graphcms
 // TODO - Hook up hubspot for site
-// TODO - Add button on about section to go to full page
-// TODO - Create about page subnav based on hover
 // TODO - Create scroll to top button reuse comp
 // TODO - Add resume - available to download
-// TODO - render actual blog post
 // TODO - Add icons to public profiles
 // TODO - Add social share buttons for blog posts
 // TODO - Create meta data for pages
