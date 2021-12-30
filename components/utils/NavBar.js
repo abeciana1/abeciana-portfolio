@@ -12,7 +12,9 @@ import { animateScroll as scroll } from "react-scroll";
 const NavBar = (props) => {
 
     const {
-        router
+        router,
+        selectedComp,
+        setSelectedComp
     } = props
 
     const scrollToTop = () => {
@@ -73,93 +75,103 @@ const NavBar = (props) => {
                             <SmoothScrollLink
                                 className="text-3xl hidden lg:block mr-5 font-reross cursor-pointer anim-text"
                                 activeClass="active"
-                                to="about"
+                                to="renderedSection"
                                 spy={true}
                                 smooth={true}
                                 duration={1000}
                                 exact="true"
                                 offset={-100}
                                 linkText="about"
+                                setSelectedComp={setSelectedComp}
                             />
                             <SmoothScrollLink
                                 className="text-3xl hidden lg:block mr-5 font-reross cursor-pointer anim-text"
                                 activeClass="active"
-                                to="portfolio"
+                                to="renderedSection"
                                 spy={true}
                                 smooth={true}
                                 duration={1000}
                                 exact="true"
                                 offset={-120}
                                 linkText="portfolio"
+                                setSelectedComp={setSelectedComp}
                             />
                             <SmoothScrollLink
                                 className="text-3xl hidden lg:block mr-5 font-reross cursor-pointer anim-text"
                                 activeClass="active"
-                                to="blog"
+                                to="renderedSection"
                                 spy={true}
                                 smooth={true}
                                 duration={1000}
                                 exact="true"
-                                offset={-80}
+                                offset={-120}
                                 linkText="blog"
+                                setSelectedComp={setSelectedComp}
                             />
                             <SmoothScrollLink
                                 className="text-3xl hidden lg:block mr-5 font-reross cursor-pointer anim-text"
                                 activeClass="active"
-                                to="reviews"
+                                to="renderedSection"
                                 spy={true}
                                 smooth={true}
                                 duration={1000}
                                 exact="true"
-                                offset={-100}
+                                offset={-120}
                                 linkText="reviews"
+                                setSelectedComp={setSelectedComp}
                             />
                             <SmoothScrollLink
                                 className="text-3xl hidden lg:block mr-5 font-reross cursor-pointer anim-text"
                                 activeClass="active"
-                                to="contact"
+                                to="renderedSection"
                                 spy={true}
                                 smooth={true}
                                 duration={1000}
                                 exact="true"
-                                offset={-80}
+                                offset={-120}
                                 linkText="contact"
+                                setSelectedComp={setSelectedComp}
                             />
                         </>
                         :
                         <>
                             <Link
-                                href="/about"
+                                href="/#renderedSection"
                             >
                                 <a
+                                    onClick={() => setSelectedComp("about")}
                                     className="text-3xl hidden lg:block mr-5 font-reross cursor-pointer anim-text"
                                 >about</a>
                             </Link>
                             <Link
-                                href="/portfolio"
+                                href="/#renderedSection"
                             >
                                 <a
+                                    onClick={() => setSelectedComp("portfolio")}
                                     className="text-3xl hidden lg:block mr-5 font-reross cursor-pointer anim-text"
                                 >portfolio</a>
                             </Link>
                             <Link
-                                href="/blog"
+                                href="/#renderedSection"
                             >
                                 <a
+                                    onClick={() => setSelectedComp("blog")}
                                     className="text-3xl hidden lg:block mr-5 font-reross cursor-pointer anim-text"
                                 >blog</a>
                             </Link>
                             <Link
-                                href="/reviews"
+                                href="/#renderedSection"
                             >
                                 <a
+                                    onClick={() => setSelectedComp("reviews")}
                                     className="text-3xl hidden lg:block mr-5 font-reross cursor-pointer anim-text"
                                 >reviews</a>
                             </Link>
                             <Link
-                                href="/contact"
+                                href="/#renderedSection"
                             >
                                 <a
+                                    onClick={() => setSelectedComp("contact")}
                                     className="text-3xl hidden lg:block mr-5 font-reross cursor-pointer anim-text"
                                 >contact</a>
                             </Link>

@@ -7,23 +7,30 @@ import '../styles/notion.css'
 
 import 'tailwindcss/tailwind.css'
 
+import React, { useState } from 'react'
+
 import Head from 'next/head'
 import NavBar from '../components/utils/NavBar'
 
-import { withRouter } from 'next/router'
+function MyApp({ Component, pageProps }) {
 
-
-function MyApp({ Component, pageProps, router }) {
+  const [selectedComp, setSelectedComp] = useState('')
 
   return (
     <>
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1"/>
       </Head>
-      <NavBar/>
-      <Component {...pageProps} />
+      <NavBar
+        selectedComp={selectedComp}
+        setSelectedComp={setSelectedComp}
+      />
+      <Component
+        {...pageProps}
+        selectedComp={selectedComp}
+        />
     </>
   )
 }
 
-export default withRouter(MyApp)
+export default MyApp
