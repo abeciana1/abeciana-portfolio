@@ -28,12 +28,12 @@ const SmoothScrollLink = (props) => {
                 exact={exact}
                 offset={offset}
             >
-                <a
+                <div
                     className={className}
                     onClick={() => setSelectedComp(linkText)}
                 >
                     {linkText}
-                </a>
+                </div>
             </Link>
         </>
     )
