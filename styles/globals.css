@@ -64,16 +64,7 @@ a {
     0 4px 12px 0 rgb(61 72 116 / 20%);
   border-radius: 20px;
   overflow: hidden;
-  /* pointer-events: none; */
 }
-
-/* .code-card {
-  flex-shrink: 0;
-  margin-bottom: 120px;
-  position: relative;
-  max-width: 376px;
-  width: 100%;
-} */
 
 @media (min-width: 768px) {
   .code-wrapper {
@@ -92,7 +83,6 @@ a {
 
 @media (min-width: 1024px) {
   .code {
-    /* font-size: 15px; */
     padding: 18px 20px;
     margin-left: 48px
   }
