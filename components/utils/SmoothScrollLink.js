@@ -19,7 +19,6 @@ const SmoothScrollLink = (props) => {
     return (
         <>
             <Link
-                // className={className}
                 activeClass={activeClass}
                 to={to}
                 spy={spy}

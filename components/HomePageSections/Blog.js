@@ -1,9 +1,11 @@
 import React from 'react';
-import PostCard from '../utils/PostCard'
 import Link from 'next/link'
 import PageMargin from '../utils/PageMargin'
+import SmoothScrollLink from '../utils/SmoothScrollLink'
+import FeaturedPostCard from '../utils/FeaturedPostCard'
+import PostCard from '../utils/PostCard'
 
-const Blog = ({posts}) => {
+const Blog = ({posts, descPosts}) => {
 
     return (
         <React.Fragment>
@@ -14,7 +16,7 @@ const Blog = ({posts}) => {
                 <section
                     className="flex text-3xl"
                 >
-                    <Link
+                    <SmoothScrollLink
                         className="mr-5 font-reross cursor-pointer anim-text"
                         activeClass="active"
                         to="recent"
@@ -23,11 +25,10 @@ const Blog = ({posts}) => {
                         duration={1000}
                         exact="true"
                         offset={5}
-                    >
-                        recent posts
-                    </Link>
+                        linkText="recent posts"
+                    />
                     |
-                    <Link
+                    <SmoothScrollLink
                         className="ml-5 font-reross cursor-pointer anim-text"
                         activeClass="active"
                         to="all"
@@ -36,9 +37,8 @@ const Blog = ({posts}) => {
                         duration={1000}
                         exact="true"
                         offset={-100}
-                    >
-                        all posts
-                    </Link>
+                        linkText="all posts"
+                    />
                     {/* <Dropdown
                         className="w-1/2"
                         defaultVal={blogType ? 'Recent posts' : 'All posts'}

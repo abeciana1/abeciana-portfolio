@@ -61,6 +61,7 @@ const HomePage = (props) => {
         <Portfolio/>
         <Blog
           posts={posts}
+          descPosts={descPosts}
         />
         <Reviews />
         <section
