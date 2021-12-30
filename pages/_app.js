@@ -12,15 +12,9 @@ import React, { useState } from 'react'
 import Head from 'next/head'
 import NavBar from '../components/utils/NavBar'
 
-import { withRouter } from 'next/router'
-
-
-
-function MyApp({ Component, pageProps, router }) {
+function MyApp({ Component, pageProps }) {
 
   const [selectedComp, setSelectedComp] = useState('')
-  
-  console.log(selectedComp);
 
   return (
     <>
@@ -39,4 +33,4 @@ function MyApp({ Component, pageProps, router }) {
   )
 }
 
-export default withRouter(MyApp)
+export default MyApp
