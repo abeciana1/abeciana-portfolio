@@ -57,7 +57,10 @@ const HomePage = (props) => {
                 className="shadow-xl rounded-full w-2/3 md:w-3/5 mx-auto bg-white"
             />
         </div>
-        <About aboutAnimate={aboutAnimate} />
+      <About aboutAnimate={aboutAnimate} />
+      <section
+        id="renderedSection"
+      >
         <Portfolio/>
         <Blog
           posts={posts}
@@ -69,6 +72,7 @@ const HomePage = (props) => {
         >
           <Contact />
         </section>
+      </section>
     </React.Fragment>
   )
 }
