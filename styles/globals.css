@@ -2,12 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
-/* html {
-  min-width: 320px;
-} */
 
 h1, h2, h3, h4, h5, h6 {
-  /* font-family: carlmarx, sans-serif; */
   font-family: reross-quadratic, sans-serif;
   color: #292F36;
   font-weight: 400;
@@ -68,16 +64,7 @@ a {
     0 4px 12px 0 rgb(61 72 116 / 20%);
   border-radius: 20px;
   overflow: hidden;
-  /* pointer-events: none; */
 }
-
-/* .code-card {
-  flex-shrink: 0;
-  margin-bottom: 120px;
-  position: relative;
-  max-width: 376px;
-  width: 100%;
-} */
 
 @media (min-width: 768px) {
   .code-wrapper {
@@ -96,7 +83,6 @@ a {
 
 @media (min-width: 1024px) {
   .code {
-    /* font-size: 15px; */
     padding: 18px 20px;
     margin-left: 48px
   }

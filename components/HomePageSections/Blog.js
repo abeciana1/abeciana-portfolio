@@ -1,47 +1,83 @@
 import React from 'react';
-import PostCard from '../utils/PostCard'
 import Link from 'next/link'
 import PageMargin from '../utils/PageMargin'
+import SmoothScrollLink from '../utils/SmoothScrollLink'
+import FeaturedPostCard from '../utils/FeaturedPostCard'
+import PostCard from '../utils/PostCard'
 
-const Blog = ({posts}) => {
+const Blog = ({posts, descPosts}) => {
 
     return (
         <React.Fragment>
-            <section
-                id="blog"
-                className="homepage-section blog-background mt-16 pb-16 z-40 hidden lg:block"
+            <PageMargin>
+                <h1
+                    className="text-5xl font-reross text-altYellow leading-relaxed"
+                >blog</h1>
+                <section
+                    className="flex text-3xl"
                 >
-                    <h1
-                        className="text-5xl pt-4 font-reross flex flex-col text-altYellow leading-relaxed ml-5 md:ml-10"
-                    >
-                    recent blog posts
-                    </h1>
+                    <SmoothScrollLink
+                        className="mr-5 font-reross cursor-pointer anim-text"
+                        activeClass="active"
+                        to="recent"
+                        spy={true}
+                        smooth={true}
+                        duration={1000}
+                        exact="true"
+                        offset={5}
+                        linkText="recent posts"
+                    />
+                    |
+                    <SmoothScrollLink
+                        className="ml-5 font-reross cursor-pointer anim-text"
+                        activeClass="active"
+                        to="all"
+                        spy={true}
+                        smooth={true}
+                        duration={1000}
+                        exact="true"
+                        offset={-100}
+                        linkText="all posts"
+                    />
+                    {/* <Dropdown
+                        className="w-1/2"
+                        defaultVal={blogType ? 'Recent posts' : 'All posts'}
+                        options={postType}
+                        onChange={(e) => selectHandler(e)}
+                    /> */}
+                </section>
+                    <>
+                        <h2
+                            id="recent"
+                            className="text-4xl font-reross text-altYellow leading-relaxed"
+                        >recent posts</h2>
+                        <section
+                            className="py-12 md:mx-16 lg:mx-44"
+                        >
+                            <FeaturedPostCard key={descPosts[0].id} post={descPosts[0]} />
+                        </section>
+                        <section
+                            className="pb-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12"
+                        >
+                            {descPosts.slice(1, 4).map((post) => {
+                                return <FeaturedPostCard key={post.id} post={post} />
+                            })}
+                        </section>
+                    </>
+                <>
+                    <h2
+                        id="all"
+                        className="text-4xl font-reross text-altYellow leading-relaxed"
+                    >all posts</h2>
                     <section
-                        className="grid lg:grid-cols-3 justify-items-center item-stretch z-50 gap-12 my-12 mx-5 md:mx-10"
+                        className="py-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12"
                     >
-                        {posts.slice(1,7).map((post) => {
-                            return <PostCard key={post.id} post={post} />
+                        {posts.map((post) => {
+                            return <PostCard key={post.id} post={post} /> 
                         })}
                     </section>
-                <section className="mt-10">
-                    <section className="justify-self-start ml-5 md:ml-10">
-                        <Link
-                            href="/blog"
-                        >
-                            <button
-                                className="bg-black text-lg text-white font-medium py-2 px-10 rounded-full flex content-center"
-                            >
-                                See more
-                                <span>
-                                    <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 pt-1 ml-2" fill="none" viewBox="0 0 24 24" stroke="white">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                                    </svg>
-                                </span>
-                            </button>
-                        </Link>
-                    </section>
-                </section>
-            </section>
+                </>
+            </PageMargin>
         </React.Fragment>
     )
 }
