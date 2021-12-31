@@ -44,20 +44,28 @@ const HomePage = (props) => {
   switch (renderComponent) {
     case "blog":
       return (
-        <Blog
-          posts={posts}
-          descPosts={descPosts}
-        />
+        <section className="slide-in-bottom">
+          <Blog
+            posts={posts}
+            descPosts={descPosts}
+          />
+        </section>
       );
     case "portfolio":
-      return <Portfolio />
+      return (
+        <section className="slide-in-bottom">
+          <Portfolio />
+        </section>
+      )
     case "reviews":
-      return <Reviews />
+      return (
+        <section className="slide-in-bottom">
+          <Reviews />
+        </section>
+      )
     case "contact":
       return (
-        <section
-          // className="mt-32"
-        >
+        <section className="slide-in-bottom">
           <Contact />
         </section>
       )
@@ -77,20 +85,9 @@ const HomePage = (props) => {
       <About aboutAnimate={aboutAnimate} />
       <section
         id="renderedSection"
-        className="mt-20"
+        className="mt-10"
       >
-        <Transition
-            show={selectedComp !== ""}
-            enter="transition ease-in-out duration-1000 transform"
-            enterFrom="-translate-y-0 opacity-0"
-            enterTo="translate-y-0 opacity-100"
-            leave="transition ease-in-out duration-1000 transform"
-            leaveFrom="translate-y-0 opacity-100"
-            leaveTo="-translate-y-0 opacity-0"
-            beforeLeave={() => setSelectedComp("")}
-        >
           {renderComp(selectedComp)}
-        </Transition>
       </section>
     </React.Fragment>
   )

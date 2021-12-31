@@ -10,6 +10,7 @@ const Portfolio = (props) => {
             <PageMargin>
                 <section
                     id="portfolio"
+                    className="py-10"
                 >
                     <section
                         className="homepage-section mt-10 justify-items-stretch items-stretch"

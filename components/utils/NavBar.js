@@ -48,7 +48,7 @@ const NavBar = (props) => {
         <React.Fragment>
             <section
                 id={navBarId}
-                className="bg-white z-50 py-4">
+                className="bg-white z-50">
                 <PageMargin>
                     <section
                         className="hidden lg:block flex lg:items-stretch"
@@ -102,7 +102,7 @@ const NavBar = (props) => {
                                 smooth={true}
                                 duration={1000}
                                 exact="true"
-                                offset={-120}
+                                offset={-100}
                                 linkText="blog"
                                 setSelectedComp={setSelectedComp}
                             />
@@ -126,7 +126,7 @@ const NavBar = (props) => {
                                 smooth={true}
                                 duration={1000}
                                 exact="true"
-                                offset={-120}
+                                offset={-100}
                                 linkText="contact"
                                 setSelectedComp={setSelectedComp}
                             />
