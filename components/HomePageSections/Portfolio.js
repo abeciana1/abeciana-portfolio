@@ -12,7 +12,7 @@ const Portfolio = (props) => {
                     id="portfolio"
                 >
                     <section
-                        className="homepage-section mt-16 justify-items-stretch items-stretch"
+                        className="homepage-section mt-10 justify-items-stretch items-stretch"
                     >
                             <h1
                                 className="justify-self-start text-5xl font-reross text-altYellow"

@@ -27,6 +27,7 @@ function MyApp({ Component, pageProps }) {
       />
       <Component
         {...pageProps}
+        setSelectedComp={setSelectedComp}
         selectedComp={selectedComp}
         />
     </>

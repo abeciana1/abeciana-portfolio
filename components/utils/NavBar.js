@@ -48,7 +48,7 @@ const NavBar = (props) => {
         <React.Fragment>
             <section
                 id={navBarId}
-                className="bg-white z-50">
+                className="bg-white z-50 py-4">
                 <PageMargin>
                     <section
                         className="hidden lg:block flex lg:items-stretch"
@@ -75,12 +75,10 @@ const NavBar = (props) => {
                             <SmoothScrollLink
                                 className="text-3xl hidden lg:block mr-5 font-reross cursor-pointer anim-text"
                                 activeClass="active"
-                                to="renderedSection"
                                 spy={true}
                                 smooth={true}
                                 duration={1000}
                                 exact="true"
-                                offset={-100}
                                 linkText="about"
                                 setSelectedComp={setSelectedComp}
                             />
@@ -92,7 +90,7 @@ const NavBar = (props) => {
                                 smooth={true}
                                 duration={1000}
                                 exact="true"
-                                offset={-120}
+                                // offset={-120}
                                 linkText="portfolio"
                                 setSelectedComp={setSelectedComp}
                             />
@@ -116,7 +114,7 @@ const NavBar = (props) => {
                                 smooth={true}
                                 duration={1000}
                                 exact="true"
-                                offset={-120}
+                                offset={-100}
                                 linkText="reviews"
                                 setSelectedComp={setSelectedComp}
                             />

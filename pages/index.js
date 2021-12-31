@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from 'react';
 const { Client } = require("@notionhq/client")
+import { Transition } from '@headlessui/react'
 
 //! import home page sections here
 import About from '../components/HomePageSections/About'
@@ -28,7 +29,8 @@ const HomePage = (props) => {
     posts,
     descPosts,
     blogResponse,
-    selectedComp
+    selectedComp,
+    setSelectedComp
   } = props
 
   const [aboutAnimate, setAboutAnimate] = useState(false)
@@ -54,7 +56,7 @@ const HomePage = (props) => {
     case "contact":
       return (
         <section
-          className="mt-32"
+          // className="mt-32"
         >
           <Contact />
         </section>
@@ -77,7 +79,18 @@ const HomePage = (props) => {
         id="renderedSection"
         className="mt-20"
       >
-        {renderComp(selectedComp)}
+        <Transition
+            show={selectedComp !== ""}
+            enter="transition ease-in-out duration-1000 transform"
+            enterFrom="-translate-y-0 opacity-0"
+            enterTo="translate-y-0 opacity-100"
+            leave="transition ease-in-out duration-1000 transform"
+            leaveFrom="translate-y-0 opacity-100"
+            leaveTo="-translate-y-0 opacity-0"
+            beforeLeave={() => setSelectedComp("")}
+        >
+          {renderComp(selectedComp)}
+        </Transition>
       </section>
     </React.Fragment>
   )
