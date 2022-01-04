@@ -13,7 +13,7 @@ const About = (props) => {
             <PageMargin>
                 <section
                     id="about"
-                    className="homepage-section sticky lg:pt-12 flex flex-col md:grid md:grid-cols-2 gap-12 justify-items-center item-stretch"
+                    className="homepage-section sticky lg:pt-4 flex flex-col md:grid md:grid-cols-2 gap-12 justify-items-center item-stretch"
                 >
                         <section
                             className="self-center justify-self-start"
@@ -21,15 +21,6 @@ const About = (props) => {
                         <section className={cx({
                                 ['mt-10']: props.router.asPath === '/'
                             })}>
-                            {props.router.asPath === '/' ?    
-                                null
-                                :
-                                <div
-                                    className="text-5xl font-reross text-altYellow leading-relaxed"
-                                >
-                                    about me
-                                </div>
-                            }
                             <h1
                                 className="text-5xl font-reross leading-relaxed"
                             >
