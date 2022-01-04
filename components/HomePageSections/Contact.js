@@ -11,7 +11,7 @@ const Contact = (props) => {
             <PageMargin>
                 <section
                     id="contact"
-                    className="homepage-section pb-16 flex flex-col justify-items-center item-stretch"
+                    className="pb-16 flex flex-col justify-items-center item-stretch"
                 >
                     <h1
                         className="text-5xl font-reross text-altYellow leading-relaxed"
@@ -30,8 +30,6 @@ const Contact = (props) => {
                                     className="hidden md:inline"
                                 />
                             </div>
-                        {/* <section>
-                        </section> */}
                     </section>
                 </section>
             </PageMargin>
