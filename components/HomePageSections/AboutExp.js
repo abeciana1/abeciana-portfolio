@@ -11,7 +11,7 @@ const AboutExp = () => {
             <PageMargin>
                 <h1
                     className="text-5xl font-reross text-altYellow leading-relaxed"
-                >blog</h1>
+                >about me</h1>
                 <section
                     className="flex text-3xl"
                 >
@@ -24,7 +24,7 @@ const AboutExp = () => {
                         duration={1000}
                         exact="true"
                         offset={5}
-                        linkText="recent posts"
+                        linkText="skills"
                     />
                     |
                     <SmoothScrollLink
@@ -36,8 +36,18 @@ const AboutExp = () => {
                         duration={1000}
                         exact="true"
                         offset={-100}
-                        linkText="all posts"
+                        linkText="experience"
                     />
+                </section>
+                <section
+                    className="mt-20"
+                >
+                    <section
+                        id="skills"
+                        className=""
+                    >
+                        
+                    </section>
                 </section>
             </PageMargin>
         </React.Fragment>
