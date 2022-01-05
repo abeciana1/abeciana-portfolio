@@ -3,8 +3,11 @@ import PageMargin from '../utils/PageMargin'
 import cx from 'classnames'
 import Link from 'next/link'
 import SmoothScrollLink from '../utils/SmoothScrollLink'
+import Skills from '../../data/skills.json'
 
 const AboutExp = () => {
+
+    console.log(Skills);
 
     return (
         <React.Fragment>
@@ -44,9 +47,25 @@ const AboutExp = () => {
                 >
                     <section
                         id="skills"
-                        className=""
+                        className="grid grid-cols-3 md:grid-cols-5 lg:grid-cols-7 gap-10"
                     >
-                        
+                        {Skills.map((skill) => {
+                            return (
+                                <div
+                                    className="text-center"
+                                >
+                                    <img
+                                        src={skill.image}
+                                        className="w-auto h-12 mx-auto"
+                                    />
+                                    <div
+                                        className="mt-2"
+                                    >
+                                        {skill.name}
+                                    </div>
+                                </div>
+                            )
+                        })}
                     </section>
                 </section>
             </PageMargin>
