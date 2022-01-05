@@ -7,8 +7,6 @@ import Skills from '../../data/skills.json'
 
 const AboutExp = () => {
 
-    console.log(Skills);
-
     return (
         <React.Fragment>
             <PageMargin>
@@ -52,7 +50,7 @@ const AboutExp = () => {
                         {Skills.map((skill) => {
                             return (
                                 <div
-                                    className="text-center"
+                                    className="text-center rounded-xl"
                                 >
                                     <img
                                         src={skill.image}
