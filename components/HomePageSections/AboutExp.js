@@ -94,25 +94,41 @@ const AboutExp = (props) => {
                             return (
                                 <section
                                     id={job?.companyName}
-                                    className="grid grid-cols-1 md:grid-cols-2 items-stretch"
+                                    className="grid grid-cols-1 md:grid-cols-2 items-stretch py-8"
                                 >
                                     <div
                                         className="self-center"
                                     >
                                         <img
                                             src={job?.companyLogo.url}
-                                            className="h-32 w-auto mx-auto"
+                                            className="w-4/6 mx-auto"
                                         />
                                     </div>
                                     <div
-                                        className="self-center"
+                                        className="self-center leading-9"
                                     >
-                                        <h3>
-                                            {job?.companyName}
-                                        </h3>
-                                        <h4>
+                                        <a
+                                            href={job?.companyWebsite}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            alt={job?.companyName}
+                                        >
+                                            <h3
+                                                className="text-3xl text-altBlue underline"
+                                            >
+                                                {job?.companyName}
+                                            </h3>
+                                        </a>
+                                        <h4
+                                            className="text-2xl"
+                                        >
                                             {job?.position}
                                         </h4>
+                                        <div
+                                            className="text-xl"
+                                        >
+                                            {job?.startDate} — {job?.endDate}
+                                        </div>
                                         <p>
                                             <ReactMarkdown
                                                 children={job?.responsibilities}
