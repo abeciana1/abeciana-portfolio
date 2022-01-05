@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react';
 const { Client } = require("@notionhq/client")
-import { Transition } from '@headlessui/react'
+import { gql, GraphQLClient } from 'graphql-request'
 
 //! import home page sections here
 import About from '../components/HomePageSections/About'
@@ -151,6 +151,8 @@ export async function getStaticProps() {
         }
     }
     });
+  
+    const jobResponse = await
 
     return {
         props: {
