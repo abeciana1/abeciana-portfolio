@@ -94,7 +94,7 @@ const AboutExp = (props) => {
                             return (
                                 <section
                                     id={job?.companyName}
-                                    className="grid grid-cols-1 md:grid-cols-2 items-stretch py-8"
+                                    className="grid grid-cols-1 md:grid-cols-2 gap-10 items-stretch py-8"
                                 >
                                     <div
                                         className="self-center"
@@ -103,22 +103,20 @@ const AboutExp = (props) => {
                                             src={job?.companyLogo.url}
                                             className="w-4/6 mx-auto"
                                         />
+                                        <div
+                                            className="text-center mt-5 text-lg"
+                                        >
+                                            {job?.companyDescription}
+                                        </div>
                                     </div>
                                     <div
                                         className="self-center leading-9"
                                     >
-                                        <a
-                                            href={job?.companyWebsite}
-                                            target="_blank"
-                                            rel="noopener noreferrer"
-                                            alt={job?.companyName}
-                                        >
                                             <h3
-                                                className="text-3xl text-altBlue underline"
+                                                className="text-3xl"
                                             >
                                                 {job?.companyName}
                                             </h3>
-                                        </a>
                                         <h4
                                             className="text-2xl"
                                         >
@@ -129,6 +127,17 @@ const AboutExp = (props) => {
                                         >
                                             {job?.startDate} — {job?.endDate}
                                         </div>
+                                        {job?.companyWebsite && (
+                                            <a
+                                                href={job?.companyWebsite}
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                alt={job?.companyName}
+                                                className="text-altBlue underline"
+                                            >
+                                                Website
+                                            </a>
+                                        )}
                                         <p>
                                             <ReactMarkdown
                                                 children={job?.responsibilities}

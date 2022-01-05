@@ -168,6 +168,7 @@ export async function getStaticProps() {
         startDate
         companyName
         companyWebsite
+        companyDescription
         companyLogo {
           url
         }
