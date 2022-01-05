@@ -5,7 +5,11 @@ import Link from 'next/link'
 import SmoothScrollLink from '../utils/SmoothScrollLink'
 import Skills from '../../data/skills.json'
 
-const AboutExp = () => {
+const AboutExp = (props) => {
+
+    const {
+        jobData,
+    } = props
 
     return (
         <React.Fragment>
