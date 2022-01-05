@@ -26,14 +26,16 @@ import Contact from '../components/HomePageSections/Contact'
 
 const HomePage = (props) => {
 
+  
   const {
     posts,
     descPosts,
     blogResponse,
     selectedComp,
-    setSelectedComp
+    setSelectedComp,
+    jobData
   } = props
-
+  
   const [aboutAnimate, setAboutAnimate] = useState(false)
 
     useEffect(() => {
@@ -73,7 +75,9 @@ const HomePage = (props) => {
     case "about":
       return (
         <section className="slide-in-bottom">
-          <AboutExp/>
+          <AboutExp
+            jobData={jobData}
+          />
         </section>
       )
     default:
@@ -151,17 +155,49 @@ export async function getStaticProps() {
         }
     }
     });
-  
-    const jobResponse = await
 
+  const expClient = new GraphQLClient(process.env.GRAPH_CMS_API_ENDPOINT)
+  
+  const expQuery = gql`
+    query {
+      jobs {
+        id
+        position
+        startDate
+        companyName
+        companyWebsite
+        companyLogo {
+          url
+        }
+        endDate
+        responsibilities
+      }
+    }`
+  
+  const jobData = await expClient.request(expQuery)
+  
+  
     return {
         props: {
             posts: response.results,
             descPosts: descResponse.results,
-            blogResponse: blogResponse.results
+            blogResponse: blogResponse.results,
+            jobData: jobData
         },
         revalidate: 1,
     };
 }
+
+// export const getServerSideProps = async (context) => {
+
+
+
+//   return {
+//     props: {
+//       jobData
+//     }
+//   }
+
+// }
 
 export default HomePage
