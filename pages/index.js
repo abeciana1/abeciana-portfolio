@@ -4,6 +4,7 @@ import { Transition } from '@headlessui/react'
 
 //! import home page sections here
 import About from '../components/HomePageSections/About'
+import AboutExp from '../components/HomePageSections/AboutExp'
 import Portfolio from '../components/HomePageSections/Portfolio'
 import Blog from '../components/HomePageSections/Blog'
 import Reviews from '../components/HomePageSections/Reviews'
@@ -67,6 +68,12 @@ const HomePage = (props) => {
       return (
         <section className="slide-in-bottom">
           <Contact />
+        </section>
+      )
+    case "about":
+      return (
+        <section className="slide-in-bottom">
+          <AboutExp/>
         </section>
       )
     default:
