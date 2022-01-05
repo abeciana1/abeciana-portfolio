@@ -154,6 +154,7 @@ const NavBar = (props) => {
                             <SmoothScrollLink
                                 className="text-3xl hidden lg:block mr-5 font-reross cursor-pointer anim-text"
                                 activeClass="active"
+                                to="renderedSection"
                                 spy={true}
                                 smooth={true}
                                 duration={1000}

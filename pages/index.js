@@ -23,6 +23,7 @@ import Contact from '../components/HomePageSections/Contact'
 // TODO - Add mobile nav menu rendering
 // TODO - Optimize all images with next/image comp
 // TODO - Review web metrics and optimize
+// TODO - Add graphql, graphcms, and vercel icons to skills
 
 const HomePage = (props) => {
 
@@ -77,6 +78,7 @@ const HomePage = (props) => {
         <section className="slide-in-bottom">
           <AboutExp
             jobData={jobData}
+            setSelectedComp={setSelectedComp}
           />
         </section>
       )
