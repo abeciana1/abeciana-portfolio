@@ -29,7 +29,9 @@ const Portfolio = (props) => {
                                     chevrons for switching
                                 </div>
                             </h1>
-                        <PortfolioComp/>
+                            {projData?.projects.map((proj) => {
+                                return <PortfolioComp proj={proj} />
+                            })}
                     <section className="mt-10">
                     <section className="justify-self-start">
                         <Link

@@ -2,6 +2,10 @@ import React from 'react';
 
 const PortfolioComp = (props) => {
 
+    const {
+        proj
+    } = props
+
     return (
         <React.Fragment>
             <section
