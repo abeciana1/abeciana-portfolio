@@ -5,6 +5,10 @@ import Link from 'next/link'
 
 const Portfolio = (props) => {
 
+    const {
+        projData
+    } = props
+
     return (
         <React.Fragment>
             <PageMargin>
@@ -37,7 +41,7 @@ const Portfolio = (props) => {
                                 See all
                                 <span>
                                     <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 pt-1 ml-2" fill="none" viewBox="0 0 24 24" stroke="white">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
                                     </svg>
                                 </span>
                             </button>

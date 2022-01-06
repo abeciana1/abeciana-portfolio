@@ -34,7 +34,8 @@ const HomePage = (props) => {
     blogResponse,
     selectedComp,
     setSelectedComp,
-    jobData
+    jobData,
+    projData
   } = props
   
   const [aboutAnimate, setAboutAnimate] = useState(false)
@@ -58,7 +59,9 @@ const HomePage = (props) => {
     case "portfolio":
       return (
         <section className="slide-in-bottom">
-          <Portfolio />
+          <Portfolio
+            projData={projData}
+          />
         </section>
       )
     case "reviews":
@@ -178,16 +181,33 @@ export async function getStaticProps() {
     }`
   
   const jobData = await expClient.request(expQuery)
-
-  // const descJobData = jobData?.jobs?.reverse()
   
+  const projClient = new GraphQLClient(process.env.GRAPH_CMS_API_ENDPOINT)
+
+  const projQuery = gql`
+  query {
+    projects {
+        id
+        projectStatus
+        projectLink
+        projectTitle
+        projectDescription
+        projectImage {
+          url
+        }
+        technology
+      }
+    }
+  `
+    const projData = await projClient.request(projQuery)
   
     return {
         props: {
             posts: response.results,
             descPosts: descResponse.results,
             blogResponse: blogResponse.results,
-            jobData: jobData
+            jobData: jobData,
+            projData: projData
         },
         revalidate: 1,
     };
