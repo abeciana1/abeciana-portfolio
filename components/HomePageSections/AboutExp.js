@@ -81,7 +81,6 @@ const AboutExp = (props) => {
                     className="mt-20"
                 >
                     <h2
-                        id="experience"
                         className="text-4xl font-reross text-altYellow leading-relaxed"
                     >experience</h2>
                     <section
@@ -157,6 +156,19 @@ const AboutExp = (props) => {
                                 </section>
                             )
                         })}
+                    </section>
+                </section>
+                <section
+                    id="education"
+                    className="mt-20"
+                >
+                    <h2
+                        className="text-4xl font-reross text-altYellow leading-relaxed"
+                    >experience</h2>
+                    <section
+                        className="mt-10"
+                    >
+                        
                     </section>
                 </section>
             </PageMargin>

@@ -177,6 +177,15 @@ export async function getStaticProps() {
         endDate
         responsibilities
       }
+      educations {
+        id
+        schoolName
+        schoolWebsite
+        schoolImage {
+          url
+        }
+        achievements
+      }
     }`
   
   const jobData = await expClient.request(expQuery)
@@ -199,6 +208,8 @@ export async function getStaticProps() {
     }
   `
     const projData = await projClient.request(projQuery)
+
+  
   
     return {
         props: {
