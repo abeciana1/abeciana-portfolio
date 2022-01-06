@@ -160,6 +160,7 @@ const NavBar = (props) => {
                                 duration={1000}
                                 exact="true"
                                 linkText="about"
+                                offset={-100}
                                 setSelectedComp={setSelectedComp}
                             />
                             <SmoothScrollLink

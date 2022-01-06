@@ -35,7 +35,7 @@ const AboutExp = (props) => {
                     />
                     |
                     <SmoothScrollLink
-                        className="ml-5 font-reross cursor-pointer anim-text"
+                        className="ml-5 font-reross cursor-pointer anim-text mr-5"
                         activeClass="active"
                         to="experience"
                         spy={true}
@@ -44,6 +44,19 @@ const AboutExp = (props) => {
                         exact="true"
                         offset={-100}
                         linkText="experience"
+                        setSelectedComp={setSelectedComp}
+                    />
+                    |
+                    <SmoothScrollLink
+                        className="ml-5 font-reross cursor-pointer anim-text"
+                        activeClass="active"
+                        to="education"
+                        spy={true}
+                        smooth={true}
+                        duration={1000}
+                        exact="true"
+                        offset={-100}
+                        linkText="education"
                         setSelectedComp={setSelectedComp}
                     />
                 </section>
