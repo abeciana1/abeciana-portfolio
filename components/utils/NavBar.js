@@ -98,13 +98,52 @@ const NavBar = (props) => {
                             </div>
                         </div>
                         :
-                        <Link
-                            href="/"
-                        >
-                            <a
-                                className="text-3xl sm:text-4xl md:text-3xl font-reross cursor-pointer anim-text"
-                            >Alex Beciana</a>
-                        </Link>
+                        <div
+                            className="flex justify-center self-center float-left items-stretch"
+                            >
+                            <Link
+                                href="/"
+                            >
+                                <a
+                                    className="text-3xl sm:text-4xl md:text-3xl font-reross cursor-pointer anim-text"
+                                >Alex Beciana</a>
+                            </Link>
+                                <div className="flex self-center ml-5">
+                                <Link href="https://www.behance.net/alexbeciana">
+                                    <a
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        alt="Alex Beciana - Behance"
+                                    >
+                                        <img
+                                            src="./behance.svg"
+                                        />
+                                    </a>
+                                </Link>
+                                <Link href="https://github.com/abeciana1">
+                                    <a
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        alt="Alex Beciana - GitHub"
+                                    >
+                                        <img
+                                            src="./github.svg"
+                                        />
+                                    </a>
+                                </Link>
+                                <Link href="https://www.linkedin.com/in/alexbeciana/">
+                                    <a
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        alt="Alex Beciana - LinkedIn"
+                                    >
+                                        <img
+                                            src="./linkedin.svg"
+                                        />
+                                    </a>
+                                </Link>
+                            </div>
+                            </div>
                         }
                         <section
                             className="self-center ml-60 flex justify-end"
@@ -115,6 +154,7 @@ const NavBar = (props) => {
                             <SmoothScrollLink
                                 className="text-3xl hidden lg:block mr-5 font-reross cursor-pointer anim-text"
                                 activeClass="active"
+                                to="renderedSection"
                                 spy={true}
                                 smooth={true}
                                 duration={1000}
