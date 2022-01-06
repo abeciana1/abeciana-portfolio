@@ -14,8 +14,6 @@ const AboutExp = (props) => {
         setSelectedComp
     } = props
 
-    console.log(jobData?.jobs);
-
     return (
         <React.Fragment>
             <PageMargin>
