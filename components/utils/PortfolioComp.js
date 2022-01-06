@@ -38,36 +38,51 @@ const PortfolioComp = (props) => {
                     {proj?.projectTitle}
                 </h3>
             <section
-                className="text-center grid grid-cols-1 md:grid-cols-2 items-stretch"
+                className="text-center grid grid-cols-1 md:grid-cols-2 items-stretch mt-5"
             >
                 <div
                     className="self-center"
                 >
                     <img
                         src={proj?.projectImage?.url}
+                        className="proj-img mx-auto"
                     />
                 </div>
                 <div
-                    className="flex justify-center p-5 mx-auto lg:w-3/4 self-center"
+                    className="p-5 mx-auto lg:w-3/4 self-center"
                 >
+                    <ReactMarkdown 
+                        children={proj?.projectDescription}
+                        components={{
+                            p({ children, props }) {
+                                return (
+                                    <p
+                                        className="leading-9 text-lg"
+                                        {...props}
+                                    >
+                                        { children }
+                                    </p>
+                                )
+                            }
+                        }}
+                    />
                     <div
-                        // className="bg-white testimonial-rec shadow-xl leading-10 text-base p-10 rounded-3xl z-30 overflow-auto overscroll-contain"
-                        className="leading-10 text-lg"
+                        className="font-semiBold"
                     >
-                        <ReactMarkdown 
-                            children={proj?.projectDescription}
-                            components={{
-                                p({ children, props }) {
-                                    return (
-                                        <p
-                                            {...props}
-                                        >
-                                            { children }
-                                        </p>
-                                    )
-                                }
-                            }}
-                        />
+                            Status: 
+                        <span
+                            className="ml-2 font-normal"
+                        >{proj?.projectStatus}</span>
+                    </div>
+                    <div className="font-semiBold">
+                        Tech:
+                            <span
+                                className="ml-2 font-normal"
+                            >
+                                {proj?.technology.map((tech) => {
+                                    return `${tech.split(" ")} `
+                                })}
+                            </span>
                     </div>
                 </div>
             </section>

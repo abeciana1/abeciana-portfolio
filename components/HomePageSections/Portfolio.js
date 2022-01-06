@@ -23,33 +23,10 @@ const Portfolio = (props) => {
                                 className="justify-self-start text-5xl font-reross text-altYellow"
                             >
                                 portfolio
-                                <div
-                                    className="text-lg font-futura"
-                                >
-                                    chevrons for switching
-                                </div>
                             </h1>
                             {projData?.projects.map((proj) => {
                                 return <PortfolioComp proj={proj} />
                             })}
-                    {/* <section className="mt-10">
-                    <section className="justify-self-start">
-                        <Link
-                            href="/portfolio"
-                        >
-                            <button
-                                className="bg-black text-lg text-white font-medium py-2 px-10 rounded-full flex content-center"
-                            >
-                                See all
-                                <span>
-                                    <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 pt-1 ml-2" fill="none" viewBox="0 0 24 24" stroke="white">
-                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                                    </svg>
-                                </span>
-                            </button>
-                        </Link>
-                    </section>
-                </section> */}
                     </section>
                 </section>
             </PageMargin>
