@@ -1,6 +1,31 @@
 import React from 'react';
+import ReactMarkdown from 'react-markdown'
 
 const PortfolioComp = (props) => {
+
+    const {
+        proj
+    } = props
+
+    console.log(proj)
+
+//* {
+//*     "id": "ckvffxh2wx2v30d79ngwd4jh9",
+//*     "projectStatus": "Completed",
+//*     "projectLink": "https://github.com/abeciana1/le-cine-frontend",
+//*     "projectTitle": "Le Cine",
+//*     "projectDescription": "A film club management app to bring meaningful conversation and film lovers together under one roof.",
+//*     "projectImage": {
+//*         "url": "https://media.graphcms.com/zX1wDQloQ0awintRywuh"
+//*     },
+//*     "technology": [
+//*         "VanillaCSS",
+//*         "Bootstrap",
+//*         "JWTAuthentication",
+//*         "React",
+//*         "RubyOnRails"
+//*     ]
+//* }
 
     return (
         <React.Fragment>
@@ -10,30 +35,54 @@ const PortfolioComp = (props) => {
                 <h3
                     className="text-3xl"
                 >
-                    Project title
+                    {proj?.projectTitle}
                 </h3>
-                <div
-                    className=" py-5 grid grid-cols-3 flex justify-center mx-auto text-center"
-                >
-                    <div>Picture 1</div>
-                    <div>Picture 2</div>
-                    <div>Picture 3</div>
-                </div>
             <section
-                className="text-center"
+                className="text-center grid grid-cols-1 md:grid-cols-2 items-stretch mt-5"
             >
                 <div
-                    className="flex justify-center p-5 rounded-lg shadow-xl mx-auto lg:w-3/4"
+                    className="self-center"
                 >
+                    <img
+                        src={proj?.projectImage?.url}
+                        className="proj-img mx-auto"
+                    />
+                </div>
+                <div
+                    className="p-5 mx-auto lg:w-3/4 self-center"
+                >
+                    <ReactMarkdown 
+                        children={proj?.projectDescription}
+                        components={{
+                            p({ children, props }) {
+                                return (
+                                    <p
+                                        className="leading-9 text-lg"
+                                        {...props}
+                                    >
+                                        { children }
+                                    </p>
+                                )
+                            }
+                        }}
+                    />
                     <div
-                        // className="bg-white testimonial-rec shadow-xl leading-10 text-base p-10 rounded-3xl z-30 overflow-auto overscroll-contain"
-                        className="bg-white testimonial-rec leading-10 text-base z-30 overflow-auto overscroll-contain"
+                        className="font-semiBold"
                     >
-                        I’ve been a Lead Instructor at Flatiron School for close to 3 years and have graduated over 1500 students. I don’t often write recommendations but I do when I notice something special. There are 3 things I look for in a student to gauge their likelihood to be highly successful engineers: resiliency, ability to receive feedback, and impact on others. Alex exhibits all three. 
-
-                        There was a moment where I’ve had to give constructive feedback to Alex about his code and performance on a code challenge. Most students in this situation respond with resentment or denial. Alex, on the other hand, gracefully accepted the feedback. He spoke with me about how he could improve and what suggestions I had. Not only did Alex execute on this feedback, improving in every area, he became one of the strongest students I’ve ever had. In fact, he’s the first student of mine to build his own Ruby gem to help initialize new CLI projects, eliminating a prominent pain point for his classmates. Additionally, Alex would offer his time to help his fellow classmates who were struggling with understanding and implementing concepts. The ability to acknowledge areas of opportunities and the resiliency to turn them into strengths are integral to success in any career but particularly significant for a Software Engineer. 
-
-                        Alex has proven that he is self motivated and committed to learning and growing as a developer. I firmly believe he will be a valuable addition to any team. 
+                            Status: 
+                        <span
+                            className="ml-2 font-normal"
+                        >{proj?.projectStatus}</span>
+                    </div>
+                    <div className="font-semiBold">
+                        Tech:
+                            <span
+                                className="ml-2 font-normal"
+                            >
+                                {proj?.technology.map((tech) => {
+                                    return `${tech.split(" ")} `
+                                })}
+                            </span>
                     </div>
                 </div>
             </section>

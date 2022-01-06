@@ -1,5 +1,4 @@
 import React from 'react';
-import Link from 'next/link'
 import PageMargin from '../utils/PageMargin'
 import SmoothScrollLink from '../utils/SmoothScrollLink'
 import FeaturedPostCard from '../utils/FeaturedPostCard'

@@ -1,9 +1,10 @@
 import React, {useState, useEffect} from 'react';
 const { Client } = require("@notionhq/client")
-import { Transition } from '@headlessui/react'
+import { gql, GraphQLClient } from 'graphql-request'
 
 //! import home page sections here
 import About from '../components/HomePageSections/About'
+import AboutExp from '../components/HomePageSections/AboutExp'
 import Portfolio from '../components/HomePageSections/Portfolio'
 import Blog from '../components/HomePageSections/Blog'
 import Reviews from '../components/HomePageSections/Reviews'
@@ -25,14 +26,17 @@ import Contact from '../components/HomePageSections/Contact'
 
 const HomePage = (props) => {
 
+  
   const {
     posts,
     descPosts,
     blogResponse,
     selectedComp,
-    setSelectedComp
+    setSelectedComp,
+    jobData,
+    projData
   } = props
-
+  
   const [aboutAnimate, setAboutAnimate] = useState(false)
 
     useEffect(() => {
@@ -54,7 +58,9 @@ const HomePage = (props) => {
     case "portfolio":
       return (
         <section className="slide-in-bottom">
-          <Portfolio />
+          <Portfolio
+            projData={projData}
+          />
         </section>
       )
     case "reviews":
@@ -67,6 +73,15 @@ const HomePage = (props) => {
       return (
         <section className="slide-in-bottom">
           <Contact />
+        </section>
+      )
+    case "about":
+      return (
+        <section className="slide-in-bottom">
+          <AboutExp
+            jobData={jobData}
+            setSelectedComp={setSelectedComp}
+          />
         </section>
       )
     default:
@@ -145,14 +160,68 @@ export async function getStaticProps() {
     }
     });
 
+  const expClient = new GraphQLClient(process.env.GRAPH_CMS_API_ENDPOINT)
+  
+  const expQuery = gql`
+    query {
+      jobs(orderBy: endDate_DESC) {
+        id
+        position
+        startDate
+        companyName
+        companyWebsite
+        companyDescription
+        companyLogo {
+          url
+        }
+        endDate
+        responsibilities
+      }
+    }`
+  
+  const jobData = await expClient.request(expQuery)
+  
+  const projClient = new GraphQLClient(process.env.GRAPH_CMS_API_ENDPOINT)
+
+  const projQuery = gql`
+  query {
+    projects {
+        id
+        projectStatus
+        projectLink
+        projectTitle
+        projectDescription
+        projectImage {
+          url
+        }
+        technology
+      }
+    }
+  `
+    const projData = await projClient.request(projQuery)
+  
     return {
         props: {
             posts: response.results,
             descPosts: descResponse.results,
-            blogResponse: blogResponse.results
+            blogResponse: blogResponse.results,
+            jobData: jobData,
+            projData: projData
         },
         revalidate: 1,
     };
 }
+
+// export const getServerSideProps = async (context) => {
+
+
+
+//   return {
+//     props: {
+//       jobData
+//     }
+//   }
+
+// }
 
 export default HomePage
