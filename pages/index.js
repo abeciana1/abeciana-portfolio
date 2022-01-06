@@ -162,7 +162,7 @@ export async function getStaticProps() {
   
   const expQuery = gql`
     query {
-      jobs {
+      jobs(orderBy: endDate_DESC) {
         id
         position
         startDate
@@ -178,6 +178,8 @@ export async function getStaticProps() {
     }`
   
   const jobData = await expClient.request(expQuery)
+
+  // const descJobData = jobData?.jobs?.reverse()
   
   
     return {

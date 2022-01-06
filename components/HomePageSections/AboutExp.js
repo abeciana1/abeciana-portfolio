@@ -5,6 +5,7 @@ import Link from 'next/link'
 import SmoothScrollLink from '../utils/SmoothScrollLink'
 import Skills from '../../data/skills.json'
 import ReactMarkdown from 'react-markdown'
+import moment from 'moment'
 
 const AboutExp = (props) => {
 
@@ -13,7 +14,7 @@ const AboutExp = (props) => {
         setSelectedComp
     } = props
 
-    // console.log(jobData?.jobs);
+    console.log(jobData?.jobs);
 
     return (
         <React.Fragment>
@@ -93,6 +94,7 @@ const AboutExp = (props) => {
                         {jobData?.jobs.map((job) => {
                             return (
                                 <section
+                                    key={job?.id}
                                     id={job?.companyName}
                                     className="grid grid-cols-1 md:grid-cols-2 gap-10 items-stretch py-8"
                                 >
@@ -100,8 +102,8 @@ const AboutExp = (props) => {
                                         className="self-center"
                                     >
                                         <img
-                                            src={job?.companyLogo.url}
-                                            className="w-4/6 mx-auto"
+                                            src={job?.companyLogo?.url || "/profile-pic.png"}
+                                            className="w-3/5 mx-auto"
                                         />
                                         <div
                                             className="text-center mt-5 text-lg"
@@ -125,7 +127,7 @@ const AboutExp = (props) => {
                                         <div
                                             className="text-xl"
                                         >
-                                            {job?.startDate} — {job?.endDate}
+                                            {moment(job?.startDate).format("MMM YYYY")} — {job?.endDate === "2022-01-01" ? "Present" : moment(job?.endDate).format("MMM YYYY")}
                                         </div>
                                         {job?.companyWebsite && (
                                             <a
