@@ -1,7 +1,5 @@
 import React from 'react';
 import PageMargin from '../utils/PageMargin'
-import cx from 'classnames'
-import Link from 'next/link'
 import SmoothScrollLink from '../utils/SmoothScrollLink'
 import Skills from '../../data/skills.json'
 import ReactMarkdown from 'react-markdown'
