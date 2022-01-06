@@ -6,6 +6,8 @@ const PortfolioComp = (props) => {
         proj
     } = props
 
+    console.log(proj)
+
     return (
         <React.Fragment>
             <section

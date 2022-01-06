@@ -32,7 +32,7 @@ const Portfolio = (props) => {
                             {projData?.projects.map((proj) => {
                                 return <PortfolioComp proj={proj} />
                             })}
-                    <section className="mt-10">
+                    {/* <section className="mt-10">
                     <section className="justify-self-start">
                         <Link
                             href="/portfolio"
@@ -49,7 +49,7 @@ const Portfolio = (props) => {
                             </button>
                         </Link>
                     </section>
-                </section>
+                </section> */}
                     </section>
                 </section>
             </PageMargin>

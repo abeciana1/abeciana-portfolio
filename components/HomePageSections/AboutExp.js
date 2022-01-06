@@ -164,17 +164,4 @@ const AboutExp = (props) => {
     )
 }
 
-// {
-//     "id": "ckve5tilcq4vj0d79r7maunfs",
-//     "position": "Web Project Coordinator",
-//     "startDate": "August 2016",
-//     "companyName": "New York University - Robert F. Wagner Graduate School of Public Service",
-//     "companyWebsite": "https://wagner.nyu.edu/",
-//     "companyLogo": {
-//         "url": "https://media.graphcms.com/OPqzH32TtGTkdcatr7n2"
-//     },
-//     "endDate": "March 2017",
-//     "responsibilities": "- Acted as the liaison between the IT web team and the school’s faculty/staff\n- Supervised content placement, editorial proofreading, and provided feedback to departments"
-// }
-
 export default AboutExp
