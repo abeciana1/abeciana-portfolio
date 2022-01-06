@@ -23,7 +23,6 @@ import Contact from '../components/HomePageSections/Contact'
 // TODO - Add mobile nav menu rendering
 // TODO - Optimize all images with next/image comp
 // TODO - Review web metrics and optimize
-// TODO - Add graphql, graphcms, and vercel icons to skills
 
 const HomePage = (props) => {
 
