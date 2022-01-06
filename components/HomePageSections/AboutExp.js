@@ -109,11 +109,11 @@ const AboutExp = (props) => {
                                     <div
                                         className="self-center leading-9"
                                     >
-                                            <h3
-                                                className="text-3xl"
-                                            >
-                                                {job?.companyName}
-                                            </h3>
+                                        <h3
+                                            className="text-3xl"
+                                        >
+                                            {job?.companyName}
+                                        </h3>
                                         <h4
                                             className="text-2xl"
                                         >
@@ -168,12 +168,77 @@ const AboutExp = (props) => {
                     <section
                         className="mt-10"
                     >
-                        
+                        {jobData?.educations.map((school) => {
+                            console.log(school)
+                            return (
+                                <section
+                                    key={school?.id}
+                                    id={school?.schoolName}
+                                    className="grid grid-cols-1 md:grid-cols-2 gap-10 items-stretch py-8"
+                                >
+                                    <div
+                                        className="self-center"
+                                    >
+                                        <img
+                                            src={school?.schoolImage?.url}
+                                            className="w-3/5 mx-auto"
+                                        />
+                                    </div>
+                                    <div
+                                        className="self-center leading-9"
+                                    >
+                                        <h3
+                                            className="text-3xl"
+                                        >
+                                            {school?.schoolName}
+                                        </h3>
+                                        {school?.schoolWebsite && (
+                                            <a
+                                                href={school?.schoolWebsite}
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                alt={school?.schoolName}
+                                                className="text-altBlue underline"
+                                            >
+                                                Website
+                                            </a>
+                                        )}
+                                        <p>
+                                            <ReactMarkdown
+                                                children={school?.achievements}
+                                                components={{
+                                                    p({ children, ...props }) {
+                                                        return (
+                                                            <p
+                                                                className=""
+                                                                {...props}
+                                                            >
+                                                                { children }
+                                                            </p>
+                                                        )
+                                                    }
+                                                }}
+                                            />
+                                        </p>
+                                    </div>
+                                </section>
+                            )
+                        })}
                     </section>
                 </section>
             </PageMargin>
         </React.Fragment>
     )
 }
+
+// {
+//     "id": "ckve5nhrsq6qm0b82hx2eqmeo",
+//     "schoolName": "SUNY - Suffolk County Community College",
+//     "schoolWebsite": "https://www.suny.edu/campuses/suffolk/",
+//     "schoolImage": {
+//         "url": "https://media.graphcms.com/KDR5IgAzTnKXllOmtuJv"
+//     },
+//     "achievements": "Associate of Science (AS) in Business Administration and Management"
+// }
 
 export default AboutExp
