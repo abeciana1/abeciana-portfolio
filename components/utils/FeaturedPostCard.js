@@ -7,9 +7,6 @@ const FeaturedPostCard = ({ post }) => {
 
     const slug = post["properties"]["Slug"]["rich_text"][0]["plain_text"]
     const featuredImage = post["properties"]["FeaturedImage"].files[0].file.url
-    const tags = post["properties"]["Tags"]["multi_select"].map((tag) => {
-        tag.name
-    })
     const title = post["properties"]["Name"]["title"][0]["plain_text"]
     const publishedDate = post["properties"]["PublishedDate"]["date"]["start"]
 

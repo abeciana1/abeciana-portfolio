@@ -9,7 +9,6 @@ const AboutExp = (props) => {
 
     const {
         jobData,
-        setSelectedComp
     } = props
 
     return (
@@ -24,7 +23,6 @@ const AboutExp = (props) => {
                     <SmoothScrollLink
                         className="mr-5 font-reross cursor-pointer anim-text"
                         activeClass="active"
-                        // to="skills"
                         spy={true}
                         smooth={true}
                         duration={1000}
