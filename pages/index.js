@@ -36,8 +36,6 @@ const HomePage = (props) => {
     projData,
     reviewData
   } = props
-
-  console.log(reviewData);
   
   const [aboutAnimate, setAboutAnimate] = useState(false)
 
@@ -225,6 +223,7 @@ export async function getStaticProps() {
     reviewerPic {
       url
     }
+    callOut
   }
 }
   `
@@ -243,17 +242,5 @@ export async function getStaticProps() {
         revalidate: 1,
     };
 }
-
-// export const getServerSideProps = async (context) => {
-
-
-
-//   return {
-//     props: {
-//       jobData
-//     }
-//   }
-
-// }
 
 export default HomePage
