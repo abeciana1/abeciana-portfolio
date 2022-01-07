@@ -31,7 +31,6 @@ const AboutExp = (props) => {
                         exact="true"
                         offset={5}
                         linkText="skills"
-                        setSelectedComp={setSelectedComp}
                     />
                     |
                     <SmoothScrollLink
@@ -44,7 +43,6 @@ const AboutExp = (props) => {
                         exact="true"
                         offset={-100}
                         linkText="experience"
-                        setSelectedComp={setSelectedComp}
                     />
                     |
                     <SmoothScrollLink
@@ -57,7 +55,6 @@ const AboutExp = (props) => {
                         exact="true"
                         offset={-100}
                         linkText="education"
-                        setSelectedComp={setSelectedComp}
                     />
                 </section>
                 <section
