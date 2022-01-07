@@ -171,7 +171,7 @@ const NavBar = (props) => {
                                 smooth={true}
                                 duration={1000}
                                 exact="true"
-                                // offset={-120}
+                                offset={-100}
                                 linkText="portfolio"
                                 setSelectedComp={setSelectedComp}
                             />

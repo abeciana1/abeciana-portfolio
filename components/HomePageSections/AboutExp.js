@@ -244,14 +244,4 @@ const AboutExp = (props) => {
     )
 }
 
-// {
-//     "id": "ckve5nhrsq6qm0b82hx2eqmeo",
-//     "schoolName": "SUNY - Suffolk County Community College",
-//     "schoolWebsite": "https://www.suny.edu/campuses/suffolk/",
-//     "schoolImage": {
-//         "url": "https://media.graphcms.com/KDR5IgAzTnKXllOmtuJv"
-//     },
-//     "achievements": "Associate of Science (AS) in Business Administration and Management"
-// }
-
 export default AboutExp
