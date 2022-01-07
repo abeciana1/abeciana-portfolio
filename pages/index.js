@@ -36,6 +36,8 @@ const HomePage = (props) => {
     projData,
     reviewData
   } = props
+
+  console.log(reviewData);
   
   const [aboutAnimate, setAboutAnimate] = useState(false)
 
@@ -199,7 +201,7 @@ export async function getStaticProps() {
     projects {
         id
         projectStatus
-        projectLink
+        projectLinks
         projectTitle
         projectDescription
         projectImage {
@@ -214,16 +216,18 @@ export async function getStaticProps() {
   const reviewClient = new GraphQLClient(process.env.GRAPH_CMS_API_ENDPOINT)
   
   const reviewQuery = gql`
-    testimonials {
-        id
-        testimonialBody
-        reviewerPosition
-        reviewerName
-        reviewerPic {
-          url
-        }
-      }
-    }`
+  query {
+  testimonials {
+    id
+    testimonialBody
+    reviewerPosition
+    reviewerName
+    reviewerPic {
+      url
+    }
+  }
+}
+  `
   
   const reviewData = await reviewClient.request(reviewQuery)
   

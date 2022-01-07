@@ -142,8 +142,8 @@ const AboutExp = (props) => {
                                                 href={job?.companyWebsite}
                                                 target="_blank"
                                                 rel="noopener noreferrer"
-                                                alt={job?.companyName}
                                                 className="text-altBlue underline"
+                                                alt={job?.companyName}
                                             >
                                                 Website
                                             </a>
