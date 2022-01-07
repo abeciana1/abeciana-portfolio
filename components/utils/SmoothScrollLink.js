@@ -16,8 +16,6 @@ const SmoothScrollLink = (props) => {
         setSelectedComp
     } = props
 
-    console.log(setSelectedComp);
-
     return (
         <>
             <Link
