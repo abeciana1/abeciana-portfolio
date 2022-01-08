@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react';
 const { Client } = require("@notionhq/client")
 import { gql, GraphQLClient } from 'graphql-request'
+import Head from 'next/head'
 
 //! import home page sections here
 import About from '../components/HomePageSections/About'
@@ -93,6 +94,9 @@ const HomePage = (props) => {
 
   return (
     <React.Fragment>
+      <Head>
+        <title>Alex Beciana</title>
+      </Head>
         <div className="justify-item-center self-center mx-auto z-30 md:hidden">
             <img
                 src="/profile-pic.png"

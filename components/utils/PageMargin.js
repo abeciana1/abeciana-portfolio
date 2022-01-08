@@ -3,7 +3,7 @@ import React from 'react'
 const PageMargin = ({ children }) => {
 
     return (
-        <section className="mx-5 md:mx-10 my-4">
+        <section className="px-5 md:px-10 py-4 mx-auto page-margin">
             {children}
         </section>
     )
