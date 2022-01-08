@@ -13,7 +13,7 @@ const MyDocument = () => {
                 {/* <link rel="preconnect preload" as="font" href="https://fonts.googleapis.com" crossOrigin="anonymous" /> */}
                 {/* <link rel="preconnect preload" as="font" href="https://fonts.gstatic.com" crossOrigin="anonymous" /> */}
                 <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" as="font" rel="stylesheet preload" crossOrigin="anonymous" />
-                <script type="text/javascript" id="hs-script-loader" async src="//js.hs-scripts.com/21235958.js"></script>
+                <script type="text/javascript" id="hs-script-loader" defer src="//js.hs-scripts.com/21235958.js"></script>
             </Head>
             <body>
                 <Main />

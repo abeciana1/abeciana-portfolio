@@ -21,7 +21,7 @@ const NavBar = (props) => {
 
     const [scrolled, setScrolled] = React.useState(false);
 
-    const [isOpen, setOpen] = useState(true);
+    const [isOpen, setOpen] = useState(false);
 
     let navBarId = '';
 

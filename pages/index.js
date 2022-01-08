@@ -17,6 +17,9 @@ import Contact from '../components/HomePageSections/Contact'
 // TODO - create SEO title and description for blog posts
 // TODO - Optimize all images with next/image comp
 // TODO - Review web metrics and optimize
+// TODO Add Google analytics
+// TODO check out next js web core vitals fixes
+
 
 const HomePage = (props) => {
 
