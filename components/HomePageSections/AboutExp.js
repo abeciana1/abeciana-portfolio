@@ -177,7 +177,6 @@ const AboutExp = (props) => {
                         className="mt-10"
                     >
                         {jobData?.educations.map((school) => {
-                            console.log(school)
                             return (
                                 <section
                                     key={school?.id}
