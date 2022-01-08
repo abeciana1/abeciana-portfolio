@@ -13,7 +13,9 @@ const SmoothScrollLink = (props) => {
         exact,
         offset,
         linkText,
-        setSelectedComp
+        setSelectedComp,
+        isOpen,
+        setOpen
     } = props
 
     return (
@@ -30,7 +32,12 @@ const SmoothScrollLink = (props) => {
                 {setSelectedComp !== undefined ? 
                 <div
                     className={className}
-                    onClick={() => setSelectedComp(linkText)}
+                    onClick={() => {
+                        setSelectedComp(linkText)
+                        if (isOpen === true) {
+                            setOpen(false)
+                        }
+                    }}
                 >
                     {linkText}
                 </div>
