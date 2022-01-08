@@ -6,7 +6,8 @@ class ContactForm extends React.Component {
         name: '',
         email: '',
         subject: '',
-        message: ''
+        message: '',
+        submitted: false
     }
 
     changeHandler = (e) => {
@@ -17,10 +18,18 @@ class ContactForm extends React.Component {
 
     submitHandler = (e) => {
         e.preventDefault()
-
+        this.setState({
+            name: '',
+            email: '',
+            subject: '',
+            message: '',
+            submitted: true
+        })
     }
 
     render() {
+
+        const { submitted } = this.state
         
         return (
             <React.Fragment>
@@ -30,7 +39,7 @@ class ContactForm extends React.Component {
                     <section
                         className="bg-black rounded-xl w-full"
                     >
-                        <h2 className="text-white text-5xl pt-5 pl-10">say hi!</h2>
+                        <h2 className="text-white text-5xl pt-5 pl-10">{submitted ? "Thanks for submitting!" : "say hi!"}</h2>
                         <form
                             className="pt-5 pb-10 px-10"
                             onSubmit={this.submitHandler}
