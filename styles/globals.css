@@ -203,3 +203,7 @@ a {
 .proj-img {
   max-height: 220px;
 }
+
+.page-margin{
+  max-width: 1440px;
+}

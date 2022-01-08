@@ -5,21 +5,13 @@ import { Transition } from '@headlessui/react'
 
 import moment from 'moment'
 
-// TODO - Add blog post teaser comp on hover covering with meta data
-// TODO - Add column for excerpt tex -- use for hover cover ^^
-
 
 const PostCard = ({ post }) => {
-
-    // console.log(post)
 
     const [mouseHover, setHover] = useState(false)
 
     const slug = post["properties"]["Slug"]["rich_text"][0]["plain_text"]
     const featuredImage = post["properties"]["FeaturedImage"].files[0].file.url
-    const tags = post["properties"]["Tags"]["multi_select"].map((tag) => {
-        tag.name
-    })
     const title = post["properties"]["Name"]["title"][0]["plain_text"]
     const publishedDate = post["properties"]["PublishedDate"]["date"]["start"]
 
@@ -69,7 +61,7 @@ const PostCard = ({ post }) => {
                                 >
                                     {post["properties"]["Tags"]["multi_select"].map((tag) => {
                                         return <span
-                                            className={cx("ml-1 my-1 py-0.5 px-1.5 rounded-full text-xs leading-tight", {
+                                            className={cx("ml-1 my-1 py-0.5 px-1.5 rounded-full text-xs text-black leading-tight", {
                                                 ['bg-yellow-700 text-white bg-opacity-60']: tag.color === "brown",
                                                 ['bg-yellow-500	text-white bg-opacity-60']: tag.color === 'orange',
                                                 ['bg-pink-300 text-white']: tag.color === 'pink',

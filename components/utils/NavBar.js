@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link'
 import PageMargin from './PageMargin'
-import cx from 'classnames'
 import { Squash as Hamburger } from 'hamburger-react'
 import { withRouter } from 'next/router'
 
@@ -13,7 +12,6 @@ const NavBar = (props) => {
 
     const {
         router,
-        selectedComp,
         setSelectedComp
     } = props
 
@@ -147,7 +145,6 @@ const NavBar = (props) => {
                         }
                         <section
                             className="self-center ml-60 flex justify-end"
-                            // className="self-center flex"
                         >
                         {router.asPath === '/' ?
                         <>

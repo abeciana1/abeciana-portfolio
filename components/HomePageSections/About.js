@@ -1,8 +1,7 @@
-import React, { useState } from 'react';
+import React from 'react';
 import PageMargin from '../utils/PageMargin'
 import { withRouter } from 'next/router'
 import cx from 'classnames'
-import Link from 'next/link'
 
 const About = (props) => {
 
