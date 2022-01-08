@@ -19,7 +19,8 @@ import Contact from '../components/HomePageSections/Contact'
 // TODO - Review web metrics and optimize
 // TODO Add Google analytics
 // TODO check out next js web core vitals fixes
-
+// TODO Add metice script to head
+// TODO Add changes from diagnostics on web dev
 
 const HomePage = (props) => {
 

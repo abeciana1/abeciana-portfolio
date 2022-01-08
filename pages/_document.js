@@ -9,7 +9,8 @@ const MyDocument = () => {
                 <link rel="icon preload" as="image" href="/waving.png" />
                 <link rel="preload" as="image" href="/profile-callout-edited.png" />
                 <link rel="preload" as="image" href="/profile-pic.png" />
-                <link rel="stylesheet preload" as="font" href="https://use.typekit.net/bsh6twa.css" crossOrigin="anonymous" />
+                <link rel="preload stylesheet" as="font" href="./RerossQuadratic.otf" crossOrigin="anonymous" />
+                {/* <link rel="stylesheet preload" as="font" href="https://use.typekit.net/bsh6twa.css" crossOrigin="anonymous"/> */}
                 {/* <link rel="preconnect preload" as="font" href="https://fonts.googleapis.com" crossOrigin="anonymous" /> */}
                 {/* <link rel="preconnect preload" as="font" href="https://fonts.gstatic.com" crossOrigin="anonymous" /> */}
                 <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" as="font" rel="stylesheet preload" crossOrigin="anonymous" />
