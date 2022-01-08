@@ -12,7 +12,7 @@ const MyDocument = () => {
                 <link rel="preconnect preload" href="https://fonts.googleapis.com" crossOrigin="anonymous" />
                 <link rel="preconnect preload" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
                 <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet preload" crossOrigin="anonymous" />
-                {/* <script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/21004082.js"></script> */}
+                <script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/21004082.js"></script>
             </Head>
             <body>
                 <Main />
