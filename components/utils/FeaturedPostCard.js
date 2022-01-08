@@ -40,7 +40,7 @@ const FeaturedPostCard = ({ post }) => {
                         >
                             {post["properties"]["Tags"]["multi_select"].map((tag) => {
                                 return <span
-                                    className={cx("ml-1 my-1 py-0.5 px-1.5 rounded-full text-xs leading-tight", {
+                                    className={cx("ml-1 my-1 py-0.5 px-1.5 rounded-full text-xs text-black leading-tight", {
                                         ['bg-yellow-700 text-white bg-opacity-60']: tag.color === "brown",
                                         ['bg-yellow-500	text-white bg-opacity-60']: tag.color === 'orange',
                                         ['bg-pink-300 text-white']: tag.color === 'pink',
