@@ -11,17 +11,10 @@ import Blog from '../components/HomePageSections/Blog'
 import Reviews from '../components/HomePageSections/Reviews'
 import Contact from '../components/HomePageSections/Contact'
 
-// TODO - create mobile rendering of blog section on homepage
-// TODO - Reach out to clients for testimonials
-// TODO - Add testimonials to graphcms
-// TODO - Hook up hubspot for site
 // TODO - Create scroll to top button reuse comp
 // TODO - Add resume - available to download
-// TODO - Add icons to public profiles
 // TODO - Add social share buttons for blog posts
-// TODO - Create meta data for pages
 // TODO - create SEO title and description for blog posts
-// TODO - Add mobile nav menu rendering
 // TODO - Optimize all images with next/image comp
 // TODO - Review web metrics and optimize
 
