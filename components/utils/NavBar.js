@@ -21,7 +21,7 @@ const NavBar = (props) => {
 
     const [scrolled, setScrolled] = React.useState(false);
 
-    const [isOpen, setOpen] = useState(false);
+    const [isOpen, setOpen] = useState(true);
 
     let navBarId = '';
 
@@ -270,12 +270,163 @@ const NavBar = (props) => {
                                 easing="ease-in"
                             />
                     </section>
+                </PageMargin>
                     {isOpen && (
-                        <section>
-                            
+                        <section
+                            className="bg-white z-50 absolute w-full h-screen"
+                        >
+                            <section
+                                className="px-5 md:px-10 py-4"
+                            >
+                                <section
+                                    className="ml-6 flex flex-col gap-y-8"
+                                >
+                                {router.asPath === '/' ?
+                                <>
+                                    <SmoothScrollLink
+                                        className="text-3xl block lg:hidden mr-5 font-reross cursor-pointer anim-text"
+                                        activeClass="active"
+                                        to="renderedSection"
+                                        spy={true}
+                                        smooth={true}
+                                        duration={1000}
+                                        exact="true"
+                                        linkText="about"
+                                        offset={-100}
+                                        setSelectedComp={setSelectedComp}
+                                        isOpen={isOpen}
+                                        setOpen={setOpen}
+                                    />
+                                    <SmoothScrollLink
+                                        className="text-3xl block lg:hidden mr-5 font-reross cursor-pointer anim-text"
+                                        activeClass="active"
+                                        to="renderedSection"
+                                        spy={true}
+                                        smooth={true}
+                                        duration={1000}
+                                        exact="true"
+                                        offset={-100}
+                                        linkText="portfolio"
+                                        setSelectedComp={setSelectedComp}
+                                        isOpen={isOpen}
+                                        setOpen={setOpen}
+                                    />
+                                    <SmoothScrollLink
+                                        className="text-3xl block lg:hidden mr-5 font-reross cursor-pointer anim-text"
+                                        activeClass="active"
+                                        to="renderedSection"
+                                        spy={true}
+                                        smooth={true}
+                                        duration={1000}
+                                        exact="true"
+                                        offset={-100}
+                                        linkText="blog"
+                                        setSelectedComp={setSelectedComp}
+                                        isOpen={isOpen}
+                                        setOpen={setOpen}
+                                    />
+                                    <SmoothScrollLink
+                                        className="text-3xl block lg:hidden mr-5 font-reross cursor-pointer anim-text"
+                                        activeClass="active"
+                                        to="renderedSection"
+                                        spy={true}
+                                        smooth={true}
+                                        duration={1000}
+                                        exact="true"
+                                        offset={-100}
+                                        linkText="reviews"
+                                        setSelectedComp={setSelectedComp}
+                                        isOpen={isOpen}
+                                        setOpen={setOpen}
+                                    />
+                                    <SmoothScrollLink
+                                        className="text-3xl block lg:hidden mr-5 font-reross cursor-pointer anim-text"
+                                        activeClass="active"
+                                        to="renderedSection"
+                                        spy={true}
+                                        smooth={true}
+                                        duration={1000}
+                                        exact="true"
+                                        offset={-100}
+                                        linkText="contact"
+                                        setSelectedComp={setSelectedComp}
+                                        isOpen={isOpen}
+                                        setOpen={setOpen}
+                                    />
+                                </>
+                                :
+                                <>
+                                    <Link
+                                        href="/#renderedSection"
+                                    >
+                                        <a
+                                            onClick={() => {
+                                                setSelectedComp("about")
+                                                if (isOpen) {
+                                                    setOpen(false)
+                                                }
+                                            }}
+                                            className="text-3xl block lg:hidden mr-5 font-reross cursor-pointer anim-text"
+                                        >about</a>
+                                    </Link>
+                                    <Link
+                                        href="/#renderedSection"
+                                    >
+                                        <a
+                                            onClick={() => {
+                                                setSelectedComp("portfolio")
+                                                if (isOpen) {
+                                                    setOpen(false)
+                                                }
+                                            }}
+                                            className="text-3xl block lg:hidden mr-5 font-reross cursor-pointer anim-text"
+                                        >portfolio</a>
+                                    </Link>
+                                    <Link
+                                        href="/#renderedSection"
+                                    >
+                                        <a
+                                            onClick={() => {
+                                                    setSelectedComp("blog")
+                                                    if (isOpen) {
+                                                        setOpen(false)
+                                                    }
+                                                }}
+                                            className="text-3xl block lg:hidden mr-5 font-reross cursor-pointer anim-text"
+                                        >blog</a>
+                                    </Link>
+                                    <Link
+                                        href="/#renderedSection"
+                                    >
+                                        <a
+                                            onClick={() => {
+                                                    setSelectedComp("reviews")
+                                                    if (isOpen) {
+                                                        setOpen(false)
+                                                    }
+                                                }}
+                                            className="text-3xl block lg:hidden mr-5 font-reross cursor-pointer anim-text"
+                                        >reviews</a>
+                                    </Link>
+                                    <Link
+                                        href="/#renderedSection"
+                                    >
+                                        <a
+                                            onClick={() => {
+                                                    setSelectedComp("contact")
+                                                    if (isOpen) {
+                                                        setOpen(false)
+                                                    }
+                                                }}
+                                            className="text-3xl block lg:hidden mr-5 font-reross cursor-pointer anim-text"
+                                        >contact</a>
+                                    </Link>
+                                </>
+                                }
+                                </section>
+                            </section>
                         </section>
                     )}
-                </PageMargin>
             </section>
         </React.Fragment>
     )
