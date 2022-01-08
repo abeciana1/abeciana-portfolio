@@ -1,7 +1,6 @@
 import React from 'react';
 import PortfolioComp from '../utils/PortfolioComp'
 import PageMargin from '../utils/PageMargin'
-import Link from 'next/link'
 
 const Portfolio = (props) => {
 
