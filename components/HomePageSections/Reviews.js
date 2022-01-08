@@ -2,7 +2,11 @@ import React from 'react'
 import Testimonial from '../utils/Testimonial'
 import PageMargin from '../utils/PageMargin'
 
-const Reviews = () => {
+const Reviews = (props) => {
+
+    const {
+        reviewData
+    } = props
 
     return (
         <React.Fragment>
@@ -17,7 +21,9 @@ const Reviews = () => {
                         reviews
                     </h1>
                     <section className="py-5">
-                        <Testimonial />
+                        {reviewData?.testimonials?.map((review) => {
+                            return <Testimonial review={review} />
+                        })}
                     </section>
                 </section>
             </PageMargin>

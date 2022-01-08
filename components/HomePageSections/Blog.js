@@ -38,12 +38,6 @@ const Blog = ({posts, descPosts}) => {
                         offset={-100}
                         linkText="all posts"
                     />
-                    {/* <Dropdown
-                        className="w-1/2"
-                        defaultVal={blogType ? 'Recent posts' : 'All posts'}
-                        options={postType}
-                        onChange={(e) => selectHandler(e)}
-                    /> */}
                 </section>
                     <>
                         <h2

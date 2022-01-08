@@ -7,26 +7,6 @@ const PortfolioComp = (props) => {
         proj
     } = props
 
-    console.log(proj)
-
-//* {
-//*     "id": "ckvffxh2wx2v30d79ngwd4jh9",
-//*     "projectStatus": "Completed",
-//*     "projectLink": "https://github.com/abeciana1/le-cine-frontend",
-//*     "projectTitle": "Le Cine",
-//*     "projectDescription": "A film club management app to bring meaningful conversation and film lovers together under one roof.",
-//*     "projectImage": {
-//*         "url": "https://media.graphcms.com/zX1wDQloQ0awintRywuh"
-//*     },
-//*     "technology": [
-//*         "VanillaCSS",
-//*         "Bootstrap",
-//*         "JWTAuthentication",
-//*         "React",
-//*         "RubyOnRails"
-//*     ]
-//* }
-
     return (
         <React.Fragment>
             <section
@@ -47,9 +27,30 @@ const PortfolioComp = (props) => {
                         src={proj?.projectImage?.url}
                         className="proj-img mx-auto"
                     />
+                    <div
+                        className="mt-2"
+                    >
+                        {proj.projectLinks?.map((link) => {
+                            return (
+                                <a
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="text-altBlue"
+                                    href={link.link}
+                                >
+                                    <span
+                                        className="underline"
+                                    >
+                                        {link.text}
+                                    </span>
+                                    {" "}
+                                </a>
+                            )
+                        })}
+                    </div>
                 </div>
                 <div
-                    className="p-5 mx-auto lg:w-3/4 self-center"
+                    className="p-5 mx-auto lg:w-3/4 self-center leading-7"
                 >
                     <ReactMarkdown 
                         children={proj?.projectDescription}
@@ -57,7 +58,7 @@ const PortfolioComp = (props) => {
                             p({ children, props }) {
                                 return (
                                     <p
-                                        className="leading-9 text-lg"
+                                        className="text-lg"
                                         {...props}
                                     >
                                         { children }
@@ -74,14 +75,12 @@ const PortfolioComp = (props) => {
                             className="ml-2 font-normal"
                         >{proj?.projectStatus}</span>
                     </div>
-                    <div className="font-semiBold">
+                    <div className="font-semiBold leading-7">
                         Tech:
                             <span
                                 className="ml-2 font-normal"
                             >
-                                {proj?.technology.map((tech) => {
-                                    return `${tech.split(" ")} `
-                                })}
+                                {proj?.technology}
                             </span>
                     </div>
                 </div>
