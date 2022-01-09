@@ -18,7 +18,7 @@ const AboutExp = (props) => {
                     className="text-5xl font-reross text-altYellow leading-relaxed"
                 >about me</h1>
                 <section
-                    className="flex text-3xl"
+                    className="flex flex-wrap md:flow-row text-3xl"
                 >
                     <SmoothScrollLink
                         className="mr-5 font-reross cursor-pointer anim-text"
@@ -44,7 +44,7 @@ const AboutExp = (props) => {
                     />
                     |
                     <SmoothScrollLink
-                        className="ml-5 font-reross cursor-pointer anim-text"
+                        className="md:ml-5 font-reross cursor-pointer anim-text"
                         activeClass="active"
                         to="education"
                         spy={true}
