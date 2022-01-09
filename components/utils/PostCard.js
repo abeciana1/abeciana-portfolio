@@ -62,16 +62,16 @@ const PostCard = ({ post }) => {
                                     {post["properties"]["Tags"]["multi_select"].map((tag) => {
                                         return <span
                                             className={cx("ml-1 my-1 py-0.5 px-1.5 rounded-full text-xs text-black leading-tight", {
-                                                ['bg-yellow-700 text-white bg-opacity-60']: tag.color === "brown",
-                                                ['bg-yellow-500	text-white bg-opacity-60']: tag.color === 'orange',
-                                                ['bg-pink-300 text-white']: tag.color === 'pink',
-                                                ['bg-purple-300	text-white']: tag.color === 'purple',
-                                                ['bg-yellow-200']: tag.color === 'yellow',
-                                                ['bg-blue-300 text-white']: tag.color === 'blue',
-                                                ['bg-gray-200']: tag.color === 'gray',
-                                                ['bg-green-400 text-white']: tag.color === 'green',
-                                                ['bg-red-400 text-white']: tag.color === 'red',
-                                                ['bg-blue-800 text-white']: tag.color === 'default'
+                                                ['text-white bg-yellow-700 bg-opacity-60']: tag.color === "brown",
+                                                ['text-white bg-orange-400 bg-opacity-60']: tag.color === 'orange',
+                                                ['text-white bg-pink-300']: tag.color === 'pink',
+                                                ['text-white bg-purple-300']: tag.color === 'purple',
+                                                ['text-black bg-yellow-200']: tag.color === 'yellow',
+                                                ['text-white bg-blue-300']: tag.color === 'blue',
+                                                ['text-black bg-gray-200']: tag.color === 'gray',
+                                                ['text-white bg-green-400']: tag.color === 'green',
+                                                ['text-white bg-red-400']: tag.color === 'red',
+                                                ['text-white bg-blue-800']: tag.color === 'default'
                                             })}
                                         >{tag.name}</span>
                                     })}
