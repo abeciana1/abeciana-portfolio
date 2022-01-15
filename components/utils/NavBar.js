@@ -69,6 +69,7 @@ const NavBar = (props) => {
                                     >
                                         <img
                                             src="./behance.svg"
+                                            alt="Alex Beciana - Behance"
                                         />
                                     </a>
                                 </Link>
@@ -80,6 +81,7 @@ const NavBar = (props) => {
                                     >
                                         <img
                                             src="./github.svg"
+                                            alt="Alex Beciana - GitHub"
                                         />
                                     </a>
                                 </Link>
@@ -91,6 +93,7 @@ const NavBar = (props) => {
                                     >
                                         <img
                                             src="./linkedin.svg"
+                                            alt="Alex Beciana - LinkedIn"
                                         />
                                     </a>
                                 </Link>
