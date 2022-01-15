@@ -2,14 +2,35 @@ import React, {useState, useEffect} from 'react';
 const { Client } = require("@notionhq/client")
 import { gql, GraphQLClient } from 'graphql-request'
 import Head from 'next/head'
+import dynamic from 'next/dynamic'
+
+const AboutExp = dynamic(() => import('../components/HomePageSections/AboutExp'), {
+  ssr: false
+})
+
+const Portfolio = dynamic(() => import('../components/HomePageSections/Portfolio'), {
+  ssr: false
+})
+
+const Blog = dynamic(() => import('../components/HomePageSections/Blog'), {
+  ssr: false
+})
+
+const Reviews = dynamic(() => import('../components/HomePageSections/Reviews'), {
+  ssr: false
+})
+
+const Contact = dynamic(() => import('../components/HomePageSections/Contact'), {
+  ssr: false
+})
 
 //! import home page sections here
 import About from '../components/HomePageSections/About'
-import AboutExp from '../components/HomePageSections/AboutExp'
-import Portfolio from '../components/HomePageSections/Portfolio'
-import Blog from '../components/HomePageSections/Blog'
-import Reviews from '../components/HomePageSections/Reviews'
-import Contact from '../components/HomePageSections/Contact'
+// import AboutExp from '../components/HomePageSections/AboutExp'
+// import Portfolio from '../components/HomePageSections/Portfolio'
+// import Blog from '../components/HomePageSections/Blog'
+// import Reviews from '../components/HomePageSections/Reviews'
+// import Contact from '../components/HomePageSections/Contact'
 
 // TODO - Create scroll to top button reuse comp
 // TODO - Add resume - available to download
@@ -98,6 +119,7 @@ const HomePage = (props) => {
             <img
                 src="/profile-pic.png"
                 className="shadow-xl rounded-full w-2/3 md:w-3/5 mx-auto bg-white"
+                alt="Alex Beciana (simple animated)"
             />
         </div>
       <About aboutAnimate={aboutAnimate} />

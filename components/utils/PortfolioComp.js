@@ -26,6 +26,7 @@ const PortfolioComp = (props) => {
                     <img
                         src={proj?.projectImage?.url}
                         className="proj-img mx-auto"
+                        alt={"Alex Beciana - " + proj?.projectTitle}
                     />
                     <div
                         className="mt-2"
@@ -37,6 +38,7 @@ const PortfolioComp = (props) => {
                                     rel="noopener noreferrer"
                                     className="text-altBlue"
                                     href={link.link}
+                                    alt={"Alex Beciana - " + proj?.projectTitle + " - " + link.text}
                                 >
                                     <span
                                         className="underline"
