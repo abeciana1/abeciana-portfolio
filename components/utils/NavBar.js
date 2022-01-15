@@ -56,6 +56,7 @@ const NavBar = (props) => {
                             className="flex justify-center self-center float-left items-stretch"
                             >
                             <a
+                                alt="Alex Beciana - Homepage"
                                 className="text-3xl sm:text-4xl md:text-3xl font-reross cursor-pointer anim-text"
                                 onClick={() => scrollToTop()}
                             >Alex Beciana</a>

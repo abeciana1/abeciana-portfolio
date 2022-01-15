@@ -21,13 +21,8 @@ const BlogPost = ({ post, blocks }) => {
         Name
     } = post
 
-    console.log(post)
-
     return (
         <React.Fragment>
-            {/* <Head>
-                <title>Alex Beciana | {post.Name}</title>
-            </Head> */}
             <NextSeo
                 title={"Alex Beciana | " + Name}
                 description={Excerpt}
