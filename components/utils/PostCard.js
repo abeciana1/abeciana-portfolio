@@ -31,12 +31,14 @@ const PostCard = ({ post }) => {
                         className="z-40"
                         onMouseEnter={() => setHover(!mouseHover)}
                         onMouseLeave={() => setHover(!mouseHover)}
+                        alt={"Alex Beciana - " + title}
                     >
                             <div
                                 
                             >
                                 <img
                                     src={featuredImage}
+                                    alt={"Alex Beciana - " + title}
                                 />
                             </div>
                         <Transition

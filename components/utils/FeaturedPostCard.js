@@ -21,12 +21,14 @@ const FeaturedPostCard = ({ post }) => {
             >
                 <a
                     className="z-40"
+                    alt={"Alex Beciana - " + title}
                 >
                     <div
                         
                     >
                         <img
                             src={featuredImage}
+                            alt={"Alex Beciana - " + title}
                         />
                     </div>
                     <div

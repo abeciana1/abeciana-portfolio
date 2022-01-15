@@ -56,6 +56,7 @@ const Testimonial = (props) => {
                         <Image
                             src={review?.reviewerPic?.url}
                             layout="responsive"
+                            alt={review.reviewerName}
                             height={150}
                             width={150}
                             className="rounded-full testimonial-pic"

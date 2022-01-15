@@ -41,6 +41,7 @@ const About = (props) => {
                                 <img 
                                     src="/profile-callout-edited.png"
                                     className="transform translate-x-10 hidden md:inline"
+                                    alt="Alex Beciana (animated)"
                                 />
                             </div>
                             </>
@@ -50,7 +51,7 @@ const About = (props) => {
                                 className="pt-5 hidden sm:block"
                             >
                                 <h2 className="text-left text-3xl pb-5">Dev dad jokes</h2>
-                                <img src="https://readme-jokes.vercel.app/api" alt="Jokes Card" />
+                                <img src="https://readme-jokes.vercel.app/api" alt="Dev Dad Jokes Card" />
                             </div>
                         </section>
                 </section>
