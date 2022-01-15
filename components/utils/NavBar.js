@@ -68,7 +68,7 @@ const NavBar = (props) => {
                                         alt="Alex Beciana - Behance"
                                     >
                                         <img
-                                            src="./behance.svg"
+                                            src="./behance-png.png"
                                             alt="Alex Beciana - Behance"
                                         />
                                     </a>
@@ -80,7 +80,7 @@ const NavBar = (props) => {
                                         alt="Alex Beciana - GitHub"
                                     >
                                         <img
-                                            src="./github.svg"
+                                            src="./github-png.png"
                                             alt="Alex Beciana - GitHub"
                                         />
                                     </a>
@@ -92,7 +92,7 @@ const NavBar = (props) => {
                                         alt="Alex Beciana - LinkedIn"
                                     >
                                         <img
-                                            src="./linkedin.svg"
+                                            src="./linkedin-png.png"
                                             alt="Alex Beciana - LinkedIn"
                                         />
                                     </a>
@@ -119,7 +119,7 @@ const NavBar = (props) => {
                                         alt="Alex Beciana - Behance"
                                     >
                                         <img
-                                            src="./behance.svg"
+                                            src="./behance-png.png"
                                         />
                                     </a>
                                 </Link>
@@ -130,7 +130,7 @@ const NavBar = (props) => {
                                         alt="Alex Beciana - GitHub"
                                     >
                                         <img
-                                            src="./github.svg"
+                                            src="./github-png.png"
                                         />
                                     </a>
                                 </Link>
@@ -141,7 +141,7 @@ const NavBar = (props) => {
                                         alt="Alex Beciana - LinkedIn"
                                     >
                                         <img
-                                            src="./linkedin.svg"
+                                            src="./linkedin-png.png"
                                         />
                                     </a>
                                 </Link>
