@@ -3,7 +3,7 @@ import Link from 'next/link'
 import PageMargin from './PageMargin'
 import { Squash as Hamburger } from 'hamburger-react'
 import { withRouter } from 'next/router'
-
+import Image from 'next/image'
 import SmoothScrollLink from './SmoothScrollLink'
 import { animateScroll as scroll } from "react-scroll";
 
@@ -67,8 +67,11 @@ const NavBar = (props) => {
                                         rel="noopener noreferrer"
                                         alt="Alex Beciana - Behance"
                                     >
-                                        <img
-                                            src="./behance-png.png"
+                                        <Image
+                                            width={25}
+                                            height={25}
+                                            loading="lazy"
+                                            src="/behance-png.png"
                                             alt="Alex Beciana - Behance"
                                         />
                                     </a>
@@ -79,8 +82,11 @@ const NavBar = (props) => {
                                         rel="noopener noreferrer"
                                         alt="Alex Beciana - GitHub"
                                     >
-                                        <img
-                                            src="./github-png.png"
+                                        <Image
+                                            width={25}
+                                            height={25}
+                                            loading="lazy"
+                                            src="/github-png.png"
                                             alt="Alex Beciana - GitHub"
                                         />
                                     </a>
@@ -91,8 +97,11 @@ const NavBar = (props) => {
                                         rel="noopener noreferrer"
                                         alt="Alex Beciana - LinkedIn"
                                     >
-                                        <img
-                                            src="./linkedin-png.png"
+                                        <Image
+                                            width={25}
+                                            height={25}
+                                            loading="lazy"
+                                            src="/linkedin-png.png"
                                             alt="Alex Beciana - LinkedIn"
                                         />
                                     </a>
@@ -118,8 +127,12 @@ const NavBar = (props) => {
                                         rel="noopener noreferrer"
                                         alt="Alex Beciana - Behance"
                                     >
-                                        <img
-                                            src="./behance-png.png"
+                                        <Image
+                                            loading="lazy"
+                                            width={25}
+                                            height={25}
+                                            src="/behance-png.png"
+                                            alt="Alex Beciana - Behance"
                                         />
                                     </a>
                                 </Link>
@@ -129,8 +142,12 @@ const NavBar = (props) => {
                                         rel="noopener noreferrer"
                                         alt="Alex Beciana - GitHub"
                                     >
-                                        <img
-                                            src="./github-png.png"
+                                        <Image
+                                            loading="lazy"
+                                            width={25}
+                                            height={25}
+                                            src="/github-png.png"
+                                            alt="Alex Beciana - GitHub"
                                         />
                                     </a>
                                 </Link>
@@ -140,8 +157,12 @@ const NavBar = (props) => {
                                         rel="noopener noreferrer"
                                         alt="Alex Beciana - LinkedIn"
                                     >
-                                        <img
-                                            src="./linkedin-png.png"
+                                        <Image
+                                            loading="lazy"
+                                            width={25}
+                                            height={25}
+                                            src="/linkedin-png.png"
+                                            alt="Alex Beciana - LinkedIn"
                                         />
                                     </a>
                                 </Link>
