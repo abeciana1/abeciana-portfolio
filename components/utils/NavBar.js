@@ -103,6 +103,7 @@ const NavBar = (props) => {
                                 href="/"
                             >
                                 <a
+                                    alt="Alex Beciana - Homepage"
                                     className="text-3xl sm:text-4xl md:text-3xl font-reross cursor-pointer anim-text"
                                 >Alex Beciana</a>
                             </Link>
@@ -215,6 +216,7 @@ const NavBar = (props) => {
                                 href="/#renderedSection"
                             >
                                 <a
+                                    alt="Alex Beciana - Homepage About section"
                                     onClick={() => setSelectedComp("about")}
                                     className="text-3xl hidden lg:block mr-5 font-reross cursor-pointer anim-text"
                                 >about</a>
@@ -223,6 +225,7 @@ const NavBar = (props) => {
                                 href="/#renderedSection"
                             >
                                 <a
+                                    alt="Alex Beciana - Homepage Portfolio section"
                                     onClick={() => setSelectedComp("portfolio")}
                                     className="text-3xl hidden lg:block mr-5 font-reross cursor-pointer anim-text"
                                 >portfolio</a>
@@ -231,6 +234,7 @@ const NavBar = (props) => {
                                 href="/#renderedSection"
                             >
                                 <a
+                                    alt="Alex Beciana - Homepage Blog section"
                                     onClick={() => setSelectedComp("blog")}
                                     className="text-3xl hidden lg:block mr-5 font-reross cursor-pointer anim-text"
                                 >blog</a>
@@ -239,6 +243,7 @@ const NavBar = (props) => {
                                 href="/#renderedSection"
                             >
                                 <a
+                                    alt="Alex Beciana - Homepage Reviews section"
                                     onClick={() => setSelectedComp("reviews")}
                                     className="text-3xl hidden lg:block mr-5 font-reross cursor-pointer anim-text"
                                 >reviews</a>
@@ -247,6 +252,7 @@ const NavBar = (props) => {
                                 href="/#renderedSection"
                             >
                                 <a
+                                    alt="Alex Beciana - Homepage Contact section"
                                     onClick={() => setSelectedComp("contact")}
                                     className="text-3xl hidden lg:block mr-5 font-reross cursor-pointer anim-text"
                                 >contact</a>
@@ -259,6 +265,7 @@ const NavBar = (props) => {
                         className="block lg:hidden flex items-center justify-between"
                     >
                         <a
+                            alt="Alex Beciana - Homepage"
                             className="text-3xl sm:text-4xl md:text-3xl font-reross cursor-pointer anim-text"
                             onClick={() => scrollToTop()}
                         >Alex Beciana</a>
@@ -360,6 +367,7 @@ const NavBar = (props) => {
                                         href="/#renderedSection"
                                     >
                                         <a
+                                            alt="Alex Beciana - Homepage About section"
                                             onClick={() => {
                                                 setSelectedComp("about")
                                                 if (isOpen) {
@@ -373,6 +381,7 @@ const NavBar = (props) => {
                                         href="/#renderedSection"
                                     >
                                         <a
+                                            alt="Alex Beciana - Homepage Portfolio section"
                                             onClick={() => {
                                                 setSelectedComp("portfolio")
                                                 if (isOpen) {
@@ -386,6 +395,7 @@ const NavBar = (props) => {
                                         href="/#renderedSection"
                                     >
                                         <a
+                                            alt="Alex Beciana - Homepage Blog section"
                                             onClick={() => {
                                                     setSelectedComp("blog")
                                                     if (isOpen) {
@@ -399,6 +409,7 @@ const NavBar = (props) => {
                                         href="/#renderedSection"
                                     >
                                         <a
+                                            alt="Alex Beciana - Homepage Reviews section"
                                             onClick={() => {
                                                     setSelectedComp("reviews")
                                                     if (isOpen) {
@@ -412,6 +423,7 @@ const NavBar = (props) => {
                                         href="/#renderedSection"
                                     >
                                         <a
+                                            alt="Alex Beciana - Homepage Contact section"
                                             onClick={() => {
                                                     setSelectedComp("contact")
                                                     if (isOpen) {

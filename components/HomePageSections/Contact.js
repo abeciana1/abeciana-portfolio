@@ -28,6 +28,7 @@ const Contact = (props) => {
                                 <img 
                                     src="/profile-callout-edited.png"
                                     className="hidden md:inline"
+                                    alt="Alex Beciana (animated)"
                                 />
                             </div>
                     </section>
