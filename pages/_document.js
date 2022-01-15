@@ -1,4 +1,6 @@
 import Document, { Html, Head, Main, NextScript } from 'next/document'
+import Script from 'next/script'
+
 
 const MyDocument = () => {
 
@@ -11,14 +13,23 @@ const MyDocument = () => {
                 <link rel="preload" as="image" href="/profile-pic.png" />
                 <link rel="preload stylesheet" as="font" href="./RerossQuadratic.otf" crossOrigin="anonymous" />
                 <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" as="font" rel="stylesheet preload" crossOrigin="anonymous" />
-                <script type="text/javascript" id="hs-script-loader" defer src="//js.hs-scripts.com/21235958.js"></script>
-                {/* <script type="text/javascript">
-                    (function(c,l,a,r,i,t,y){
-                        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-                        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-                        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-                    })(window, document, "clarity", "script", "a78c5ntos1");
-                </script> */}
+                <Script
+                    id="hs-script-loader"
+                    src="//js.hs-scripts.com/21235958.js"
+                    strategy="lazyOnload"
+                />
+                <Script
+                    strategy="afterInteractive"
+                    dangerouslySetInnerHTML={{
+                        __html: `
+                        (function(c,l,a,r,i,t,y){
+                            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+                            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+                            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+                        })(window, document, "clarity", "script", "a78c5ntos1");
+                        `
+                    }}
+                />
             </Head>
             <body>
                 <Main />
