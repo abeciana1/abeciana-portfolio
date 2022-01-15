@@ -1,8 +1,10 @@
 import React from 'react';
 // const { Client } = require("@notionhq/client")
-import Head from 'next/head'
+// import Head from 'next/head'
 import { withRouter } from 'next/router'
 import { NotionRenderer } from "react-notion";
+import { NextSeo } from 'next-seo';
+
 
 import PageMargin from '../../components/utils/PageMargin'
 
@@ -19,11 +21,35 @@ const BlogPost = ({ post, blocks }) => {
         Name
     } = post
 
+    console.log(post)
+
     return (
         <React.Fragment>
-            <Head>
+            {/* <Head>
                 <title>Alex Beciana | {post.Name}</title>
-            </Head>
+            </Head> */}
+            <NextSeo
+                title={"Alex Beciana | " + Name}
+                description={Excerpt}
+                canonical={"https://alexbeciana.com/blog/" + Slug}
+                article={{
+                    tags: Tags
+                }}
+                openGraph={{
+                    url: "https://alexbeciana.com/blog/" + Slug,
+                    title: "Alex Beciana | " + Name,
+                    description: Excerpt,
+                    images: [
+                        {
+                            url: FeaturedImage[0]?.rawUrl
+                        },
+                        {
+                            url: FeaturedImage[0]?.url
+                        }
+                    ],
+                    site_name: "Alex Beciana"
+                }}
+            />
             <PageMargin>
                 <section
                     className="py-10 leading-8"
@@ -31,7 +57,7 @@ const BlogPost = ({ post, blocks }) => {
                     <section>
                         <h1
                             className="text-4xl lg:text-5xl py-5"
-                        >{post.Name}</h1>
+                        >{Name}</h1>
                         <p
                             className="py-2 italic"
                         >
