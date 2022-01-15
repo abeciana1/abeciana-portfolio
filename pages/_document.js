@@ -10,11 +10,15 @@ const MyDocument = () => {
                 <link rel="preload" as="image" href="/profile-callout-edited.png" />
                 <link rel="preload" as="image" href="/profile-pic.png" />
                 <link rel="preload stylesheet" as="font" href="./RerossQuadratic.otf" crossOrigin="anonymous" />
-                {/* <link rel="stylesheet preload" as="font" href="https://use.typekit.net/bsh6twa.css" crossOrigin="anonymous"/> */}
-                {/* <link rel="preconnect preload" as="font" href="https://fonts.googleapis.com" crossOrigin="anonymous" /> */}
-                {/* <link rel="preconnect preload" as="font" href="https://fonts.gstatic.com" crossOrigin="anonymous" /> */}
                 <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" as="font" rel="stylesheet preload" crossOrigin="anonymous" />
                 <script type="text/javascript" id="hs-script-loader" defer src="//js.hs-scripts.com/21235958.js"></script>
+                <script type="text/javascript">
+                    (function(c,l,a,r,i,t,y){
+                        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+                        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+                        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+                    })(window, document, "clarity", "script", "a78c5ntos1");
+                </script>
             </Head>
             <body>
                 <Main />
