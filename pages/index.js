@@ -26,11 +26,6 @@ const Contact = dynamic(() => import('../components/HomePageSections/Contact'), 
 
 //! import home page sections here
 import About from '../components/HomePageSections/About'
-// import AboutExp from '../components/HomePageSections/AboutExp'
-// import Portfolio from '../components/HomePageSections/Portfolio'
-// import Blog from '../components/HomePageSections/Blog'
-// import Reviews from '../components/HomePageSections/Reviews'
-// import Contact from '../components/HomePageSections/Contact'
 
 // TODO - Create scroll to top button reuse comp
 // TODO - Add resume - available to download
