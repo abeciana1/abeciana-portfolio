@@ -5,5 +5,14 @@ module.exports = {
         domains: [
             "media.graphcms.com"
         ]
+    },
+    async redirects() {
+        return [
+            {
+                source: 'about',
+                destination: '/',
+                permanent: true
+            }
+        ]
     }
 }
