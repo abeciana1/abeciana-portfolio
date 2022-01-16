@@ -5,8 +5,6 @@ import cx from 'classnames'
 
 const FeaturedPostCard = ({ post }) => {
 
-    console.log(post);
-
     const slug = post["properties"]["Slug"]["rich_text"][0]["plain_text"]
     const featuredImage = post["properties"]["FeaturedImage"].files[0].file.url
     const title = post["properties"]["Name"]["title"][0]["plain_text"]
@@ -37,7 +35,7 @@ const FeaturedPostCard = ({ post }) => {
                         <div
                             className="font-medium text-lg px-2 flex flex-wrap"
                         >
-                            {title + " — " + moment(new Date(publishedDate)).format("MMM Do YY")}
+                            {title + " — " + moment(new Date(publishedDate)).add(1, 'days').format("MMM Do YY")}
                         </div>
                         <div
                             className="flex flex-wrap px-1"
