@@ -56,7 +56,7 @@ const PostCard = ({ post }) => {
                                 <div
                                     className="font-medium text-lg px-2 flex flex-wrap"
                                 >
-                                    {title + " — " + moment(new Date(publishedDate)).format("MMM Do YY")}
+                                    {title + " — " + moment(new Date(publishedDate)).add(1, 'days').format("MMM Do YY")}
                                 </div>
                                 <div
                                     className="flex flex-wrap px-1"
