@@ -33,7 +33,17 @@ const MyDocument = () => {
                         `
                     }}
                 />
-                <Script
+                <script async src="https://www.googletagmanager.com/gtag/js?id=G-Y7HNS80HJT"></script>
+                <script dangerouslySetInnerHTML={{
+                    __html: `
+                        window.dataLayer = window.dataLayer || [];
+                        function gtag(){dataLayer.push(arguments);}
+                        gtag('js', new Date());
+
+                        gtag('config', 'G-Y7HNS80HJT');
+                            `
+                        }}></script>
+                {/* <Script
                     strategy="beforeInteractive"
                     src="https://www.googletagmanager.com/gtag/js?id=G-Y7HNS80HJT"
                 />
@@ -48,7 +58,7 @@ const MyDocument = () => {
                             gtag('config', 'G-Y7HNS80HJT');
                         `
                     }}
-                />
+                /> */}
             </Head>
             <body>
                 <Main />
