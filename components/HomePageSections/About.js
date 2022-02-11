@@ -2,6 +2,7 @@ import React from 'react';
 import PageMargin from '../utils/PageMargin'
 import { withRouter } from 'next/router'
 import cx from 'classnames'
+import Image from 'next/image'
 
 const About = (props) => {
 
@@ -28,19 +29,23 @@ const About = (props) => {
                             <div
                                 className="leading-10 text-lg"
                             >
-                                Full stack software engineer with two years of experience with an entrepreneurial spirit. Previous experience with five years in digital marketing, product management, and community management, working in tech (startup to FAANG), education, and music as well as leading a profitable startup. Accustomed to working across technical and non-technical teams and managing project roadmaps.
+                                Full stack software engineer with two years of experience with an entrepreneurial spirit. Previous experience with five  years in digital marketing, product management, and community management, working in tech (startup to FAANG), education, and music as well as leading a profitable startup. Accustomed to working across technical and non-technical teams and managing project roadmaps.
                             </div>
                             </section>
                         </section>
                         <section
-                            className="self-center justify-self-start"
+                            className="self-center justify-self-start lg:justify-self-end"
                         >
                         {props.aboutAnimate ?
                             <>
-                            <div className="profile-callout">
-                                <img 
+                            <div className="profile-callout lg:mx-20">
+                                <Image 
                                     src="/profile-callout-edited.png"
-                                    className="transform translate-x-10 hidden md:inline"
+                                    layout="responsive"
+                                    width={100}
+                                    height={100}
+                                    priority
+                                    className="desktop-profile transform translate-x-0 hidden md:inline"
                                     alt="Alex Beciana (animated)"
                                 />
                             </div>
