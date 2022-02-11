@@ -3,6 +3,7 @@ const { Client } = require("@notionhq/client")
 import { gql, GraphQLClient } from 'graphql-request'
 import Head from 'next/head'
 import dynamic from 'next/dynamic'
+import Image from 'next/image'
 
 const AboutExp = dynamic(() => import('../components/HomePageSections/AboutExp'), {
   ssr: false
@@ -110,12 +111,15 @@ const HomePage = (props) => {
       <Head>
         <title>Alex Beciana</title>
       </Head>
-        <div className="justify-item-center self-center mx-auto z-30 md:hidden">
-            <img
-                src="/profile-pic.png"
-                className="shadow-xl rounded-full w-2/3 md:w-3/5 mx-auto bg-white"
-                alt="Alex Beciana (simple animated)"
-            />
+      <div className="justify-item-center self-center mx-auto z-30 block md:hidden w-2/3 drop-shadow-xl">
+        <Image 
+          src="/profile-pic.png"
+          layout="responsive"
+          width={100}
+          height={100}
+          className="profile-pic-simple"
+          alt="Alex Beciana"
+        />
         </div>
       <About aboutAnimate={aboutAnimate} />
       <section

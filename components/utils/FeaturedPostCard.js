@@ -2,6 +2,7 @@ import React from 'react';
 import Link from 'next/link'
 import moment from 'moment';
 import cx from 'classnames'
+import Image from 'next/image'
 
 const FeaturedPostCard = ({ post }) => {
 
@@ -24,8 +25,12 @@ const FeaturedPostCard = ({ post }) => {
                     <div
                         
                     >
-                        <img
+                        <Image
                             src={featuredImage}
+                            layout="responsive"
+                            priority
+                            width={200}
+                            height={100}
                             alt={"Alex Beciana - " + title}
                         />
                     </div>
