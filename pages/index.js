@@ -117,6 +117,7 @@ const HomePage = (props) => {
           layout="responsive"
           width={100}
           height={100}
+          priority
           className="profile-pic-simple"
           alt="Alex Beciana"
         />
