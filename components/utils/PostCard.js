@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import Link from 'next/link'
 import cx from 'classnames'
 import { Transition } from '@headlessui/react'
-
+import Image from 'next/image'
 import moment from 'moment'
 
 
@@ -36,10 +36,14 @@ const PostCard = ({ post }) => {
                             <div
                                 
                             >
-                                <img
-                                    src={featuredImage}
-                                    alt={"Alex Beciana - " + title}
-                                />
+                            <Image
+                                src={featuredImage}
+                                layout="responsive"
+                                loading="lazy"
+                                width={200}
+                                height={100}
+                                alt={"Alex Beciana - " + title}
+                            />
                             </div>
                         <Transition
                             show={mouseHover}
