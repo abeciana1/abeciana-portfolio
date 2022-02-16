@@ -6,8 +6,10 @@ import Image from 'next/image'
 
 const FeaturedPostCard = ({ post }) => {
 
+    // console.log(post["properties"]["FeaturedImage"])
+
     const slug = post["properties"]["Slug"]["rich_text"][0]["plain_text"]
-    const featuredImage = post["properties"]["FeaturedImage"].files[0].file.url
+    // const featuredImage =  .
     const title = post["properties"]["Name"]["title"][0]["plain_text"]
     const publishedDate = post["properties"]["PublishedDate"]["date"]["start"]
     const tags = post["properties"]["Tags"]["multi_select"]
@@ -26,7 +28,7 @@ const FeaturedPostCard = ({ post }) => {
                         
                     >
                         <Image
-                            src={featuredImage}
+                            src={post["properties"]["FeaturedImage"].files[0].file.url}
                             layout="responsive"
                             priority
                             width={200}
