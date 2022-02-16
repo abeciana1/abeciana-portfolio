@@ -135,6 +135,7 @@ const HomePage = (props) => {
 
 export async function getStaticProps() {
     const notion = new Client({ auth: process.env.NOTION_API_KEY });
+    const deNotion = new Client({ auth: process.env.NOTION_API_KEY });
     const response = await notion.databases.query({
         database_id: process.env.NOTION_DATABASE_ID,
         sorts: [
@@ -151,7 +152,7 @@ export async function getStaticProps() {
     }
     });
 
-    const descResponse = await notion.databases.query({
+    const descResponse = await deNotion.databases.query({
         database_id: process.env.NOTION_DATABASE_ID,
         sorts: [
         {
@@ -163,24 +164,6 @@ export async function getStaticProps() {
         property: 'Status',
         select: {
             equals: 'Published'
-        }
-    }
-    });
-
-    let blogSlug = 'responsive-search-react'
-
-    const blogResponse = await notion.databases.query({
-        database_id: process.env.NOTION_DATABASE_ID,
-        sorts: [
-        {
-            property: 'PublishedDate',
-            direction: 'ascending',
-        },
-    ],
-    filter: {
-        property: 'Slug',
-        text: {
-            contains: blogSlug
         }
     }
     });
@@ -257,7 +240,6 @@ export async function getStaticProps() {
         props: {
             posts: response.results,
             descPosts: descResponse.results,
-            blogResponse: blogResponse.results,
             jobData: jobData,
             projData: projData,
             reviewData: reviewData
