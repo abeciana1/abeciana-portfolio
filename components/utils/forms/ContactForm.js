@@ -30,7 +30,6 @@ class ContactForm extends React.Component {
     render() {
 
         const { submitted } = this.state
-        
         return (
             <React.Fragment>
                 <section

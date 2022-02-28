@@ -28,7 +28,7 @@ const FeaturedPostCard = ({ post }) => {
                         
                     >
                         <Image
-                            src={post["properties"]["FeaturedImage"].files[0].file.url}
+                            src={post["properties"]["hostedImage"]["rich_text"][0]["plain_text"]}
                             layout="responsive"
                             priority
                             width={200}
