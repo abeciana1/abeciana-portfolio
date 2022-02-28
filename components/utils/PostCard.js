@@ -11,7 +11,7 @@ const PostCard = ({ post }) => {
     const [mouseHover, setHover] = useState(false)
 
     const slug = post["properties"]["Slug"]["rich_text"][0]["plain_text"]
-    const featuredImage = post["properties"]["FeaturedImage"].files[0].file.url
+    const featuredImage = post["properties"]["hostedImage"]["rich_text"][0]["plain_text"]
     const title = post["properties"]["Name"]["title"][0]["plain_text"]
     const publishedDate = post["properties"]["PublishedDate"]["date"]["start"]
     const tags = post["properties"]["Tags"]["multi_select"]
