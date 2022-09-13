@@ -34,11 +34,11 @@ const About = (props) => {
                             </section>
                         </section>
                         <section
-                            className="self-center justify-self-start lg:justify-self-end"
+                            className="self-center justify-self-start lg:justify-self-end lg:mx-20"
                         >
                         {props.aboutAnimate ?
                             <>
-                            <div className="profile-callout lg:mx-20">
+                            <div className="profile-callout">
                                 <Image 
                                     src="/profile-callout-edited.png"
                                     layout="responsive"
@@ -56,7 +56,7 @@ const About = (props) => {
                                 className="pt-5 hidden sm:block"
                             >
                                 <h2 className="text-left text-3xl pb-5">Dev dad jokes</h2>
-                                <img src="https://readme-jokes.vercel.app/api" alt="Dev Dad Jokes Card" />
+                                <img className="mx-auto" src="https://readme-jokes.vercel.app/api" alt="Dev Dad Jokes Card" />
                             </div>
                         </section>
                 </section>
