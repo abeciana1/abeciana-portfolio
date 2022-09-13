@@ -60,7 +60,7 @@
         "image": "./skills/graphql.png"
     },
     {
-        "name": "GraphCMS",
+        "name": "hygraph (fmr. GraphCMS)",
         "image": "./skills/graphcms.svg"
     },
     {
@@ -110,5 +110,17 @@
     {
         "name": "HubSpot",
         "image": "./skills/hubspot.png"
+    },
+    {
+        "name": "JIRA",
+        "image": "./skills/jira.svg"
+    },
+    {
+        "name": "Prisma",
+        "image": "./skills/prisma.svg"
+    },
+    {
+        "name": "Supabase",
+        "image": "./skills/supabase.png"
     }
 ]

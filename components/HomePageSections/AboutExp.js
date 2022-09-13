@@ -130,7 +130,7 @@ const AboutExp = (props) => {
                                         <div
                                             className="text-xl"
                                         >
-                                            {moment(job?.startDate).format("MMM YYYY")} — {job?.endDate === "2022-01-01" ? "Present" : moment(job?.endDate).format("MMM YYYY")}
+                                            {moment(job?.startDate).format("MMM YYYY")} — {job?.endDate === "2023-01-01" ? "Present" : moment(job?.endDate).format("MMM YYYY")}
                                         </div>
                                         {job?.companyWebsite && (
                                             <a
