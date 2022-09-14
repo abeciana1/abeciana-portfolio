@@ -5,6 +5,7 @@ module.exports = {
         domains: [
             "media.graphcms.com",
             "s3.us-west-2.amazonaws.com",
+            "media.graphassets.com"
         ]
     },
     async redirects() {

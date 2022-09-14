@@ -135,7 +135,7 @@ const HomePage = (props) => {
 
 export async function getStaticProps() {
     const notion = new Client({ auth: process.env.NOTION_API_KEY });
-    const deNotion = new Client({ auth: process.env.NOTION_API_KEY });
+    // const deNotion = new Client({ auth: process.env.NOTION_API_KEY });
     const response = await notion.databases.query({
         database_id: process.env.NOTION_DATABASE_ID,
         sorts: [
@@ -152,21 +152,21 @@ export async function getStaticProps() {
     }
     });
 
-    const descResponse = await deNotion.databases.query({
-        database_id: process.env.NOTION_DATABASE_ID,
-        sorts: [
-        {
-            property: 'PublishedDate',
-            direction: 'descending',
-        },
-    ],
-    filter: {
-        property: 'Status',
-        select: {
-            equals: 'Published'
-        }
-    }
-    });
+    // const descResponse = await deNotion.databases.query({
+    //     database_id: process.env.NOTION_DATABASE_ID,
+    //     sorts: [
+    //     {
+    //         property: 'PublishedDate',
+    //         direction: 'descending',
+    //     },
+    // ],
+    // filter: {
+    //     property: 'Status',
+    //     select: {
+    //         equals: 'Published'
+    //     }
+    // }
+    // });
 
   const expClient = new GraphQLClient(process.env.GRAPH_CMS_API_ENDPOINT)
   
@@ -239,7 +239,7 @@ export async function getStaticProps() {
     return {
         props: {
             posts: response.results,
-            descPosts: descResponse.results,
+            // descPosts: descResponse.results,
             jobData: jobData,
             projData: projData,
             reviewData: reviewData
