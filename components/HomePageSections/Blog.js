@@ -4,7 +4,9 @@ import SmoothScrollLink from '../utils/SmoothScrollLink'
 import FeaturedPostCard from '../utils/FeaturedPostCard'
 import PostCard from '../utils/PostCard'
 
-const Blog = ({posts, descPosts}) => {
+const Blog = ({ posts }) => {
+    
+    let descPosts = posts.reverse()
 
     return (
         <React.Fragment>
