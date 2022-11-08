@@ -12,7 +12,7 @@ module.exports = {
         return [
             {
             "source": '/about',
-            "destination": '/',
+            "destination": '/about',
             "permanent": true,
             },
         ]

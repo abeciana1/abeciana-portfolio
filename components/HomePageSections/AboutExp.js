@@ -172,7 +172,7 @@ const AboutExp = (props) => {
                 >
                     <h2
                         className="text-4xl font-reross text-altYellow leading-relaxed"
-                    >experience</h2>
+                    >education</h2>
                     <section
                         className="mt-10"
                     >
