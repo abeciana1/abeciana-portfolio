@@ -4,10 +4,11 @@ import { gql, GraphQLClient } from 'graphql-request'
 import Head from 'next/head'
 import dynamic from 'next/dynamic'
 import Image from 'next/image'
+import PageMargin from '../components/utils/PageMargin'
 
-const AboutExp = dynamic(() => import('../components/HomePageSections/AboutExp'), {
-  ssr: false
-})
+// const AboutExp = dynamic(() => import('../components/HomePageSections/AboutExp'), {
+//   ssr: false
+// })
 
 const Portfolio = dynamic(() => import('../components/HomePageSections/Portfolio'), {
   ssr: false
@@ -26,7 +27,7 @@ const Contact = dynamic(() => import('../components/HomePageSections/Contact'), 
 })
 
 //! import home page sections here
-import About from '../components/HomePageSections/About'
+// import About from '../components/HomePageSections/About'
 
 // TODO - Create scroll to top button reuse comp
 // TODO - Add resume - available to download
@@ -92,15 +93,6 @@ const HomePage = (props) => {
           <Contact />
         </section>
       )
-    case "about":
-      return (
-        <section className="slide-in-bottom">
-          <AboutExp
-            jobData={jobData}
-            setSelectedComp={setSelectedComp}
-          />
-        </section>
-      )
     default:
       return null
   }
@@ -122,7 +114,50 @@ const HomePage = (props) => {
           alt="Alex Beciana"
         />
         </div>
-      <About aboutAnimate={aboutAnimate} />
+            <PageMargin>
+                <section
+                    id="about"
+                    className="homepage-section sticky lg:pt-4 flex flex-col md:grid md:grid-cols-2 gap-12 justify-items-center item-stretch"
+                >
+                        <section
+                            className="self-center justify-self-start"
+                        >
+                        <section>
+                            <h1
+                                className="text-5xl font-reross leading-relaxed"
+                            >
+                                Hi I'm Alex Beciana
+                            </h1>
+                            <div
+                                className="leading-10 text-lg"
+                            >
+                                Full stack software engineer with two years of experience with an entrepreneurial spirit. Previous experience with five  years in digital marketing, product management, and community management, working in tech (startup to FAANG), education, and music as well as leading a profitable startup. Accustomed to working across technical and non-technical teams and managing project roadmaps.
+                            </div>
+                            </section>
+                        </section>
+                        <section
+                            className="self-center justify-self-start lg:justify-self-end lg:mx-20"
+                        >
+                            <div className="profile-callout">
+                                <Image 
+                                    src="/profile-callout-edited.png"
+                                    layout="responsive"
+                                    width={100}
+                                    height={100}
+                                    priority
+                                    className="desktop-profile transform translate-x-0 hidden md:inline"
+                                    alt="Alex Beciana (animated)"
+                                />
+                            </div>
+                            <div
+                                className="pt-5 hidden sm:block"
+                            >
+                                <h2 className="text-left text-3xl pb-5">Dev dad jokes</h2>
+                                <img className="mx-auto" src="https://readme-jokes.vercel.app/api" alt="Dev Dad Jokes Card" />
+                            </div>
+                        </section>
+                </section>
+            </PageMargin>
       <section
         id="renderedSection"
         className="mt-10"

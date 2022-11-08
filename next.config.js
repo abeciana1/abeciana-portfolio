@@ -7,14 +7,5 @@ module.exports = {
             "s3.us-west-2.amazonaws.com",
             "media.graphassets.com"
         ]
-    },
-    // async redirects() {
-    //     return [
-    //         {
-    //         "source": '/about',
-    //         "destination": '/about',
-    //         "permanent": true,
-    //         },
-    //     ]
-    // },
+    }
 }
