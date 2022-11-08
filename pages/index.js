@@ -150,36 +150,6 @@ export async function getStaticProps() {
         }
     }
     });
-
-  const expClient = new GraphQLClient(process.env.GRAPH_CMS_API_ENDPOINT)
-  
-  const expQuery = gql`
-    query {
-      jobs(orderBy: endDate_DESC) {
-        id
-        position
-        startDate
-        companyName
-        companyWebsite
-        companyDescription
-        companyLogo {
-          url
-        }
-        endDate
-        responsibilities
-      }
-      educations {
-        id
-        schoolName
-        schoolWebsite
-        schoolImage {
-          url
-        }
-        achievements
-      }
-    }`
-  
-  const jobData = await expClient.request(expQuery)
   
   const projClient = new GraphQLClient(process.env.GRAPH_CMS_API_ENDPOINT)
 
@@ -222,7 +192,6 @@ export async function getStaticProps() {
     return {
         props: {
             posts: response.results,
-            jobData: jobData,
             projData: projData,
             reviewData: reviewData
         },
