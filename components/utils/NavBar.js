@@ -12,40 +12,13 @@ const NavBar = (props) => {
 
     const {
         router,
-        setSelectedComp
     } = props
 
-    const scrollToTop = () => {
-        scroll.scrollToTop();
-    };
-
-    const [scrolled, setScrolled] = React.useState(false);
-
     const [isOpen, setOpen] = useState(false);
-
-    let navBarId = '';
-
-    const handleScroll = () => {
-        const offset = window.scrollY;
-        if (offset > 450) {
-            setScrolled(true);
-        } else {
-            setScrolled(false);
-        }
-    };
-
-    useEffect(() => {
-        window.addEventListener('scroll', handleScroll);
-    });
-
-    if (scrolled) {
-        navBarId = 'scrolled';
-    }
 
     return (
         <React.Fragment>
             <section
-                id={navBarId}
                 className="bg-white z-50">
                 <PageMargin>
                     <section
@@ -56,9 +29,8 @@ const NavBar = (props) => {
                             className="flex justify-center self-center float-left items-stretch"
                             >
                             <a
-                                alt="Alex Beciana - Homepage"
+                                alt="Alex Beciana"
                                 className="text-3xl sm:text-4xl md:text-3xl font-reross cursor-pointer anim-text"
-                                onClick={() => scrollToTop()}
                             >Alex Beciana</a>
                                 <div className="flex self-center ml-5">
                                 <Link href="https://www.behance.net/alexbeciana">
@@ -176,109 +148,69 @@ const NavBar = (props) => {
                         <>
                             <SmoothScrollLink
                                 className="text-3xl hidden lg:block mr-5 font-reross cursor-pointer anim-text"
-                                activeClass="active"
-                                to="renderedSection"
-                                spy={true}
-                                smooth={true}
-                                duration={1000}
-                                exact="true"
                                 linkText="about"
-                                offset={-100}
-                                setSelectedComp={setSelectedComp}
+                                href="/about"
                             />
                             <SmoothScrollLink
                                 className="text-3xl hidden lg:block mr-5 font-reross cursor-pointer anim-text"
-                                activeClass="active"
-                                to="renderedSection"
-                                spy={true}
-                                smooth={true}
-                                duration={1000}
-                                exact="true"
-                                offset={-100}
                                 linkText="portfolio"
-                                setSelectedComp={setSelectedComp}
+                                href="/portfolio"
                             />
                             <SmoothScrollLink
                                 className="text-3xl hidden lg:block mr-5 font-reross cursor-pointer anim-text"
-                                activeClass="active"
-                                to="renderedSection"
-                                spy={true}
-                                smooth={true}
-                                duration={1000}
-                                exact="true"
-                                offset={-100}
+                                href="/blog"
                                 linkText="blog"
-                                setSelectedComp={setSelectedComp}
                             />
                             <SmoothScrollLink
                                 className="text-3xl hidden lg:block mr-5 font-reross cursor-pointer anim-text"
-                                activeClass="active"
-                                to="renderedSection"
-                                spy={true}
-                                smooth={true}
-                                duration={1000}
-                                exact="true"
-                                offset={-100}
+                                href="/reviews"
                                 linkText="reviews"
-                                setSelectedComp={setSelectedComp}
                             />
                             <SmoothScrollLink
                                 className="text-3xl hidden lg:block mr-5 font-reross cursor-pointer anim-text"
-                                activeClass="active"
-                                to="renderedSection"
-                                spy={true}
-                                smooth={true}
-                                duration={1000}
-                                exact="true"
-                                offset={-100}
+                                href="/contact"
                                 linkText="contact"
-                                setSelectedComp={setSelectedComp}
                             />
                         </>
                         :
                         <>
                             <Link
-                                href="/#renderedSection"
+                                href="/about"
                             >
                                 <a
-                                    alt="Alex Beciana - Homepage About section"
-                                    onClick={() => setSelectedComp("about")}
+                                    alt="Alex Beciana - About Me"
                                     className="text-3xl hidden lg:block mr-5 font-reross cursor-pointer anim-text"
                                 >about</a>
                             </Link>
                             <Link
-                                href="/#renderedSection"
+                                href="/portfolio"
                             >
                                 <a
-                                    alt="Alex Beciana - Homepage Portfolio section"
-                                    onClick={() => setSelectedComp("portfolio")}
+                                    alt="Alex Beciana - Portfolio"
                                     className="text-3xl hidden lg:block mr-5 font-reross cursor-pointer anim-text"
                                 >portfolio</a>
                             </Link>
                             <Link
-                                href="/#renderedSection"
+                                href="/blog"
                             >
                                 <a
-                                    alt="Alex Beciana - Homepage Blog section"
-                                    onClick={() => setSelectedComp("blog")}
+                                    alt="Alex Beciana - Blog"
                                     className="text-3xl hidden lg:block mr-5 font-reross cursor-pointer anim-text"
                                 >blog</a>
                             </Link>
                             <Link
-                                href="/#renderedSection"
+                                href="/reviews"
                             >
                                 <a
-                                    alt="Alex Beciana - Homepage Reviews section"
-                                    onClick={() => setSelectedComp("reviews")}
+                                    alt="Alex Beciana - Reviews"
                                     className="text-3xl hidden lg:block mr-5 font-reross cursor-pointer anim-text"
                                 >reviews</a>
                             </Link>
                             <Link
-                                href="/#renderedSection"
+                                href="/contact"
                             >
                                 <a
-                                    alt="Alex Beciana - Homepage Contact section"
-                                    onClick={() => setSelectedComp("contact")}
+                                    alt="Alex Beciana - Contact"
                                     className="text-3xl hidden lg:block mr-5 font-reross cursor-pointer anim-text"
                                 >contact</a>
                             </Link>
@@ -292,7 +224,6 @@ const NavBar = (props) => {
                         <a
                             alt="Alex Beciana - Homepage"
                             className="text-3xl sm:text-4xl md:text-3xl font-reross cursor-pointer anim-text"
-                            onClick={() => scrollToTop()}
                         >Alex Beciana</a>
                             <Hamburger
                                 toggled={isOpen}
@@ -317,144 +248,69 @@ const NavBar = (props) => {
                                 <>
                                     <SmoothScrollLink
                                         className="text-3xl block lg:hidden mr-5 font-reross cursor-pointer anim-text"
-                                        activeClass="active"
-                                        to="renderedSection"
-                                        spy={true}
-                                        smooth={true}
-                                        duration={1000}
-                                        exact="true"
                                         linkText="about"
-                                        offset={-100}
-                                        setSelectedComp={setSelectedComp}
-                                        isOpen={isOpen}
-                                        setOpen={setOpen}
+                                        href="/about"
                                     />
                                     <SmoothScrollLink
                                         className="text-3xl block lg:hidden mr-5 font-reross cursor-pointer anim-text"
-                                        activeClass="active"
-                                        to="renderedSection"
-                                        spy={true}
-                                        smooth={true}
-                                        duration={1000}
-                                        exact="true"
-                                        offset={-100}
                                         linkText="portfolio"
-                                        setSelectedComp={setSelectedComp}
-                                        isOpen={isOpen}
-                                        setOpen={setOpen}
+                                        href="/portfolio"
                                     />
                                     <SmoothScrollLink
                                         className="text-3xl block lg:hidden mr-5 font-reross cursor-pointer anim-text"
-                                        activeClass="active"
-                                        to="renderedSection"
-                                        spy={true}
-                                        smooth={true}
-                                        duration={1000}
-                                        exact="true"
-                                        offset={-100}
                                         linkText="blog"
-                                        setSelectedComp={setSelectedComp}
-                                        isOpen={isOpen}
-                                        setOpen={setOpen}
+                                        href="/blog"
                                     />
                                     <SmoothScrollLink
                                         className="text-3xl block lg:hidden mr-5 font-reross cursor-pointer anim-text"
-                                        activeClass="active"
-                                        to="renderedSection"
-                                        spy={true}
-                                        smooth={true}
-                                        duration={1000}
-                                        exact="true"
-                                        offset={-100}
                                         linkText="reviews"
-                                        setSelectedComp={setSelectedComp}
-                                        isOpen={isOpen}
-                                        setOpen={setOpen}
+                                        href="/reviews"
                                     />
                                     <SmoothScrollLink
                                         className="text-3xl block lg:hidden mr-5 font-reross cursor-pointer anim-text"
-                                        activeClass="active"
-                                        to="renderedSection"
-                                        spy={true}
-                                        smooth={true}
-                                        duration={1000}
-                                        exact="true"
-                                        offset={-100}
                                         linkText="contact"
-                                        setSelectedComp={setSelectedComp}
-                                        isOpen={isOpen}
-                                        setOpen={setOpen}
+                                        href="/contact"
                                     />
                                 </>
                                 :
                                 <>
                                     <Link
-                                        href="/#renderedSection"
+                                        href="/about"
                                     >
                                         <a
-                                            alt="Alex Beciana - Homepage About section"
-                                            onClick={() => {
-                                                setSelectedComp("about")
-                                                if (isOpen) {
-                                                    setOpen(false)
-                                                }
-                                            }}
+                                            alt="Alex Beciana - About Me"
                                             className="text-3xl block lg:hidden mr-5 font-reross cursor-pointer anim-text"
                                         >about</a>
                                     </Link>
                                     <Link
-                                        href="/#renderedSection"
+                                        href="/portfolio"
                                     >
                                         <a
-                                            alt="Alex Beciana - Homepage Portfolio section"
-                                            onClick={() => {
-                                                setSelectedComp("portfolio")
-                                                if (isOpen) {
-                                                    setOpen(false)
-                                                }
-                                            }}
+                                            alt="Alex Beciana - Portfolio"
                                             className="text-3xl block lg:hidden mr-5 font-reross cursor-pointer anim-text"
                                         >portfolio</a>
                                     </Link>
                                     <Link
-                                        href="/#renderedSection"
+                                        href="/blog"
                                     >
                                         <a
-                                            alt="Alex Beciana - Homepage Blog section"
-                                            onClick={() => {
-                                                    setSelectedComp("blog")
-                                                    if (isOpen) {
-                                                        setOpen(false)
-                                                    }
-                                                }}
+                                            alt="Alex Beciana - Blog"
                                             className="text-3xl block lg:hidden mr-5 font-reross cursor-pointer anim-text"
                                         >blog</a>
                                     </Link>
                                     <Link
-                                        href="/#renderedSection"
+                                        href="/reviews"
                                     >
                                         <a
-                                            alt="Alex Beciana - Homepage Reviews section"
-                                            onClick={() => {
-                                                    setSelectedComp("reviews")
-                                                    if (isOpen) {
-                                                        setOpen(false)
-                                                    }
-                                                }}
+                                            alt="Alex Beciana - Reviews"
                                             className="text-3xl block lg:hidden mr-5 font-reross cursor-pointer anim-text"
                                         >reviews</a>
                                     </Link>
                                     <Link
-                                        href="/#renderedSection"
+                                        href="/contact"
                                     >
                                         <a
-                                            alt="Alex Beciana - Homepage Contact section"
-                                            onClick={() => {
-                                                    setSelectedComp("contact")
-                                                    if (isOpen) {
-                                                        setOpen(false)
-                                                    }
-                                                }}
+                                            alt="Alex Beciana - Contact"
                                             className="text-3xl block lg:hidden mr-5 font-reross cursor-pointer anim-text"
                                         >contact</a>
                                     </Link>

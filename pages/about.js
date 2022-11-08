@@ -1,5 +1,10 @@
+import React from 'react';
+import PageMargin from '../components/utils/PageMargin'
+import Image from 'next/image'
 
 const AboutPage = () => {
+    return (
+
     <React.Fragment>
             <PageMargin>
                 <section
@@ -25,8 +30,6 @@ const AboutPage = () => {
                         <section
                             className="self-center justify-self-start lg:justify-self-end lg:mx-20"
                         >
-                        {props.aboutAnimate ?
-                            <>
                             <div className="profile-callout">
                                 <Image 
                                     src="/profile-callout-edited.png"
@@ -38,9 +41,6 @@ const AboutPage = () => {
                                     alt="Alex Beciana (animated)"
                                 />
                             </div>
-                            </>
-                        : null
-                        }
                             <div
                                 className="pt-5 hidden sm:block"
                             >
@@ -51,4 +51,7 @@ const AboutPage = () => {
                 </section>
             </PageMargin>
         </React.Fragment>
+    )
 }
+
+export default AboutPage

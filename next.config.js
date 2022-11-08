@@ -8,13 +8,13 @@ module.exports = {
             "media.graphassets.com"
         ]
     },
-    async redirects() {
-        return [
-            {
-            "source": '/about',
-            "destination": '/about',
-            "permanent": true,
-            },
-        ]
-    },
+    // async redirects() {
+    //     return [
+    //         {
+    //         "source": '/about',
+    //         "destination": '/about',
+    //         "permanent": true,
+    //         },
+    //     ]
+    // },
 }

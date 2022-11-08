@@ -1,53 +1,24 @@
-import { Link, animateScroll as scroll } from "react-scroll";
-
+// import { Link, animateScroll as scroll } from "react-scroll";
+import Link from 'next/link'
 
 const SmoothScrollLink = (props) => {
 
     const {
         className,
-        activeClass,
-        to,
-        spy,
-        smooth,
-        duration,
-        exact,
-        offset,
+        href,
         linkText,
-        setSelectedComp,
-        isOpen,
-        setOpen
     } = props
 
     return (
         <>
             <Link
-                activeClass={activeClass}
-                to={to}
-                spy={spy}
-                smooth={smooth}
-                duration={duration}
-                exact={exact}
-                offset={offset}
+                href={href}
             >
-                {setSelectedComp !== undefined ? 
-                <div
-                    className={className}
-                    onClick={() => {
-                        setSelectedComp(linkText)
-                        if (isOpen === true) {
-                            setOpen(false)
-                        }
-                    }}
-                >
-                    {linkText}
-                </div>
-                :
-                <div
+                <a
                     className={className}
                 >
                     {linkText}
-                </div>
-                }
+                </a>
             </Link>
         </>
     )

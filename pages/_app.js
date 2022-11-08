@@ -14,21 +14,15 @@ import NavBar from '../components/utils/NavBar'
 
 function MyApp({ Component, pageProps }) {
 
-  const [selectedComp, setSelectedComp] = useState('')
-
   return (
     <>
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1"/>
       </Head>
       <NavBar
-        selectedComp={selectedComp}
-        setSelectedComp={setSelectedComp}
       />
       <Component
         {...pageProps}
-        setSelectedComp={setSelectedComp}
-        selectedComp={selectedComp}
         />
     </>
   )
