@@ -4,7 +4,6 @@ import Image from 'next/image'
 import SmoothScrollLink from '../components/utils/SmoothScrollLink'
 import Skills from '../data/skills.json'
 import ReactMarkdown from 'react-markdown'
-const { Client } = require("@notionhq/client")
 import { gql, GraphQLClient } from 'graphql-request'
 import moment from 'moment'
 
