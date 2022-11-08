@@ -40,13 +40,13 @@ const Contact = dynamic(() => import('../components/HomePageSections/Contact'), 
 const HomePage = (props) => {
 
   
-  const {
-    posts,
-    descPosts,
-    selectedComp,
-    projData,
-    reviewData
-  } = props
+  // const {
+  //   posts,
+  //   descPosts,
+  //   selectedComp,
+  //   projData,
+  //   reviewData
+  // } = props
   
 //   const renderComp = (renderComponent) => {
 
