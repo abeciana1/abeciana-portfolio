@@ -4,8 +4,9 @@ import PageMargin from './PageMargin'
 import { Squash as Hamburger } from 'hamburger-react'
 import { withRouter } from 'next/router'
 import Image from 'next/image'
-import SmoothScrollLink from './SmoothScrollLink'
-import { animateScroll as scroll } from "react-scroll";
+import PreRenderLink from './PreRenderLink'
+// import Link from 'next/link'
+// import { animateScroll as scroll } from "react-scroll";
 
 
 const NavBar = (props) => {
@@ -146,27 +147,27 @@ const NavBar = (props) => {
                         >
                         {router.asPath === '/' ?
                         <>
-                            <SmoothScrollLink
+                            <PreRenderLink
                                 className="text-3xl hidden lg:block mr-5 font-reross cursor-pointer anim-text"
                                 linkText="about"
                                 href="/about"
                             />
-                            <SmoothScrollLink
+                            <PreRenderLink
                                 className="text-3xl hidden lg:block mr-5 font-reross cursor-pointer anim-text"
                                 linkText="portfolio"
                                 href="/portfolio"
                             />
-                            <SmoothScrollLink
+                            <PreRenderLink
                                 className="text-3xl hidden lg:block mr-5 font-reross cursor-pointer anim-text"
                                 href="/blog"
                                 linkText="blog"
                             />
-                            <SmoothScrollLink
+                            <PreRenderLink
                                 className="text-3xl hidden lg:block mr-5 font-reross cursor-pointer anim-text"
                                 href="/reviews"
                                 linkText="reviews"
                             />
-                            <SmoothScrollLink
+                            <PreRenderLink
                                 className="text-3xl hidden lg:block mr-5 font-reross cursor-pointer anim-text"
                                 href="/contact"
                                 linkText="contact"
@@ -246,27 +247,27 @@ const NavBar = (props) => {
                                 >
                                 {router.asPath === '/' ?
                                 <>
-                                    <SmoothScrollLink
+                                    <PreRenderLink
                                         className="text-3xl block lg:hidden mr-5 font-reross cursor-pointer anim-text"
                                         linkText="about"
                                         href="/about"
                                     />
-                                    <SmoothScrollLink
+                                    <PreRenderLink
                                         className="text-3xl block lg:hidden mr-5 font-reross cursor-pointer anim-text"
                                         linkText="portfolio"
                                         href="/portfolio"
                                     />
-                                    <SmoothScrollLink
+                                    <PreRenderLink
                                         className="text-3xl block lg:hidden mr-5 font-reross cursor-pointer anim-text"
                                         linkText="blog"
                                         href="/blog"
                                     />
-                                    <SmoothScrollLink
+                                    <PreRenderLink
                                         className="text-3xl block lg:hidden mr-5 font-reross cursor-pointer anim-text"
                                         linkText="reviews"
                                         href="/reviews"
                                     />
-                                    <SmoothScrollLink
+                                    <PreRenderLink
                                         className="text-3xl block lg:hidden mr-5 font-reross cursor-pointer anim-text"
                                         linkText="contact"
                                         href="/contact"

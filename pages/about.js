@@ -1,9 +1,12 @@
 import React from 'react';
 import PageMargin from '../components/utils/PageMargin'
 import Image from 'next/image'
-import SmoothScrollLink from '../utils/SmoothScrollLink'
+import SmoothScrollLink from '../components/utils/SmoothScrollLink'
 import Skills from '../data/skills.json'
 import ReactMarkdown from 'react-markdown'
+const { Client } = require("@notionhq/client")
+import { gql, GraphQLClient } from 'graphql-request'
+import moment from 'moment'
 
 const AboutPage = ({ jobData }) => {
     return (
